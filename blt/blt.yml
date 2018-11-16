@@ -1,7 +1,7 @@
 project:
   machine_name: cencosudshop
-  prefix: BLT
-  human_name: 'BLTed 8'
+  prefix: CEN
+  human_name: Cencosud
   profile:
     name: lightning
   local:
@@ -14,7 +14,7 @@ deploy:
   tag_source: true
 drush:
   aliases:
-    remote: '${project.machine_name}.test'
+    remote: '${project.machine_name}.dev'
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'
@@ -34,3 +34,5 @@ modules:
   prod:
     enable: [acquia_connector, shield]
     uninstall: [devel, views_ui]
+cloud:
+  appId: 0817e1bf-8f4c-462a-829c-307f99cb8cd5
