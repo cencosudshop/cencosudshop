@@ -6736,17 +6736,17 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/search_api",
-                "reference": "8.x-1.10"
+                "reference": "8.x-1.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "1c1d038310a079f8e8154545f743ff7a506c4b8e"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "d2bf92afa2ee760977dde1fadcb5bb64a4c2d7c1"
             },
             "require": {
                 "drupal/core": "^8.5"
@@ -6766,8 +6766,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1537175280",
+                    "version": "8.x-1.11",
+                    "datestamp": "1542564480",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8545,19 +8545,21 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.3.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "33f8d475d28741398be26cdff7a10a63003324a3"
+                "reference": "cadcfaaa13153e0e8eb92c49a53e140cf1a85dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/33f8d475d28741398be26cdff7a10a63003324a3",
-                "reference": "33f8d475d28741398be26cdff7a10a63003324a3",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/cadcfaaa13153e0e8eb92c49a53e140cf1a85dea",
+                "reference": "cadcfaaa13153e0e8eb92c49a53e140cf1a85dea",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
                 "ext-libxml": "*",
                 "php": ">=5.3.0"
             },
@@ -8606,7 +8608,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2018-10-22T16:58:34+00:00"
+            "time": "2018-11-17T20:24:36+00:00"
         },
         {
             "name": "mkalkbrenner/php-htmldiff-advanced",
@@ -10517,16 +10519,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.19.5",
+            "version": "v3.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "30f3f10bf52ec22bf5278b2e4a3719c2371209ed"
+                "reference": "db9e24541f65bd5d19506277b0869d098f3f704c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/30f3f10bf52ec22bf5278b2e4a3719c2371209ed",
-                "reference": "30f3f10bf52ec22bf5278b2e4a3719c2371209ed",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/db9e24541f65bd5d19506277b0869d098f3f704c",
+                "reference": "db9e24541f65bd5d19506277b0869d098f3f704c",
                 "shasum": ""
             },
             "type": "library",
@@ -10570,7 +10572,7 @@
                 "swagger",
                 "ui"
             ],
-            "time": "2018-11-05T05:26:25+00:00"
+            "time": "2018-11-17T01:13:28+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -13921,17 +13923,6 @@
         {
             "name": "webflo/drupal-core-require-dev",
             "version": "8.6.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "128ed1111501ff14f5acadc50f214b1e47d591ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/128ed1111501ff14f5acadc50f214b1e47d591ad",
-                "reference": "128ed1111501ff14f5acadc50f214b1e47d591ad",
-                "shasum": ""
-            },
             "require": {
                 "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "^1.2",
