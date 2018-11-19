@@ -9,7 +9,8 @@ project:
     hostname: 'local.${project.machine_name}.com'
 git:
   default_branch: master
-  remotes: {  }
+  remotes:
+    cloud: 'cencosudshop@svn-23450.prod.hosting.acquia.com:cencosudshop.git'
 deploy:
   tag_source: true
 drush:
