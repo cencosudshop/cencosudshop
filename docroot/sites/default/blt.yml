@@ -1,0 +1,9 @@
+project:
+  local:
+    hostname: local.cencosudshop.com
+    protocol: http
+  machine_name: cencosudshop
+drush:
+  aliases:
+    local: self
+    remote: cencosudshop.dev

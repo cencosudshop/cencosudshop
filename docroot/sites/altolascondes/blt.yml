@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.altolascondes.com
+    protocol: http
+  machine_name: altolascondes
+  human_name: altolascondes
+drush:
+  aliases:
+    local: altolascondes.local
+    remote: altolascondes.local
+drupal:
+  db:
+    database: altolascondes
+    username: altolascondes
+    password: altolascondes
+    host: localhost
+    port: 3306

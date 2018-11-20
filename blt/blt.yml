@@ -1,12 +1,9 @@
 project:
-  machine_name: cencosudshop
   prefix: CEN
   human_name: Cencosud
   profile:
     name: lightning
-  local:
-    protocol: http
-    hostname: 'local.${project.machine_name}.com'
+  local: {  }
 git:
   default_branch: master
   remotes:
@@ -15,8 +12,6 @@ deploy:
   tag_source: true
 drush:
   aliases:
-    remote: '${project.machine_name}.dev'
-    local: self
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
@@ -37,3 +32,6 @@ modules:
     uninstall: [devel, views_ui]
 cloud:
   appId: 0817e1bf-8f4c-462a-829c-307f99cb8cd5
+multisites:
+  - default
+  - altolascondes
