@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.floridacenter.com
+    protocol: http
+  machine_name: floridacenter
+  human_name: floridacenter
+drush:
+  aliases:
+    local: floridacenter.local
+    remote: floridacenter.local
