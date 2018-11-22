@@ -7,4 +7,4 @@ project:
 drush:
   aliases:
     local: floridacenter.local
-    remote: floridacenter.local
+    remote: floridacenter.dev
