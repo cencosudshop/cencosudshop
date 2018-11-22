@@ -105,3 +105,5 @@ devel: 1.2.0
 seckit: 1.1.0
 config_filter: 1.4.0
 config_split: 1.4.0
+admin_toolbar: 1.24.0
+admin_toolbar_tools: 1.24.0
