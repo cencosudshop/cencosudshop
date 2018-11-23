@@ -1,0 +1,15 @@
+uuid: f8c57f14-0375-4388-b347-36068b5a0501
+langcode: en
+status: false
+dependencies: {  }
+id: altolascondes
+label: altolascondes
+description: ''
+folder: ../config/altolascondes
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

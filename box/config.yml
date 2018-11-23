@@ -34,6 +34,10 @@ apache_vhosts:
         servername: local.floridacenter.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.costaneracenter.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
     -
         name: drupal
@@ -45,6 +49,10 @@ mysql_databases:
         collation: utf8_general_ci
     -
         name: floridacenter
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: costaneracenter
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -63,6 +71,11 @@ mysql_users:
         host: '%'
         password: floridacenter
         priv: 'floridacenter%.*:ALL'
+    -
+        name: costaneracenter
+        host: '%'
+        password: costaneracenter
+        priv: 'costaneracenter%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 nodejs_version: 6.x
