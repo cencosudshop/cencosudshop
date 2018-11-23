@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.pnunoa.com
+    protocol: http
+  machine_name: pnunoa
+  human_name: pnunoa
+drush:
+  aliases:
+    local: pnunoa.local
+    remote: pnunoa.dev

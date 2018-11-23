@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.ccenter.com
+    protocol: http
+  machine_name: ccenter
+  human_name: ccenter
+drush:
+  aliases:
+    local: ccenter.local
+    remote: ccenter.dev

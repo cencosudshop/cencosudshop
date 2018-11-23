@@ -35,7 +35,11 @@ apache_vhosts:
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
     -
-        servername: local.costaneracenter.com
+        servername: local.pnunoa.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ccenter.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
@@ -52,7 +56,15 @@ mysql_databases:
         encoding: utf8
         collation: utf8_general_ci
     -
-        name: costaneracenter
+        name: pnunoa
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ccenter
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ccenter
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -72,10 +84,15 @@ mysql_users:
         password: floridacenter
         priv: 'floridacenter%.*:ALL'
     -
-        name: costaneracenter
+        name: pnunoa
         host: '%'
-        password: costaneracenter
-        priv: 'costaneracenter%.*:ALL'
+        password: pnunoa
+        priv: 'pnunoa%.*:ALL'
+    -
+        name: ccenter
+        host: '%'
+        password: ccenter
+        priv: 'ccenter%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 nodejs_version: 6.x
