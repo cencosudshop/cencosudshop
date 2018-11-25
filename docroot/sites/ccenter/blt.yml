@@ -8,3 +8,10 @@ drush:
   aliases:
     local: ccenter.local
     remote: ccenter.dev
+drupal:
+  db:
+    database: ccenter
+    username: ccenter
+    password: ccenter
+    host: localhost
+    port: 3306

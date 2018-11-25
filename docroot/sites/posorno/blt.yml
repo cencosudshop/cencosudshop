@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.posorno.com
+    protocol: http
+  machine_name: posorno
+  human_name: posorno
+drush:
+  aliases:
+    local: posorno.local
+    remote: posorno.dev
+drupal:
+  db:
+    database: posorno
+    username: posorno
+    password: posorno
+    host: localhost
+    port: 3306

@@ -8,3 +8,10 @@ drush:
   aliases:
     local: pnunoa.local
     remote: pnunoa.dev
+drupal:
+  db:
+    database: pnunoa
+    username: pnunoa
+    password: pnunoa
+    host: localhost
+    port: 3306

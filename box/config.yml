@@ -42,6 +42,10 @@ apache_vhosts:
         servername: local.ccenter.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.posorno.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
     -
         name: drupal
@@ -61,6 +65,10 @@ mysql_databases:
         collation: utf8_general_ci
     -
         name: ccenter
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: posorno
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -89,6 +97,11 @@ mysql_users:
         host: '%'
         password: ccenter
         priv: 'ccenter%.*:ALL'
+    -
+        name: posorno
+        host: '%'
+        password: posorno
+        priv: 'posorno%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 nodejs_version: 6.x
