@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ptemuco.com
+    protocol: http
+  machine_name: ptemuco
+  human_name: ptemuco
+drush:
+  aliases:
+    local: ptemuco.local
+    remote: ptemuco.dev
+drupal:
+  db:
+    database: ptemuco
+    username: ptemuco
+    password: ptemuco
+    host: localhost
+    port: 3306

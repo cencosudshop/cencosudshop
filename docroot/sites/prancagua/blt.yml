@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.prancagua.com
+    protocol: http
+  machine_name: prancagua
+  human_name: prancagua
+drush:
+  aliases:
+    local: prancagua.local
+    remote: prancagua.dev
+drupal:
+  db:
+    database: prancagua
+    username: prancagua
+    password: prancagua
+    host: localhost
+    port: 3306

@@ -54,6 +54,18 @@ apache_vhosts:
         servername: local.pladehesa.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.plareina.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.prancagua.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ptemuco.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
     -
         name: drupal
@@ -85,6 +97,18 @@ mysql_databases:
         collation: utf8_general_ci
     -
         name: pladehesa
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: plareina
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: prancagua
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ptemuco
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -128,6 +152,21 @@ mysql_users:
         host: '%'
         password: pladehesa
         priv: 'pladehesa%.*:ALL'
+    -
+        name: plareina
+        host: '%'
+        password: plareina
+        priv: 'plareina%.*:ALL'
+    -
+        name: prancagua
+        host: '%'
+        password: prancagua
+        priv: 'prancagua%.*:ALL'
+    -
+        name: ptemuco
+        host: '%'
+        password: ptemuco
+        priv: 'ptemuco%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 nodejs_version: 6.x

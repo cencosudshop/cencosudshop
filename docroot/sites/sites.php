@@ -12,3 +12,6 @@ $sites['local.ccenter.com'] = 'ccenter';
 $sites['local.posorno.com'] = 'posorno';
 $sites['local.pballoto.com'] = 'pbelloto';
 $sites['local.pladehesa.com'] = 'pladehesa';
+$sites['local.plareina.com'] = 'plareina';
+$sites['local.prancagua.com'] = 'prancagua';
+$sites['local.ptemuco.com'] = 'ptemuco';

@@ -1,11 +1,11 @@
-uuid: f8c57f14-0375-4388-b347-36068b5a0501
+uuid: 42fe8790-2ca5-47a6-9c45-757766994e0a
 langcode: en
 status: false
 dependencies: {  }
-id: altolascondes
-label: altolascondes
+id: portal_belloto
+label: 'Portal Belloto'
 description: ''
-folder: ../config/altolascondes
+folder: ../config/pbelloto
 module: {  }
 theme: {  }
 blacklist: {  }
