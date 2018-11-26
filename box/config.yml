@@ -66,6 +66,10 @@ apache_vhosts:
         servername: local.ptemuco.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddccenter.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
     -
         name: drupal
@@ -109,6 +113,10 @@ mysql_databases:
         collation: utf8_general_ci
     -
         name: ptemuco
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddccenter
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -167,6 +175,11 @@ mysql_users:
         host: '%'
         password: ptemuco
         priv: 'ptemuco%.*:ALL'
+    -
+        name: ddccenter
+        host: '%'
+        password: ddccenter
+        priv: 'ddccenter%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 nodejs_version: 6.x

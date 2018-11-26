@@ -15,3 +15,4 @@ $sites['local.pladehesa.com'] = 'pladehesa';
 $sites['local.plareina.com'] = 'plareina';
 $sites['local.prancagua.com'] = 'prancagua';
 $sites['local.ptemuco.com'] = 'ptemuco';
+$sites['local.ddccenter.com'] = 'ddccenter';

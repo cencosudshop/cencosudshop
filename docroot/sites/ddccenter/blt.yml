@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddccenter.com
+    protocol: http
+  machine_name: ddccenter
+  human_name: ddccenter
+drush:
+  aliases:
+    local: ddccenter.local
+    remote: ddccenter.dev
+drupal:
+  db:
+    database: ddccenter
+    username: ddccenter
+    password: ddccenter
+    host: localhost
+    port: 3306
