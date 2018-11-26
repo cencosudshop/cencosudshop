@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.pbelloto.com
+    protocol: http
+  machine_name: pbelloto
+  human_name: pbelloto
+drush:
+  aliases:
+    local: pbelloto.local
+    remote: pbelloto.dev
+drupal:
+  db:
+    database: pbelloto
+    username: pbelloto
+    password: pbelloto
+    host: localhost
+    port: 3306
