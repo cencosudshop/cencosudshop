@@ -1,11 +1,11 @@
 uuid: 681d8ee7-2923-4137-bebf-417d006bdc1c
 langcode: en
-status: false
+status: true
 dependencies: {  }
 id: local
 label: Local
 description: ''
-folder: ../config/pbelloto
+folder: ../config/envs/local
 module: {  }
 theme: {  }
 blacklist: {  }
