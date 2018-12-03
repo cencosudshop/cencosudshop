@@ -8,3 +8,10 @@ drush:
   aliases:
     local: ddfloridacenter.local
     remote: ddfloridacenter.dev
+drupal:
+  db:
+    database: ddfloridacenter
+    username: ddfloridacenter
+    password: ddfloridacenter
+    host: localhost
+    port: 3306

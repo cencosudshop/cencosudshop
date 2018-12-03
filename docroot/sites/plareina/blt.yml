@@ -8,3 +8,10 @@ drush:
   aliases:
     local: plareina.local
     remote: plareina.dev
+drupal:
+  db:
+    database: plareina
+    username: plareina
+    password: plareina
+    host: localhost
+    port: 3306
