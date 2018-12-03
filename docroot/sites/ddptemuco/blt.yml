@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddptemuco.com
+    protocol: http
+  machine_name: ddptemuco
+  human_name: ddptemuco
+drush:
+  aliases:
+    local: ddptemuco.local
+    remote: ddptemuco.dev
+drupal:
+  db:
+    database: ddptemuco
+    username: ddptemuco
+    password: ddptemuco
+    host: localhost
+    port: 3306

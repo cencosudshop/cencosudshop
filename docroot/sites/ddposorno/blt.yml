@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddposorno.com
+    protocol: http
+  machine_name: ddposorno
+  human_name: ddposorno
+drush:
+  aliases:
+    local: ddposorno.local
+    remote: ddposorno.dev
+drupal:
+  db:
+    database: ddposorno
+    username: ddposorno
+    password: ddposorno
+    host: localhost
+    port: 3306

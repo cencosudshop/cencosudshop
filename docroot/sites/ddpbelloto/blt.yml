@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddpbelloto.com
+    protocol: http
+  machine_name: ddpbelloto
+  human_name: ddpbelloto
+drush:
+  aliases:
+    local: ddpbelloto.local
+    remote: ddpbelloto.dev
+drupal:
+  db:
+    database: ddpbelloto
+    username: ddpbelloto
+    password: ddpbelloto
+    host: localhost
+    port: 3306

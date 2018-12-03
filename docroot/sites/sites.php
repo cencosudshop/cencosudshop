@@ -5,14 +5,46 @@
  * Local development override configuration feature.
  */
 
+$sites['local.cencosudshop.com'] = 'default';
 $sites['local.altolascondes.com'] = 'altolascondes';
 $sites['local.floridacenter.com'] = 'floridacenter';
 $sites['local.pnunoa.com'] = 'pnunoa';
 $sites['local.ccenter.com'] = 'ccenter';
 $sites['local.posorno.com'] = 'posorno';
-$sites['local.pballoto.com'] = 'pbelloto';
+$sites['local.pbelloto.com'] = 'pbelloto';
 $sites['local.pladehesa.com'] = 'pladehesa';
 $sites['local.plareina.com'] = 'plareina';
 $sites['local.prancagua.com'] = 'prancagua';
 $sites['local.ptemuco.com'] = 'ptemuco';
 $sites['local.ddccenter.com'] = 'ddccenter';
+$sites['local.ddaltolascondes.com'] = 'ddaltolascondes';
+$sites['local.ddfloridacenter.com'] = 'ddfloridacenter';
+$sites['local.ddpnunoa.com'] = 'ddpnunoa';
+$sites['local.ddposorno.com'] = 'ddposorno';
+$sites['local.ddpbelloto.com'] = 'ddpbelloto';
+$sites['local.ddpladehesa.com'] = 'ddpladehesa';
+$sites['local.ddplareina.com'] = 'ddplareina';
+$sites['local.ddprancagua.com'] = 'ddprancagua';
+$sites['local.ddptemuco.com'] = 'ddptemuco';
+
+$sites['dev.cencosudshop.com'] = 'default';
+$sites['dev.altolascondes.com'] = 'altolascondes';
+$sites['dev.floridacenter.com'] = 'floridacenter';
+$sites['dev.pnunoa.com'] = 'pnunoa';
+$sites['dev.ccenter.com'] = 'ccenter';
+$sites['dev.posorno.com'] = 'posorno';
+$sites['dev.pbelloto.com'] = 'pbelloto';
+$sites['dev.pladehesa.com'] = 'pladehesa';
+$sites['dev.plareina.com'] = 'plareina';
+$sites['dev.prancagua.com'] = 'prancagua';
+$sites['dev.ptemuco.com'] = 'ptemuco';
+$sites['dev.ddccenter.com'] = 'ddccenter';
+$sites['dev.ddaltolascondes.com'] = 'ddaltolascondes';
+$sites['dev.ddfloridacenter.com'] = 'ddfloridacenter';
+$sites['dev.ddpnunoa.com'] = 'ddpnunoa';
+$sites['dev.ddposorno.com'] = 'ddposorno';
+$sites['dev.ddpbelloto.com'] = 'ddpbelloto';
+$sites['dev.ddpladehesa.com'] = 'ddpladehesa';
+$sites['dev.ddplareina.com'] = 'ddplareina';
+$sites['dev.ddprancagua.com'] = 'ddprancagua';
+$sites['dev.ddptemuco.com'] = 'ddptemuco';

@@ -70,6 +70,42 @@ apache_vhosts:
         servername: local.ddccenter.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddaltolascondes.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddfloridacenter.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddpnunoa.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddposorno.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddpbelloto.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddpladehesa.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddplareina.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddprancagua.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.ddptemuco.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
     -
         name: drupal
@@ -117,6 +153,42 @@ mysql_databases:
         collation: utf8_general_ci
     -
         name: ddccenter
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddaltolascondes
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddfloridacenter
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddpnunoa
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddposorno
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddpbelloto
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddpladehesa
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddplareina
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddprancagua
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: ddptemuco
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -180,6 +252,51 @@ mysql_users:
         host: '%'
         password: ddccenter
         priv: 'ddccenter%.*:ALL'
+    -
+        name: ddaltolascondes
+        host: '%'
+        password: ddaltolascondes
+        priv: 'ddaltolascondes%.*:ALL'
+    -
+        name: ddfloridacenter
+        host: '%'
+        password: ddfloridacenter
+        priv: 'ddfloridacenter%.*:ALL'
+    -
+        name: ddpnunoa
+        host: '%'
+        password: ddpnunoa
+        priv: 'ddpnunoa%.*:ALL'
+    -
+        name: ddposorno
+        host: '%'
+        password: ddposorno
+        priv: 'ddposorno%.*:ALL'
+    -
+        name: ddpbelloto
+        host: '%'
+        password: ddpbelloto
+        priv: 'ddpbelloto%.*:ALL'
+    -
+        name: ddpladehesa
+        host: '%'
+        password: ddpladehesa
+        priv: 'ddpladehesa%.*:ALL'
+    -
+        name: ddplareina
+        host: '%'
+        password: ddplareina
+        priv: 'ddplareina%.*:ALL'
+    -
+        name: ddprancagua
+        host: '%'
+        password: ddprancagua
+        priv: 'ddprancagua%.*:ALL'
+    -
+        name: ddptemuco
+        host: '%'
+        password: ddptemuco
+        priv: 'ddptemuco%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 nodejs_version: 6.x

@@ -70,8 +70,8 @@ views: 8.6.3
 lightning_contact_form: 3.3.0
 lightning_page: 3.3.0
 lightning_roles: 3.3.0
-search_api: 1.10.0
-search_api_db: 1.10.0
+search_api: 1.11.0
+search_api_db: 1.11.0
 lightning_search: 3.3.0
 panels: 4.3.0
 panels_ipe: 4.3.0
@@ -101,8 +101,6 @@ metatag: 1.7.0
 moderation_sidebar: 1.1.0
 pathauto: 1.3.0
 lightning: 3.202.0
-devel: 1.2.0
-seckit: 1.1.0
 config_filter: 1.4.0
 config_split: 1.4.0
 admin_toolbar: 1.24.0

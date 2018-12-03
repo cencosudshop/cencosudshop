@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.ddfloridacenter.com
+    protocol: http
+  machine_name: ddfloridacenter
+  human_name: ddfloridacenter
+drush:
+  aliases:
+    local: ddfloridacenter.local
+    remote: ddfloridacenter.dev

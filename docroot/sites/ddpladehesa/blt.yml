@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddpladehesa.com
+    protocol: http
+  machine_name: ddpladehesa
+  human_name: ddpladehesa
+drush:
+  aliases:
+    local: ddpladehesa.local
+    remote: ddpladehesa.dev
+drupal:
+  db:
+    database: ddpladehesa
+    username: ddpladehesa
+    password: ddpladehesa
+    host: localhost
+    port: 3306

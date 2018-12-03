@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddaltolascondes.com
+    protocol: http
+  machine_name: ddaltolascondes
+  human_name: ddaltolascondes
+drush:
+  aliases:
+    local: ddaltolascondes.local
+    remote: ddaltolascondes.dev
+drupal:
+  db:
+    database: ddaltolascondes
+    username: ddaltolascondes
+    password: ddaltolascondes
+    host: localhost
+    port: 3306

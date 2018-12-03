@@ -1,4 +1,4 @@
-uuid: eaedcf21-976c-4727-889a-135f15404f37
+uuid: 67bcd379-1934-43ac-94ea-dfd8c1efe5e4
 langcode: en
 status: true
 dependencies:
@@ -39,13 +39,13 @@ widgets:
     weight: -9
     label: Upload
     id: file_upload
-  14e1df9a-e0ab-42f4-9002-2fc3b6398075:
+  790a953a-8e83-4aa7-b34d-f13c815c3bfa:
     settings:
       view: media
       view_display: entity_browser_1
       submit_text: Place
       auto_select: false
-    uuid: 14e1df9a-e0ab-42f4-9002-2fc3b6398075
+    uuid: 790a953a-8e83-4aa7-b34d-f13c815c3bfa
     weight: -10
     label: Library
     id: view

@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddplareina.com
+    protocol: http
+  machine_name: ddplareina
+  human_name: ddplareina
+drush:
+  aliases:
+    local: ddplareina.local
+    remote: ddplareina.dev
+drupal:
+  db:
+    database: ddplareina
+    username: ddplareina
+    password: ddplareina
+    host: localhost
+    port: 3306

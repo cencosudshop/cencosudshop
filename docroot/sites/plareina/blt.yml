@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.plareina.com
+    protocol: http
+  machine_name: plareina
+  human_name: plareina
+drush:
+  aliases:
+    local: plareina.local
+    remote: plareina.dev

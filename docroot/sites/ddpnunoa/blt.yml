@@ -1,0 +1,17 @@
+project:
+  local:
+    hostname: local.ddpnunoa.com
+    protocol: http
+  machine_name: ddpnunoa
+  human_name: ddpnunoa
+drush:
+  aliases:
+    local: ddpnunoa.local
+    remote: ddpnunoa.dev
+drupal:
+  db:
+    database: ddpnunoa
+    username: ddpnunoa
+    password: ddpnunoa
+    host: localhost
+port: 3306

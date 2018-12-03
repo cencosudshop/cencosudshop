@@ -34,10 +34,10 @@ cloud:
   appId: 0817e1bf-8f4c-462a-829c-307f99cb8cd5
 multisites:
   - default
+  - ccenter
   - altolascondes
   - floridacenter
   - pnunoa
-  - ccenter
   - posorno
   - pbelloto
   - pladehesa
@@ -45,3 +45,12 @@ multisites:
   - prancagua
   - ptemuco
   - ddccenter
+  - ddaltolascondes
+  - ddfloridacenter
+  - ddpnunoa
+  - ddposorno
+  - ddpbelloto
+  - ddpladehesa
+  - ddplareina
+  - ddprancagua
+  - ddptemuco
