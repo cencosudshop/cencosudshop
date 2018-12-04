@@ -6,7 +6,7 @@ local:
   ssh:
     options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key'
 dev:
-  uri: cencosudshopdev.prod.acquia-sites.com
+  uri: 'http://dev.ccenter.com'
   host: staging-32317.prod.hosting.acquia.com
   options: {  }
   paths:

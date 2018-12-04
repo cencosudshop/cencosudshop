@@ -5,7 +5,7 @@ local:
     user: vagrant
     ssh: { options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
 dev:
-    uri: cencosudshopdev.prod.acquia-sites.com
+    uri: 'http://dev.pnunoa.com'
     host: staging-32317.prod.hosting.acquia.com
     options: {  }
     paths: { dump-dir: /mnt/tmp }
