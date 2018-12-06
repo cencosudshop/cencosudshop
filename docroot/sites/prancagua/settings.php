@@ -779,5 +779,5 @@ $blt_override_config_directories = FALSE;
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 
 $config_directories = array();
-$config_directories[CONFIG_SYNC_DIRECTORY] = '../config/prancagua';
+$config_directories[CONFIG_SYNC_DIRECTORY] = '../config/prancagua/default';
 
