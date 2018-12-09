@@ -1,0 +1,15 @@
+uuid: 681d8ee7-2923-4137-bebf-417d006bdc1c
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: ''
+folder: ../config/ddposorno/envs/local
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
