@@ -1,0 +1,68 @@
+/*
+* estilos del archivo:
+* /partials/header.html.twig
+*/
+#footer{
+	margin-top: unset;
+}
+.footer {
+  background-color: #5bc0de;
+  color: #ffffff;
+  /*padding: 40px 0 30px 0; */
+}
+.footer h4{
+	margin: 3px 0px; 
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer region-informacion ul{
+	/* list-style-type: none; */
+    padding-inline-start: 20px;
+}
+
+.footer a{
+	color: #ffffff;
+}
+h4.arrowLeft>a.pull-right{
+	font-size: 14px;
+}
+#block-footercenter ul>li>a.face-ico:after{
+    background-image: url('../../images/icons/face-ico-white.png');
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    content:"";
+}
+#block-footercenter ul>li>a.insta-ico:after{
+    background-image: url('../../images/icons/insta-ico-white.png');
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    content:"";
+}
+#block-footercenter ul>li>a.twitt-ico:after{
+    background-image: url('../../images/icons/twitt-ico-white.png');
+    background-size: 40px 40px;
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    content:"";
+}
+
+#block-footercenter ul>li.listFooter-inline{
+	display: inline;
+}
+/* Mobile */
+@media only screen and (max-width:576px) {
+
+}
+/* Tablet */	
+@media (min-width:415px) and (max-width:950px) {
+
+}
+/* Desktop */
+@media (min-width:951px) and (max-width:1600px) {
+	
+}

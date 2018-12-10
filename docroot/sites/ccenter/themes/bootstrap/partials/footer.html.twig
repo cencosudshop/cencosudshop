@@ -1,0 +1,9 @@
+{% if page.footer %}
+  {% block footer %}
+    <footer id="footer" class="footer {{ container }} container-fluid" role="contentinfo">
+      <div class="row">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endblock %}
+{% endif %}
