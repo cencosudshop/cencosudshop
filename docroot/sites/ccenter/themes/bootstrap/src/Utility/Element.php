@@ -827,8 +827,6 @@ class Element extends DrupalAttributes {
     // Retrieve the proper attributes array.
     // Set the tooltip attributes.
     // Remove the element description so it isn't (re-)rendered later.
-    $this->unsetProperty('description');
-
     return $this;
   }
 

@@ -13,7 +13,7 @@ local.blt.yml
 docroot/core
 
 # Ignore this file from Boostrap theme that's making BLT complain
-docroot/sites/ccenter/themes/bootstrap/src/Utility/Element.php
+docroot/sites/ccenter/themes/bootstrap/src/Utility
 
 # Ignore paths that contain user-generated content.
 docroot/sites/*/files

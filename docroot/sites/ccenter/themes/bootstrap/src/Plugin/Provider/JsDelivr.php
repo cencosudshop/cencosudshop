@@ -81,7 +81,7 @@ class JsDelivr extends ProviderBase {
    */
   public function getAssets($types = NULL) {
     $this->assets = [];
-    $error = !empty($this['error']);
+    $error = !empty(['error']);
     $version = $error ? Bootstrap::FRAMEWORK_VERSION : $this->theme->getSetting('cdn_jsdelivr_version');
     $theme = $error ? 'bootstrap' : $this->theme->getSetting('cdn_jsdelivr_theme');
     if (isset($this->pluginDefinition['themes'][$version][$theme])) {
