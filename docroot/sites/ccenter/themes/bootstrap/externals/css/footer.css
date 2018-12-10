@@ -3,7 +3,9 @@
 * /partials/header.html.twig
 */
 #footer{
-	margin-top: unset;
+	margin-top:	unset;
+	padding-top:	2rem;
+	padding-bottom:	2rem;
 }
 .footer {
   background-color: #5bc0de;
@@ -11,8 +13,11 @@
   /*padding: 40px 0 30px 0; */
 }
 .footer h4{
-	margin: 3px 0px; 
+	margin: 0 0 1rem 0;
     border-bottom: 1px solid #ffffff;
+}
+.footer ul{
+	padding: 0;
 }
 
 .footer region-informacion ul{
@@ -24,43 +29,85 @@
 	color: #ffffff;
 }
 h4.arrowLeft>a.pull-right{
-	font-size: 14px;
+	font-size: 1rem;
 }
+
+#block-footerleft ul>li.first:before{
+	background-image: url('../../images/icons/pin-white.png');
+    background-size: 2rem 2rem;
+    width: 2rem; 
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    content:"";
+}
+#block-footerleft ul>li.mid:before{
+	background-image: url('../../images/icons/phone-white.png');
+    background-size: 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    content:"";
+}
+#block-footerleft ul>li.last:before{
+	background-image: url('../../images/icons/mail-white.png');
+    background-size: 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    content:"";
+}
+
 #block-footercenter ul>li>a.face-ico:after{
     background-image: url('../../images/icons/face-ico-white.png');
-    background-size: 40px 40px;
+    background-size: 3rem 3rem;
+    width: 3rem;
+    height: 3rem;
     display: inline-block;
-    width: 40px; 
-    height: 40px;
+    vertical-align: middle;
     content:"";
 }
 #block-footercenter ul>li>a.insta-ico:after{
     background-image: url('../../images/icons/insta-ico-white.png');
-    background-size: 40px 40px;
+    background-size: 3rem 3rem;
+    width: 3rem;
+    height: 3rem;
     display: inline-block;
-    width: 40px; 
-    height: 40px;
+    vertical-align: middle;
     content:"";
 }
 #block-footercenter ul>li>a.twitt-ico:after{
     background-image: url('../../images/icons/twitt-ico-white.png');
-    background-size: 40px 40px;
+    background-size: 3rem 3rem;
+    width: 3rem;
+    height: 3rem;
     display: inline-block;
-    width: 40px; 
-    height: 40px;
+    vertical-align: middle;
     content:"";
 }
-
+#footer ul{
+	list-style-type: none;
+}
 #block-footercenter ul>li.listFooter-inline{
 	display: inline;
 }
 /* Mobile */
-@media only screen and (max-width:576px) {
-
+@media only screen and (min-width:768px) {
+	
+	#footer a.collapseMobile{
+		display: none;
+	}
+	#footer #links{
+		display: block;
+	}
 }
 /* Tablet */	
-@media (min-width:415px) and (max-width:950px) {
-
+@media only screen and (min-width:768px) and (max-width:991px) {
+    #footer{
+        font-size: 12px;
+    }
 }
 /* Desktop */
 @media (min-width:951px) and (max-width:1600px) {

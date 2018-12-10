@@ -89,7 +89,7 @@ li a:hover:not(.active) {
 #navbar a.logo>img {
     width: 100%;
 }
-#navbar a.logo> {
+#navbar a.logo {
     margin: 0;
     padding: 0; 
 }
@@ -99,6 +99,18 @@ li a:hover:not(.active) {
 span.auxiliar-bar{
     display: flex;
     justify-content: space-between;
+}
+
+span.auxiliar-bar #sel1{
+    width: auto;
+    height: 2rem;
+    padding: 0;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+#navbar-collapse div.col-sm-12:first-child {
+    padding: 1rem 15px;
 }
 
 span.auxiliar-bar a:hover{
@@ -214,6 +226,11 @@ hr.hr-vertical{
     #navbar ul.menu--main>li{
         float: none;
     }
+    @media only screen and (min-width:768px) {
+        #navbar ul.menu--main>li.expanded.dropdown:hover ul.dropdown-menu{
+            display: block;
+        }
+    }
         #navbar ul.menu--main>li>ul>li>a{
             color: #337ab7;
             text-align: center;
@@ -226,6 +243,8 @@ hr.hr-vertical{
 		background: #337ab7;
 	}
 }
+
+
 /* Tablet */	
 @media only screen and (min-width:768px) and (max-width:991px) {
     #navbar ul.menu--main>li>a{

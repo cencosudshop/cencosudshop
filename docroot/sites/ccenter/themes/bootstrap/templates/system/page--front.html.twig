@@ -55,10 +55,10 @@
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Main #}
 {% block main %}
-  <h1>ESTE ES EL FRONT</h1>
+
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+    
     <div class="row" id="top-bar">
-      {# Header #}
       {% if page.header %}
         {% block header %}
             {{ page.header }}
