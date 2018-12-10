@@ -79,6 +79,8 @@ display:
             'entity:node':
               landing_page: teaser
               page: teaser
+              panorama: default
+              promocion: default
       fields:
         rendered:
           table: search_api_index_content

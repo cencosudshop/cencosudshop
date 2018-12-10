@@ -1,0 +1,39 @@
+uuid: 6dacf780-618c-4ea5-9c75-4340e5c96c0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.panorama.body
+    - field.field.node.panorama.field_panorama_image
+    - node.type.panorama
+  module:
+    - image
+    - text
+    - user
+id: node.panorama.default
+targetEntityType: node
+bundle: panorama
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_panorama_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

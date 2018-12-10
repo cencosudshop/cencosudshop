@@ -13,3 +13,5 @@ permissions:
   - 'administer panelizer'
   - 'administer panelizer node landing_page defaults'
   - 'administer panelizer node page defaults'
+  - 'administer panelizer node panorama defaults'
+  - 'administer panelizer node promocion defaults'

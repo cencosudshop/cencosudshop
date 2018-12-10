@@ -1,0 +1,24 @@
+uuid: f2fe6f4a-272d-4a5d-8915-25ad55724365
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.promociones
+  module:
+    - views
+  theme:
+    - bootstrap
+id: views_block__promociones_block_1_2
+theme: bootstrap
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:promociones-block_1'
+settings:
+  id: 'views_block:promociones-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

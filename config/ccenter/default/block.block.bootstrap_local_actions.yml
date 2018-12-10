@@ -1,6 +1,6 @@
 uuid: 010962d7-8c24-4660-8eae-21714eb938ff
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - bootstrap
@@ -9,7 +9,7 @@ _core:
 id: bootstrap_local_actions
 theme: bootstrap
 region: header
-weight: 20
+weight: 0
 provider: null
 plugin: local_actions_block
 settings:

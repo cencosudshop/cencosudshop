@@ -1,0 +1,22 @@
+uuid: abf4bb07-a72a-4e53-9d46-9227a2ec73b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.panorama
+id: node.panorama.promote
+field_name: promote
+entity_type: node
+bundle: panorama
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

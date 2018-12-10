@@ -2,6 +2,8 @@ uuid: 783c9d50-8463-4252-bc1b-d42156b24d96
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - bootstrap
 _core:
@@ -9,7 +11,7 @@ _core:
 id: bootstrap_page_title
 theme: bootstrap
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

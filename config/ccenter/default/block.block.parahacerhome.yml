@@ -9,7 +9,7 @@ dependencies:
 id: parahacerhome
 theme: bootstrap
 region: highlighted
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:8a2da094-805a-40ec-a8a1-038a5144c04f'
 settings:

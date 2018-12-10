@@ -6,12 +6,13 @@ dependencies:
     - 'block_content:basic:9e5aafc3-57c1-4c1e-af86-6c0a19950f9e'
   module:
     - block_content
+    - system
   theme:
     - bootstrap
 id: bloqueparahacer
 theme: bootstrap
 region: highlighted
-weight: -6
+weight: -8
 provider: null
 plugin: 'block_content:9e5aafc3-57c1-4c1e-af86-6c0a19950f9e'
 settings:
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

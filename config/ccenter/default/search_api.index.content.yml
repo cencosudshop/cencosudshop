@@ -41,6 +41,8 @@ field_settings:
         'entity:node':
           landing_page: full
           page: default
+          panorama: default
+          promocion: default
   status:
     label: null
     datasource_id: 'entity:node'

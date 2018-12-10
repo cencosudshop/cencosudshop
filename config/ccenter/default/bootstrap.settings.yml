@@ -5,6 +5,24 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: profiles/contrib/lightning/favicon.ico
+  url: 'http://local.ccenter.com/profiles/contrib/lightning/favicon.ico'
+  use_default: false
+region_wells:
+  navigation: ''
+  aux_navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+fluid_container: 1
+table_responsive: '-1'
+table: ''
+logo:
+  path: 'public://costanera-brand.png'
   url: ''
   use_default: false
 features:
@@ -12,7 +30,3 @@ features:
   comment_user_verification: true
   favicon: true
   node_user_picture: true
-logo:
-  path: profiles/contrib/lightning/lightning.png
-  url: ''
-  use_default: false

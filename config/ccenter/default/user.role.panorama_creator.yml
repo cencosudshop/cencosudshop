@@ -1,0 +1,29 @@
+uuid: bfbf287e-9d86-4332-86d6-d0e850fdcef3
+langcode: en
+status: true
+dependencies: {  }
+id: panorama_creator
+label: 'Panorama creator'
+weight: 7
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node panorama content'
+  - 'administer panelizer node panorama layout'
+  - 'change layouts in place editing'
+  - 'create panorama content'
+  - 'create url aliases'
+  - 'edit own panorama content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view panorama revisions'

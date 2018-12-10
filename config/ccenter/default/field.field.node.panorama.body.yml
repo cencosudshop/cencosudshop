@@ -1,0 +1,22 @@
+uuid: 4d54def3-e2e0-4ce0-802e-3c423357ddbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.panorama
+  module:
+    - text
+id: node.panorama.body
+field_name: body
+entity_type: node
+bundle: panorama
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

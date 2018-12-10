@@ -1,0 +1,19 @@
+uuid: 16d83f07-4630-4441-adee-a84870b59e17
+langcode: en
+status: true
+dependencies: {  }
+id: panorama_reviewer
+label: 'Panorama reviewer'
+weight: 8
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any panorama content'
+  - 'edit any panorama content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

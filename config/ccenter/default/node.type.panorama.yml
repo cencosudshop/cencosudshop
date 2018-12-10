@@ -1,0 +1,17 @@
+uuid: 54770428-6133-43c6-b040-3431e8cd87f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Panorama
+type: panorama
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
