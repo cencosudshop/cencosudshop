@@ -7,7 +7,12 @@ dependencies:
     - field.field.media.instagram.field_media_in_library
     - media.type.instagram
   module:
+    - field_layout
     - media_entity_instagram
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: FGDcC__SDFv-9J0bOZYpGLVXKr2uIoXpNJOg8yLD7mU
 id: media.instagram.default
@@ -21,11 +26,13 @@ content:
     label: visually_hidden
     settings:
       width: 480
+      hidecaption: false
     third_party_settings: {  }
     region: content
 hidden:
   created: true
   field_media_in_library: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

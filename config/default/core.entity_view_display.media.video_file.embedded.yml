@@ -8,7 +8,12 @@ dependencies:
     - field.field.media.video_file.field_media_video_file
     - media.type.video_file
   module:
+    - field_layout
     - file
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: Uyt76Edz0xUv_nJpLNfM8d2zaAooh3Q5YvoDcddPwBQ
 id: media.video_file.embedded
@@ -33,6 +38,7 @@ content:
 hidden:
   created: true
   field_media_in_library: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

@@ -1,0 +1,27 @@
+uuid: 19c1f0a7-acc3-401c-9111-700ab3f75e7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.banner.field_enlace_banner
+    - field.field.node.banner.field_fecha_activo_banner
+    - field.field.node.banner.field_imagen_banner
+    - node.type.banner
+  module:
+    - user
+id: node.banner.teaser
+targetEntityType: node
+bundle: banner
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_enlace_banner: true
+  field_fecha_activo_banner: true
+  field_imagen_banner: true
+  langcode: true

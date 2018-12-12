@@ -8,9 +8,14 @@ dependencies:
     - image.style.thumbnail
     - media.type.document
   module:
+    - field_layout
     - file
     - image
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: 4tgcXj_iKv9Fw3xmONUfCHKqO7OeOa11qVesruN4k4k
 id: media.document.default
@@ -31,7 +36,8 @@ content:
   field_document:
     weight: 2
     label: above
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
@@ -61,3 +67,4 @@ content:
     region: content
 hidden:
   field_media_in_library: true
+  langcode: true

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - field_layout
     - metatag
     - panelizer
     - user
@@ -61,6 +62,9 @@ third_party_settings:
         static_context: {  }
     allow: true
     default: default
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: 4Jl7ekV85NPAM5Ybd0AMFm6PQR2aKcpP-7iTTlXph9Q
 id: node.landing_page.full
@@ -88,4 +92,5 @@ content:
 hidden:
   body: true
   content_moderation_control: true
+  langcode: true
   panelizer: true

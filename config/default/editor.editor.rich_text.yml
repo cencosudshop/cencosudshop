@@ -20,6 +20,7 @@ settings:
             - Bold
             - Italic
             - Strike
+            - Underline
             - Superscript
             - Subscript
             - '-'
@@ -41,20 +42,48 @@ settings:
             - Table
             - HorizontalRule
             - media_browser
+            - DrupalImage
         -
           name: 'Block Formatting'
           items:
             - Format
         -
+          name: Aligment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+      -
+        -
+          name: 'Text Options'
+          items:
+            - Copy
+            - Cut
+            - Paste
+            - PasteFromWord
+            - PasteText
+            - Styles
+        -
           name: Tools
           items:
             - ShowBlocks
             - Source
+            - Maximize
+            - SpecialChar
+        -
+          name: Others
+          items:
+            - Undo
+            - Redo
+            - Outdent
+            - Indent
+            - node
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public

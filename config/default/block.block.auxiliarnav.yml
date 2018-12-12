@@ -1,0 +1,31 @@
+uuid: b28da884-5211-4a5f-8b5e-11488eaf9468
+langcode: en
+status: false
+dependencies:
+  module:
+    - language
+  theme:
+    - bootstrap
+id: auxiliarnav
+theme: bootstrap
+region: navigation
+weight: -11
+provider: null
+plugin: 'block_content:89976da8-0be3-497e-bc82-cb5bcefefe4b'
+settings:
+  id: 'block_content:89976da8-0be3-497e-bc82-cb5bcefefe4b'
+  label: auxiliar-nav
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  language:
+    id: language
+    langcodes:
+      es: es
+      en: en
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

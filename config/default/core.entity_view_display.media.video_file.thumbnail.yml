@@ -9,7 +9,12 @@ dependencies:
     - image.style.medium
     - media.type.video_file
   module:
+    - field_layout
     - image
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: LnhtiSv-DKlqP8O8PK4qb2oFukMS301vvc94upqHTYg
 id: media.video_file.thumbnail
@@ -30,5 +35,6 @@ hidden:
   created: true
   field_media_in_library: true
   field_media_video_file: true
+  langcode: true
   name: true
   uid: true

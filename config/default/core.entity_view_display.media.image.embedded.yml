@@ -8,7 +8,12 @@ dependencies:
     - field.field.media.image.image
     - media.type.image
   module:
+    - field_layout
     - image
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: FaHkkj9J9DxKQ-R7RNddSDq_d0D6UBY3hoKzoAQoGaw
 id: media.image.embedded
@@ -28,6 +33,7 @@ content:
 hidden:
   created: true
   field_media_in_library: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

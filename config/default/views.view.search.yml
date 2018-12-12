@@ -6,6 +6,7 @@ dependencies:
     - search_api.index.content
   module:
     - search_api
+    - views_autocomplete_filters
 _core:
   default_config_hash: 8eXHpZgzJ58fVmB7evA4TNESdXWjMOW9AFPYSxEimE4
 id: search
@@ -77,8 +78,11 @@ display:
         options:
           view_modes:
             'entity:node':
+              banner: default
               landing_page: teaser
               page: teaser
+              tienda: default
+              tienda_mall: default
       fields:
         rendered:
           table: search_api_index_content

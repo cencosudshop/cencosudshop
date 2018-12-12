@@ -39,8 +39,11 @@ field_settings:
         anonymous: anonymous
       view_mode:
         'entity:node':
+          banner: default
           landing_page: full
           page: default
+          tienda: default
+          tienda_mall: default
   status:
     label: null
     datasource_id: 'entity:node'

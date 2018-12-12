@@ -9,7 +9,12 @@ dependencies:
     - image.style.thumbnail
     - media.type.tweet
   module:
+    - field_layout
     - image
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: VTsBksl8WpXfyee2ZCWKhunXQJP0sszeZuOxjjaLxk0
 id: media.tweet.media_library
@@ -30,5 +35,6 @@ hidden:
   created: true
   embed_code: true
   field_media_in_library: true
+  langcode: true
   name: true
   uid: true

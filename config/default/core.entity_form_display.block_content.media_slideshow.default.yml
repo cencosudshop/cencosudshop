@@ -9,6 +9,12 @@ dependencies:
   module:
     - content_moderation
     - entity_browser
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: 3KEtclm2Znn53hmVYKmkafRaI1f0EuiAaBNaLH97BkQ
 id: block_content.media_slideshow.default
@@ -37,6 +43,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default

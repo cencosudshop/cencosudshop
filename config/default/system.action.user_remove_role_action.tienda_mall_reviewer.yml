@@ -1,0 +1,14 @@
+uuid: 26e5c582-ee94-4b10-aba1-152dfaf982af
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tienda_mall_reviewer
+  module:
+    - user
+id: user_remove_role_action.tienda_mall_reviewer
+label: 'Remove the Tienda en Mall reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tienda_mall_reviewer
