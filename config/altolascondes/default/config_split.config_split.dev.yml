@@ -5,11 +5,11 @@ dependencies: {  }
 id: dev
 label: Dev
 description: ''
-folder: ../config/altolacondes/envs/dev
+folder: ../config/altolascondes/envs/dev
 module: {  }
 theme: {  }
 blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 1
+weight: 0

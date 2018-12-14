@@ -1,9 +1,0 @@
-uuid: aac5b11c-78a2-4be0-8a62-66d36d1c87a9
-langcode: en
-status: true
-dependencies: {  }
-name: 'Categorías Tiendas'
-vid: categorias_tiendas
-description: 'Categorías asociadas a las tiendas.'
-hierarchy: 0
-weight: 0

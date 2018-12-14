@@ -5,11 +5,11 @@ dependencies: {  }
 id: ci
 label: CI
 description: ''
-folder: ../config/envs/ci
+folder: ../config/ccenter/envs/ci
 module: {  }
 theme: {  }
 blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 1
+weight: 0
