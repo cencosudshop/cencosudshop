@@ -1,0 +1,14 @@
+uuid: c3193784-7f63-47f2-b58a-8ab56f142a0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tienda_creator
+  module:
+    - user
+id: user_remove_role_action.tienda_creator
+label: 'Remove the Tienda creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tienda_creator

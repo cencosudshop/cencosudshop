@@ -1,0 +1,14 @@
+uuid: 5c0716f6-110f-443e-9207-8b14f9f8a397
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tienda_creator
+  module:
+    - user
+id: user_add_role_action.tienda_creator
+label: 'Add the Tienda creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tienda_creator

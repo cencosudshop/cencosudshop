@@ -1,0 +1,37 @@
+uuid: bf8512a0-b4b0-41c8-9c28-9530bce77399
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.search_tiendas
+    - views.view.tiendas
+  module:
+    - views
+    - search_api_autocomplete
+id: tiendas
+label: Tiendas
+index_id: search_tiendas
+suggester_settings:
+  live_results:
+    fields: {  }
+    view_modes:
+      'entity:node':
+        tienda_mall: default
+  server:
+    fields: {  }
+suggester_weights:
+  live_results: 0
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:tiendas':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: false
+  autosubmit: true
+  submit_button_selector: ':submit'
+  delay: null

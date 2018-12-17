@@ -1,4 +1,4 @@
-uuid: bc5ff61e-bd55-4b92-af6a-a9363a93d4b2
+uuid: b3478619-0a06-4114-9160-334678324c8f
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,12 @@ dependencies:
     - field.field.media.video_file.field_media_video_file
     - media.type.video_file
   module:
+    - field_layout
     - file
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: caM44LmMqnda-SUlBbdgdae5SICk875uFUPvoHPLdZU
 id: media.video_file.default

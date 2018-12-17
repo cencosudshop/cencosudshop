@@ -1,4 +1,4 @@
-uuid: abb12bef-b499-4ec5-bb84-48b5f586b447
+uuid: f2c12d63-4485-43dd-adc5-1bcae8db4d94
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,12 @@ dependencies:
     - field.field.media.video_file.field_media_video_file
     - media.type.video_file
   module:
+    - field_layout
     - file
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: Uyt76Edz0xUv_nJpLNfM8d2zaAooh3Q5YvoDcddPwBQ
 id: media.video_file.embedded

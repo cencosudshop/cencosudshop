@@ -5,7 +5,7 @@ dependencies: {  }
 id: ci
 label: CI
 description: ''
-folder: ../config/envs/ci
+folder: ../config/ptemuco/envs/ci
 module: {  }
 theme: {  }
 blacklist: {  }

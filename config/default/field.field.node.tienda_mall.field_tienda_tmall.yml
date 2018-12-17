@@ -1,0 +1,29 @@
+uuid: 38ef0944-e35c-400e-8325-23c5682a5081
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tienda_tmall
+    - node.type.tienda
+    - node.type.tienda_mall
+id: node.tienda_mall.field_tienda_tmall
+field_name: field_tienda_tmall
+entity_type: node
+bundle: tienda_mall
+label: Tienda
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tienda: tienda
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: tienda
+field_type: entity_reference

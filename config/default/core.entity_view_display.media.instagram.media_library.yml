@@ -1,4 +1,4 @@
-uuid: 66155893-99c3-4b5b-9b21-4e03af52f035
+uuid: b996be63-805d-4f43-a58c-1a84b2382fd8
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,12 @@ dependencies:
     - image.style.thumbnail
     - media.type.instagram
   module:
+    - field_layout
     - image
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: H1EgOkDqYIIvR7cxkNnfvTbc95tFI_HwDu5rm7LdhNI
 id: media.instagram.media_library

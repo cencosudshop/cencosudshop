@@ -1,4 +1,4 @@
-uuid: 32e7c5dd-bf35-4ca5-9ef3-0e9e98c6e78e
+uuid: 39de4c78-8f1d-4e0f-84a8-1b0d8fc2acb8
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,14 @@ dependencies:
     - media.type.document
   module:
     - content_moderation
+    - field_layout
     - file
+    - layout_discovery
     - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: xFJUl0MccoGPEv1eb_I_XnxzjqvZ8M5HA1G3PBtv9IE
 id: media.document.default

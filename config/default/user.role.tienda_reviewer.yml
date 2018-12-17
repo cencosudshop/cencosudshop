@@ -1,0 +1,19 @@
+uuid: 12f86e8f-5aa6-4e96-b3f3-70b32d4447b4
+langcode: en
+status: true
+dependencies: {  }
+id: tienda_reviewer
+label: 'Tienda reviewer'
+weight: 8
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any tienda content'
+  - 'edit any tienda content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

@@ -1,0 +1,14 @@
+uuid: e9d82f76-d573-43f9-ad86-bf2e045f9e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tienda_mall_creator
+  module:
+    - user
+id: user_remove_role_action.tienda_mall_creator
+label: 'Remove the Tienda en Mall creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tienda_mall_creator

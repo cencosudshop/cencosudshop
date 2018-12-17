@@ -1,0 +1,355 @@
+uuid: 00b0faf2-6e26-452e-8b92-f08b477c9175
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.tienda_mall.field_fotos_tmall
+    - field.field.node.tienda_mall.field_horario_tmall
+    - field.field.node.tienda_mall.field_mall_tmall
+    - field.field.node.tienda_mall.field_nivel_tmall
+    - field.field.node.tienda_mall.field_telefono_tmall
+    - field.field.node.tienda_mall.field_tienda_tmall
+    - node.type.tienda_mall
+  module:
+    - ds
+    - ds_chains
+    - field_group
+    - field_layout
+    - options
+    - panelizer
+    - slick
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          0b8474d5-ff52-4a5a-8637-cd33e5c141ba:
+            id: 'entity_field:node:field_fotos_tmall'
+            label: Fotos
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: image
+              settings:
+                image_style: ''
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right_region
+            weight: -1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 0b8474d5-ff52-4a5a-8637-cd33e5c141ba
+          8557866d-9c24-4cb3-a130-5352dd3b2f7e:
+            id: 'entity_field:node:field_horario_tmall'
+            label: Horario
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left_region
+            weight: -8
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 8557866d-9c24-4cb3-a130-5352dd3b2f7e
+          c41c1a78-e05a-43ff-82fe-990e741eb24f:
+            id: 'entity_field:node:field_mall_tmall'
+            label: Mall
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left_region
+            weight: -9
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: c41c1a78-e05a-43ff-82fe-990e741eb24f
+          95c35e94-313b-4026-b86a-71f13e322613:
+            id: 'entity_field:node:field_nivel_tmall'
+            label: Nivel
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: list_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right_region
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 95c35e94-313b-4026-b86a-71f13e322613
+          ab3413d6-02a4-472a-83be-5ad947cb32bf:
+            id: 'entity_field:node:field_telefono_tmall'
+            label: Teléfono
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left_region
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: ab3413d6-02a4-472a-83be-5ad947cb32bf
+          b177e7f1-79eb-4652-9bab-25872c0c2b0c:
+            id: 'entity_field:node:field_tienda_tmall'
+            label: Tienda
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left_region
+            weight: -10
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: b177e7f1-79eb-4652-9bab-25872c0c2b0c
+        id: panels_variant
+        label: Default
+        uuid: 6e29db8d-4a84-44d6-96d1-7251428fba39
+        weight: 0
+        layout: 'dynamic_layout:two_columns_33x66'
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:tienda_mall:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+  ds_chains:
+    fields:
+      field_tienda_tmall: field_tienda_tmall
+  field_group:
+    group_info_tienda:
+      children:
+        - field_horario_tmall
+        - field_telefono_tmall
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda'
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: 'Info Tienda'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: 'name="info_tienda"  style="background-color:#f8f8f8"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Info Tienda'
+  ds:
+    layout:
+      id: ds_3col_stacked_fluid
+      library: ds/ds_3col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - links
+      left:
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_logo_tienda'
+        - group_info_tienda
+        - field_horario_tmall
+        - field_telefono_tmall
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda'
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
+      middle:
+        - field_tienda_tmall
+        - field_nivel_tmall
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
+        - field_fotos_tmall
+    fields:
+      'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda':
+        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
+        weight: 6
+        label: hidden
+        formatter: entity_reference_label
+        settings:
+          link: false
+      'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda':
+        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
+        weight: 9
+        label: hidden
+        formatter: basic_string
+      'ds_chains:node/tienda_mall/field_tienda_tmall/field_logo_tienda':
+        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_logo_tienda'
+        weight: 1
+        label: hidden
+        formatter: blazy
+      'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda':
+        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda'
+        weight: 5
+        label: hidden
+        formatter: link
+id: node.tienda_mall.full
+targetEntityType: node
+bundle: tienda_mall
+mode: full
+content:
+  field_fotos_tmall:
+    weight: 10
+    label: hidden
+    settings:
+      style: ''
+      optionset: default
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: full
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      grid_header: ''
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      iframe_lazy: true
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: slick_image
+    region: middle
+  field_horario_tmall:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_nivel_tmall:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: middle
+  field_telefono_tmall:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_tienda_tmall:
+    weight: 7
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: middle
+  links:
+    weight: 0
+    region: header
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_mall_tmall: true
+  langcode: true

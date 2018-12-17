@@ -1,4 +1,4 @@
-uuid: a6975c41-19bb-41b2-b164-19abd6b3b10b
+uuid: ee6fa134-5511-49ea-8a44-71b0f3c73714
 langcode: en
 status: true
 dependencies:
@@ -20,6 +20,7 @@ settings:
             - Bold
             - Italic
             - Strike
+            - Underline
             - Superscript
             - Subscript
             - '-'
@@ -41,20 +42,48 @@ settings:
             - Table
             - HorizontalRule
             - media_browser
+            - DrupalImage
         -
           name: 'Block Formatting'
           items:
             - Format
         -
+          name: Aligment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+      -
+        -
+          name: 'Text Options'
+          items:
+            - Copy
+            - Cut
+            - Paste
+            - PasteFromWord
+            - PasteText
+            - Styles
+        -
           name: Tools
           items:
             - ShowBlocks
             - Source
+            - Maximize
+            - SpecialChar
+        -
+          name: Others
+          items:
+            - Undo
+            - Redo
+            - Outdent
+            - Indent
+            - node
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public
