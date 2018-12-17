@@ -1,4 +1,4 @@
-uuid: c883841f-7afc-44ec-8b7a-c2818dc8ff53
+uuid: 63eb37e5-7894-41df-b2de-ac53e1da5133
 langcode: en
 status: true
 dependencies:
@@ -61,3 +61,4 @@ content:
     region: content
 hidden:
   field_media_in_library: true
+  langcode: true

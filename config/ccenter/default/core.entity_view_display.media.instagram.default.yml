@@ -1,4 +1,4 @@
-uuid: 109bd396-d38b-4e7e-b46b-b2bc36ee6dba
+uuid: e4580168-154d-49f3-b31a-b90be9c4426b
 langcode: en
 status: true
 dependencies:
@@ -26,6 +26,7 @@ content:
 hidden:
   created: true
   field_media_in_library: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

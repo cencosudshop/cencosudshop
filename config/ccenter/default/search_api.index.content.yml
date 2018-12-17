@@ -1,4 +1,4 @@
-uuid: bfb5b758-3588-4a5c-bec3-342df6c2b2df
+uuid: c25a5ac2-0570-4f4a-ba5e-02ae25812396
 langcode: en
 status: true
 dependencies:
@@ -41,8 +41,6 @@ field_settings:
         'entity:node':
           landing_page: full
           page: default
-          panorama: default
-          promocion: default
   status:
     label: null
     datasource_id: 'entity:node'

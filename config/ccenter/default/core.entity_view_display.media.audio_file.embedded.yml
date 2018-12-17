@@ -1,4 +1,4 @@
-uuid: c7caf897-2468-414b-8564-24daa2fdb5f1
+uuid: 5caffeca-8c33-4dc6-bb04-d9126b1aeb34
 langcode: en
 status: true
 dependencies:
@@ -30,6 +30,7 @@ content:
 hidden:
   created: true
   field_media_in_library: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

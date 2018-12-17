@@ -1,10 +1,11 @@
-uuid: 9679e3b1-e840-4018-be4e-3eb50b5c5f9e
+uuid: b91d0575-9be5-4ec6-bfa5-6594c0ac9dc2
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.panelizer
     - node.type.page
   module:
     - metatag
@@ -38,4 +39,5 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  langcode: true
   panelizer: true

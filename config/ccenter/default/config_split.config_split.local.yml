@@ -5,7 +5,7 @@ dependencies: {  }
 id: local
 label: Local
 description: ''
-folder: ../config/ccenter/envs/local
+folder: ../config/envs/local
 module: {  }
 theme: {  }
 blacklist: {  }

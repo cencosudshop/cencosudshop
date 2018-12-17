@@ -1,7 +1,7 @@
 uuid: a31433d5-32cc-4434-9cec-b3d68c19e80d
 name: Cencosudshop
 mail: admin@admin
-slogan: 'Default platform'
+slogan: defaults
 page:
   403: ''
   404: ''

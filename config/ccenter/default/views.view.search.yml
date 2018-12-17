@@ -1,4 +1,4 @@
-uuid: b2c34ce6-7fa1-4610-ab44-e079526c09f6
+uuid: 9e0c2185-55c6-41ff-aa3e-579eb5b0d9e9
 langcode: en
 status: true
 dependencies:
@@ -79,8 +79,6 @@ display:
             'entity:node':
               landing_page: teaser
               page: teaser
-              panorama: default
-              promocion: default
       fields:
         rendered:
           table: search_api_index_content

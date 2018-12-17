@@ -1,14 +1,14 @@
-uuid: f7099ddc-cb0a-4eb2-91b4-114dea5ad352
-name: 'Costanera Center'
-mail: no-reply@acquia.com
-slogan: Default
+uuid: a31433d5-32cc-4434-9cec-b3d68c19e80d
+name: Cencosudshop
+mail: admin@admin
+slogan: 'Default platform'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /user/login
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
-default_langcode: en
+default_langcode: es
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

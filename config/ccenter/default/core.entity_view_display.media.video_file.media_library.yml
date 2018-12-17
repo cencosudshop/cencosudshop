@@ -1,4 +1,4 @@
-uuid: f162706c-585b-4806-83f6-89ad7e37579b
+uuid: 80a95c4c-b063-479c-bf35-6c922b004516
 langcode: en
 status: true
 dependencies:
@@ -30,5 +30,6 @@ hidden:
   created: true
   field_media_in_library: true
   field_media_video_file: true
+  langcode: true
   name: true
   uid: true
