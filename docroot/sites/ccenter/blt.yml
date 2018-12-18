@@ -6,7 +6,7 @@ project:
   human_name: ccenter
 drush:
   aliases:
-    local: ccenter.local
+    local: self
     remote: ccenter.dev
 drupal:
   db:

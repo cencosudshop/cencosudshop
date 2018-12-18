@@ -777,6 +777,3 @@ if (file_exists('/var/www/site-php')) {
 #$blt_override_config_directories = FALSE;
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
-
-$config_directories = array();
-$config_directories[CONFIG_SYNC_DIRECTORY] = '../config/default';

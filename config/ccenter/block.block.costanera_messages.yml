@@ -1,0 +1,22 @@
+uuid: 283a7ed6-e5e0-47c2-be19-08e70f4ca10a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - costanera
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: costanera_messages
+theme: costanera
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

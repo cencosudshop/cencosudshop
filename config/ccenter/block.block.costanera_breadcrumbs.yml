@@ -1,0 +1,22 @@
+uuid: ed321186-f571-4e18-bc7b-6339bbad64b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - costanera
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: costanera_breadcrumbs
+theme: costanera
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
