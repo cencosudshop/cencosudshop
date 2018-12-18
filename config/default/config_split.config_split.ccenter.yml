@@ -1,15 +1,15 @@
-uuid: 8f068f4c-b2f5-4f85-84e5-1f57277553c4
+uuid: 2a72464e-8f81-4af2-8d78-7862bb4cb3ce
 langcode: en
-status: true
+status: false
 dependencies: {  }
-id: stage
-label: Stage
+id: ccenter
+label: ccenter
 description: ''
-folder: ../config/envs/stage
+folder: ../config/ccenter
 module: {  }
 theme: {  }
 blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 3
+weight: 0
