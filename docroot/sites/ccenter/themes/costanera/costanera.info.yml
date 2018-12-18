@@ -33,9 +33,3 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
-
-# Information added by Drupal.org packaging script on 2018-08-12
-version: '8.x-1.6'
-core: '8.x'
-project: 'costanera'
-datestamp: 1534097584
