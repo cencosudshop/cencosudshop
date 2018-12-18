@@ -1,0 +1,22 @@
+uuid: 02490108-e43a-49ff-a3ca-fdd5f5b00f7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - costanera
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: costanera_content
+theme: costanera
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
