@@ -1,0 +1,22 @@
+uuid: 47fc2e39-f220-4869-b9d4-737bf33c49a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - costanera
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: costanera_powered
+theme: costanera
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

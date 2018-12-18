@@ -1,0 +1,20 @@
+uuid: 1dbbf2fb-3d3c-4b42-b1c2-49b2d9bab68a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - costanera
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: costanera_local_actions
+theme: costanera
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

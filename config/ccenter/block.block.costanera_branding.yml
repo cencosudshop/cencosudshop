@@ -1,0 +1,25 @@
+uuid: e06fb390-096d-4436-a708-9c5ee7cb3adc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - costanera
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: costanera_branding
+theme: costanera
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
