@@ -6,7 +6,7 @@ project:
   human_name: floridacenter
 drush:
   aliases:
-    local: floridacenter.local
+    local: self
     remote: floridacenter.dev
 drupal:
   db:

@@ -6,7 +6,7 @@ project:
   human_name: ddccenter
 drush:
   aliases:
-    local: ddccenter.local
+    local: self
     remote: ddccenter.dev
 drupal:
   db:

@@ -6,7 +6,7 @@ project:
   human_name: ddpbelloto
 drush:
   aliases:
-    local: ddpbelloto.local
+    local: self
     remote: ddpbelloto.dev
 drupal:
   db:

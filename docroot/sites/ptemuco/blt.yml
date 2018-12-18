@@ -6,7 +6,7 @@ project:
   human_name: ptemuco
 drush:
   aliases:
-    local: ptemuco.local
+    local: self
     remote: ptemuco.dev
 drupal:
   db:
