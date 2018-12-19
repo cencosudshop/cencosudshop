@@ -54,3 +54,10 @@ multisites:
   - ddplareina
   - ddprancagua
   - ddptemuco
+command-hooks:
+  frontend-reqs:
+    dir: ${repo.root}
+    command: ./scripts/custom/cencosudfrontend.sh
+  frontend-assets:
+    dir: ${repo.root}
+    command: ./scripts/custom/cencosudfe-assets.sh

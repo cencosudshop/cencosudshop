@@ -6,7 +6,7 @@ project:
   human_name: pladehesa
 drush:
   aliases:
-    local: pladehesa.local
+    local: self
     remote: pladehesa.dev
 drupal:
   db:

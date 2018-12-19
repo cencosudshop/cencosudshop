@@ -774,4 +774,3 @@ if (file_exists('/var/www/site-php')) {
 }
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
-
