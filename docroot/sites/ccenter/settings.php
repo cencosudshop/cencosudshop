@@ -773,7 +773,4 @@ if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/cencosudshop/ccenter-settings.inc';
 }
 
-// Don't let BLT handle config management.
-#$blt_override_config_directories = FALSE;
-
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
