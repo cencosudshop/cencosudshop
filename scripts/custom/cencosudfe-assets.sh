@@ -1,3 +1,3 @@
-cd docroot/sites/ccenter/themes/custom/costanera
+cd docroot/themes/custom/ccenter
 
 
