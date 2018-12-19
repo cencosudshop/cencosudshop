@@ -1,0 +1,22 @@
+uuid: 410477f0-e8b4-462b-a08f-552713e10f38
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ccenter
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: ccenter_local_tasks
+theme: ccenter
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

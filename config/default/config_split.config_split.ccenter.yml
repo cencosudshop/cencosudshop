@@ -10,8 +10,7 @@ module: {  }
 theme: {  }
 blacklist: {  }
 graylist:
-  - entity_browser.browser.image_browser
-  - entity_browser.browser.media_browser
+  - system.theme
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

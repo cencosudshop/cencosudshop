@@ -1,0 +1,22 @@
+uuid: f110245f-3a78-4761-8313-096275079b7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ccenter
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: ccenter_breadcrumbs
+theme: ccenter
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
