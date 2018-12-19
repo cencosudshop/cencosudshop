@@ -55,7 +55,7 @@ multisites:
   - ddprancagua
   - ddptemuco
 command-hooks:
-  frontend-req:
+  frontend-reqs:
     dir: ${repo.root}
     command: ./scripts/custom/cencosudfrontend.sh
   frontend-assets:

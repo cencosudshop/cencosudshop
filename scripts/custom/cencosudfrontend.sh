@@ -1,4 +1,4 @@
-cd docroot/sites/ccenter/themes/custom/costanera
+cd docroot/themes/custom/ccenter
 
 npm install bootstrap@4.1.3
 
