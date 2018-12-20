@@ -1,0 +1,13 @@
+uuid: 252b5657-2360-4ef3-8a42-5776ebdf79c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.favoritos.flag
+label: Favorita
+type: node
+plugin: 'flag_action:favoritos.flag'
+configuration:
+  flag_id: favoritos
+  flag_action: flag

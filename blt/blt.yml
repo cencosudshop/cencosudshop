@@ -1,4 +1,5 @@
 project:
+  machine_name: blted8
   prefix: CEN
   human_name: Cencosud
   profile:
@@ -12,6 +13,8 @@ deploy:
   tag_source: true
 drush:
   aliases:
+    remote: '${project.machine_name}.test'
+    local: self
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:

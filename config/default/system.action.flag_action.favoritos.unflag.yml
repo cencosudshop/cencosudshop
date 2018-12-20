@@ -1,0 +1,13 @@
+uuid: 440e75db-e0a0-4c03-ac5f-c5c3b9e85feb
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.favoritos.unflag
+label: 'Remover de favoritas'
+type: node
+plugin: 'flag_action:favoritos.unflag'
+configuration:
+  flag_id: favoritos
+  flag_action: unflag
