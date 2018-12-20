@@ -8,10 +8,12 @@ dependencies:
     - field.storage.node.field_nivel_tmall
     - field.storage.node.field_telefono_tmall
     - field.storage.node.field_website_tienda
+    - flag.flag.favoritos
     - node.type.tienda_mall
     - taxonomy.vocabulary.categorias_tiendas
   module:
     - better_exposed_filters
+    - flag
     - image
     - link
     - node
@@ -74,6 +76,14 @@ display:
               more_options:
                 is_secondary: false
                 placeholder_text: '¿Qué tienda buscas?'
+            flagged:
+              bef_format: bef_single
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: "- Any -|Todas\r\nTrue|Favoritas\r\nFalse|No favoritas"
             field_nivel_tmall_value:
               bef_format: bef
               more_options:
@@ -90,11 +100,19 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
+            field_categoria_tienda_target_id_1:
+              bef_format: default
+              more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: '- Any -|Todas'
           text_input_required_format: rich_text
       pager:
         type: infinite_scroll
         options:
-          items_per_page: 2
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
@@ -293,8 +311,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ title_1 }}</ br>Nivel: '
             make_link: false
             path: ''
             absolute: false
@@ -358,7 +376,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '</ br>Nivel {{ field_nivel_tmall }}'
             make_link: false
             path: ''
@@ -603,6 +621,56 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        link_flag:
+          id: link_flag
+          table: flagging
+          field: link_flag
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: flagging
+          plugin_id: flag_link
       filters:
         status:
           value: '1'
@@ -686,6 +754,58 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: views_autocomplete_filters_string
+        flagged:
+          id: flagged
+          table: flagging
+          field: flagged
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Favoritas
+            description: ''
+            use_operator: false
+            operator: flagged_op
+            identifier: flagged
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              tienda_creator: '0'
+              tienda_reviewer: '0'
+              tienda_mall_creator: '0'
+              tienda_mall_reviewer: '0'
+              banner_creator: '0'
+              banner_reviewer: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: flagging
+          plugin_id: flag_filter
         field_nivel_tmall_value:
           id: field_nivel_tmall_value
           table: node__field_nivel_tmall
@@ -752,7 +872,7 @@ display:
           exposed: true
           expose:
             operator_id: field_categoria_tienda_target_id_op
-            label: Categoría
+            label: Categorías
             description: ''
             use_operator: false
             operator: field_categoria_tienda_target_id_op
@@ -760,6 +880,64 @@ display:
             required: false
             remember: false
             multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              tienda_creator: '0'
+              tienda_reviewer: '0'
+              tienda_mall_creator: '0'
+              tienda_mall_reviewer: '0'
+              banner_creator: '0'
+              banner_reviewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: categorias_tiendas
+          hierarchy: false
+          error_message: false
+          plugin_id: taxonomy_index_tid
+        field_categoria_tienda_target_id_1:
+          id: field_categoria_tienda_target_id_1
+          table: node__field_categoria_tienda
+          field: field_categoria_tienda_target_id
+          relationship: field_tienda_tmall
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_categoria_tienda_target_id_1_op
+            label: 'Categoría 2'
+            description: ''
+            use_operator: false
+            operator: field_categoria_tienda_target_id_1_op
+            identifier: field_categoria_tienda_target_id_1
+            required: false
+            remember: false
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -826,6 +1004,18 @@ display:
           admin_label: 'field_tienda_tmall: Content'
           required: false
           plugin_id: standard
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Favoritas
+          required: false
+          flag: favoritos
+          user_scope: current
+          entity_type: node
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
@@ -856,7 +1046,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: listado-tiendas
+      path: tiendas
       exposed_block: true
     cache_metadata:
       max-age: -1
