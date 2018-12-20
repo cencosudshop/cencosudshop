@@ -1,0 +1,16 @@
+uuid: 59599130-52d8-4add-9ba0-73817fb1bdea
+langcode: en
+status: false
+dependencies: {  }
+id: ddccenter
+label: ddccenter
+description: ''
+folder: ../config/ddccenter
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist:
+  - system.theme
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

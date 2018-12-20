@@ -1,0 +1,20 @@
+uuid: 1ddaf3ba-a215-4a32-9054-3e8ceb94017f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ddccenter
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: ddccenter_local_actions
+theme: ddccenter
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
