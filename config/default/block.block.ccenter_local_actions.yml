@@ -1,0 +1,20 @@
+uuid: 3529a419-e2bb-4bb7-b51a-959b1fe21e7b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ccenter
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: ccenter_local_actions
+theme: ccenter
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

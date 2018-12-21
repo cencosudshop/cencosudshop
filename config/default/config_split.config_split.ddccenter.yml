@@ -1,11 +1,11 @@
-uuid: 432f3dfb-f2b3-4ddd-a404-b4db459e155a
+uuid: 59599130-52d8-4add-9ba0-73817fb1bdea
 langcode: en
 status: false
 dependencies: {  }
-id: ccenter
-label: ccenter
+id: ddccenter
+label: ddccenter
 description: ''
-folder: ../config/ccenter
+folder: ../config/ddccenter
 module: {  }
 theme: {  }
 blacklist: {  }

@@ -8,7 +8,19 @@
         "acquia/blt": "^9.2.0",
         "drupal/admin_toolbar": "^1.24",
         "drupal/auto_entitylabel": "^2.1@beta",
-        "drupal/bootstrap_barrio": "^4.17"
+        "drupal/better_exposed_filters": "^3.0@alpha",
+        "drupal/bootstrap_barrio": "^4.17",
+        "drupal/bootstrap_sass": "^1.6",
+        "drupal/ds_chains": "^1.0",
+        "drupal/field_group": "^1.0",
+        "drupal/flag": "^4.0@alpha",
+        "drupal/flag_anon": "1.x-dev",
+        "drupal/fontawesome": "^2.9",
+        "drupal/responsive_tables_filter": "^1.1",
+        "drupal/search_api_autocomplete": "^1.1",
+        "drupal/slick_views": "^1.0@RC",
+        "drupal/views_autocomplete_filters": "^1.2",
+        "drupal/views_autosubmit": "^1.0"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "^4.8"
