@@ -6,7 +6,7 @@ project:
   human_name: pnunoa
 drush:
   aliases:
-    local: pnunoa.local
+    local: self
     remote: pnunoa.dev
 drupal:
   db:
