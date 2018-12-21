@@ -37,6 +37,11 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  flag_bookmark:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 1
     settings: {  }

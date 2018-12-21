@@ -23,6 +23,11 @@ targetEntityType: node
 bundle: tienda_mall
 mode: teaser
 content:
+  flag_favoritos:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
