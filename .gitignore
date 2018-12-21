@@ -32,6 +32,10 @@ docroot/themes/custom/*/node_modules
 docroot/themes/custom/*/css
 docroot/themes/custom/*/styleguide
 
+# Ignore custom theme composers build artifacts
+docroot/themes/custom/ccenter/package-lock.json
+docroot/themes/custom/ccenter/package.json
+
 # Ignore build artifacts
 deployment_identifier
 /deploy
