@@ -21,7 +21,7 @@ ra:
     user: cencosudshop.ra
     ssh: { options: '-p 22' }
 test:
-    uri: cencosudshopstg.prod.acquia-sites.com
+    uri: 'http://stage.altolascondes.com'
     host: staging-32317.prod.hosting.acquia.com
     options: {  }
     paths: { dump-dir: /mnt/tmp }
