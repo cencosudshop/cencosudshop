@@ -1,0 +1,9 @@
+uuid: 30afc741-aaeb-4ffb-862d-841d0eabbbb8
+langcode: es
+status: true
+dependencies: {  }
+name: 'Centro Comercial'
+vid: centro_comercial
+description: ''
+hierarchy: 1
+weight: 0

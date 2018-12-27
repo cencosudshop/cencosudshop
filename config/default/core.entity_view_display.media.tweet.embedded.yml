@@ -1,4 +1,4 @@
-uuid: 75c4ed01-9f70-4bb2-b495-a33c06944fee
+uuid: e3acb382-279a-4b18-8817-46304d1cf883
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,7 @@ dependencies:
     - field.field.media.tweet.field_media_in_library
     - media.type.tweet
   module:
-    - field_layout
     - media_entity_twitter
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 576jZt8I-8Q1YDaS7WRwUEkAFKl2XEXG9X6aS00uiEc
 id: media.tweet.embedded

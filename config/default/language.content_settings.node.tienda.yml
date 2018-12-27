@@ -1,0 +1,11 @@
+uuid: abbd0f4e-cb0d-480d-a13b-52fa6e6e884f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tienda
+id: node.tienda
+target_entity_type_id: node
+target_bundle: tienda
+default_langcode: site_default
+language_alterable: false

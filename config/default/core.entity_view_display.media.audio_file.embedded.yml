@@ -1,4 +1,4 @@
-uuid: c7caf897-2468-414b-8564-24daa2fdb5f1
+uuid: 5caffeca-8c33-4dc6-bb04-d9126b1aeb34
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,7 @@ dependencies:
     - field.field.media.audio_file.field_media_in_library
     - media.type.audio_file
   module:
-    - field_layout
     - file
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: sM6UMbqZ5X3WRQ464PE3wFYF9svnQWCmrBRbRQAyMl4
 id: media.audio_file.embedded

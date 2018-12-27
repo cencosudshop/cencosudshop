@@ -1,4 +1,4 @@
-uuid: df94fe28-123f-4b86-a632-62ddf6fa4528
+uuid: df82da94-6407-4a80-b94a-581425dbb9c5
 langcode: en
 status: true
 dependencies:
@@ -9,12 +9,7 @@ dependencies:
     - image.style.thumbnail
     - media.type.document
   module:
-    - field_layout
     - image
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: b2OT-HhPhS2sEoaHLM_9deYfXw2A37hxc0TwsahXsp4
 id: media.document.media_library

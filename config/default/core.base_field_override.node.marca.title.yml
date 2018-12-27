@@ -1,0 +1,18 @@
+uuid: 26c775da-2c0b-4aa9-bc14-522e756a7065
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.marca
+id: node.marca.title
+field_name: title
+entity_type: node
+bundle: marca
+label: Marca
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

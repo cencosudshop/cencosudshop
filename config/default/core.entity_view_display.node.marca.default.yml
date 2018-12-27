@@ -1,0 +1,20 @@
+uuid: 684cdfa9-7298-4d67-8a4f-c6645d921d69
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.marca
+  module:
+    - user
+id: node.marca.default
+targetEntityType: node
+bundle: marca
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

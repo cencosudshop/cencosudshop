@@ -1,4 +1,4 @@
-uuid: 17efb3d0-766d-43ce-ac33-8283e85a1a6b
+uuid: 0cf3252b-b816-4efb-988f-af2dab21d135
 langcode: en
 status: true
 dependencies:
@@ -9,12 +9,7 @@ dependencies:
     - image.style.medium
     - media.type.audio_file
   module:
-    - field_layout
     - image
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: ZkdF5ut1PZ1MPJH9FMPRDYMyuI42lGa5R3QGTTU-LdY
 id: media.audio_file.thumbnail

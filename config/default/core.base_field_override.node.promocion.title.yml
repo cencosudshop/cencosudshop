@@ -1,0 +1,18 @@
+uuid: 3e3c18d0-9197-44b6-87a0-f1bd9fe100f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.promocion
+id: node.promocion.title
+field_name: title
+entity_type: node
+bundle: promocion
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

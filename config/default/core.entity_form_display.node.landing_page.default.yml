@@ -1,4 +1,4 @@
-uuid: a7f41864-8520-4fec-af05-ef4b58c9935c
+uuid: 48a419ae-b88d-4d73-adf6-64a8740da9e8
 langcode: en
 status: true
 dependencies:
@@ -9,16 +9,10 @@ dependencies:
     - node.type.landing_page
   module:
     - content_moderation
-    - field_layout
-    - layout_discovery
     - metatag
     - panelizer
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: B48sIkDf3G7VjHI5lzy7OHgBG1x0Lj_FI4-197i4oPQ
 id: node.landing_page.default

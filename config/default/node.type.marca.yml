@@ -1,0 +1,17 @@
+uuid: 2ed79ce2-a92d-4db0-899d-c54da33a5e7a
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Marca
+type: marca
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

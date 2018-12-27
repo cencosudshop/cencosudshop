@@ -1,4 +1,4 @@
-uuid: bfb5b758-3588-4a5c-bec3-342df6c2b2df
+uuid: c25a5ac2-0570-4f4a-ba5e-02ae25812396
 langcode: en
 status: true
 dependencies:
@@ -39,11 +39,10 @@ field_settings:
         anonymous: anonymous
       view_mode:
         'entity:node':
-          banner: default
           landing_page: full
-          page: default
+          marca: default
+          promocion: default
           tienda: default
-          tienda_mall: default
   status:
     label: null
     datasource_id: 'entity:node'

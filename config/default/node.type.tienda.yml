@@ -1,5 +1,5 @@
-uuid: 33c43798-9498-4e78-8351-995de0db8771
-langcode: en
+uuid: 8f7370ea-2cf7-40bd-a7cc-e8c0595d26b3
+langcode: es
 status: true
 dependencies:
   module:
@@ -10,8 +10,8 @@ third_party_settings:
     parent: ''
 name: Tienda
 type: tienda
-description: 'Tiendas presentes en los Malls de Cencosud'
+description: ''
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

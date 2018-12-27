@@ -1,4 +1,4 @@
-uuid: 1b36c63d-001b-4aec-a06e-f4328355a84f
+uuid: ed535dea-983d-4684-ae60-8a75e2cb34a3
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,7 @@ dependencies:
     - field.field.media.instagram.field_media_in_library
     - media.type.instagram
   module:
-    - field_layout
     - media_entity_instagram
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 2r0247fIz1-cJniAb5cEhB6aWuwsBmKlt0MQ3Kjryzg
 id: media.instagram.embedded
@@ -27,7 +22,6 @@ content:
     label: hidden
     settings:
       width: 480
-      hidecaption: false
     third_party_settings: {  }
     region: content
 hidden:

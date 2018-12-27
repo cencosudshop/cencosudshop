@@ -1,21 +1,12 @@
-uuid: c6e2e723-8aff-47f6-987b-221de1ddf00f
-langcode: en
-status: false
+uuid: acad44b1-e74a-45f8-a3b2-c5b0d0de90b4
+langcode: es
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.tienda.field_categoria_tienda
-    - field.field.node.tienda.field_descripcion_tienda
-    - field.field.node.tienda.field_logo_tienda
-    - field.field.node.tienda.field_website_tienda
     - node.type.tienda
   module:
-    - field_layout
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.tienda.teaser
 targetEntityType: node
 bundle: tienda
@@ -27,8 +18,9 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_categoria_tienda: true
-  field_descripcion_tienda: true
-  field_logo_tienda: true
-  field_website_tienda: true
+  field_centro_comercial: true
+  field_descripcion: true
+  field_marca: true
+  field_sitio_web: true
+  field_telefono: true
   langcode: true

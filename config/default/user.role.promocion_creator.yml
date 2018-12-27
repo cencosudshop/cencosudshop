@@ -1,0 +1,29 @@
+uuid: 98aeff38-5409-4e4d-b7f7-997358120153
+langcode: es
+status: true
+dependencies: {  }
+id: promocion_creator
+label: 'Promoción creator'
+weight: 11
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node promocion content'
+  - 'administer panelizer node promocion layout'
+  - 'change layouts in place editing'
+  - 'create promocion content'
+  - 'create url aliases'
+  - 'edit own promocion content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view promocion revisions'

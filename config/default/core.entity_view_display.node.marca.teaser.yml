@@ -1,0 +1,21 @@
+uuid: dedfd617-ae8b-4408-8234-081af4127f2b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.marca
+  module:
+    - user
+id: node.marca.teaser
+targetEntityType: node
+bundle: marca
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

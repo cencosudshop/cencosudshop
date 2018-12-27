@@ -1,0 +1,26 @@
+uuid: daeab119-57c3-47a6-94a7-8a14af3e723d
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.promocion
+  module:
+    - user
+id: node.promocion.teaser
+targetEntityType: node
+bundle: promocion
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_centro_comercial: true
+  field_descripcion: true
+  field_imagen: true
+  field_marca: true
+  langcode: true

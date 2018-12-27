@@ -1,11 +1,10 @@
-uuid: 07ca3570-2968-484c-8601-8b57c8c3ab0e
+uuid: 9c55d2b4-14db-4c02-a75b-1afaaca23e7a
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - entity_embed
-    - responsive_tables_filter
 _core:
   default_config_hash: Mc8Hl-Ya14lrbMXaUx7Ybmv-18vtqE4lw2DpgNHPj-s
 name: 'Rich Text'
@@ -76,9 +75,3 @@ filters:
     weight: -42
     settings:
       filter_url_length: 72
-  filter_responsive_tables_filter:
-    id: filter_responsive_tables_filter
-    provider: responsive_tables_filter
-    status: true
-    weight: 0
-    settings: {  }

@@ -1,9 +1,7 @@
-uuid: d98440c0-5f6b-4bd9-8b03-cda560fd14f4
+uuid: 84768dd7-0bd6-418f-80ae-faa1a65b1e20
 langcode: en
 status: true
 dependencies:
-  module:
-    - ctools
   theme:
     - bartik
 _core:
@@ -11,7 +9,7 @@ _core:
 id: bartik_page_title
 theme: bartik
 region: content
-weight: -50
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
@@ -19,11 +17,4 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      tienda_mall: tienda_mall
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
+visibility: {  }

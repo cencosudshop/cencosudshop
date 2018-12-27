@@ -1,4 +1,4 @@
-uuid: c883841f-7afc-44ec-8b7a-c2818dc8ff53
+uuid: 63eb37e5-7894-41df-b2de-ac53e1da5133
 langcode: en
 status: true
 dependencies:
@@ -8,14 +8,9 @@ dependencies:
     - image.style.thumbnail
     - media.type.document
   module:
-    - field_layout
     - file
     - image
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 4tgcXj_iKv9Fw3xmONUfCHKqO7OeOa11qVesruN4k4k
 id: media.document.default
@@ -36,8 +31,7 @@ content:
   field_document:
     weight: 2
     label: above
-    settings:
-      use_description_as_link_text: true
+    settings: {  }
     third_party_settings: {  }
     type: file_default
     region: content

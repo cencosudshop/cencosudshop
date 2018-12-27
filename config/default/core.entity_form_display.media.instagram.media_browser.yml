@@ -1,4 +1,4 @@
-uuid: 5fd9b462-e73c-46bf-b39a-98e06c1b62eb
+uuid: e4255400-ddab-4c94-8d10-521080968c66
 langcode: en
 status: true
 dependencies:
@@ -9,13 +9,7 @@ dependencies:
     - media.type.instagram
   module:
     - content_moderation
-    - field_layout
-    - layout_discovery
     - path
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: u-N2MuYnrDGzZl-ApOrQUcObS4Otz1uk01fI6LYtJQg
 id: media.instagram.media_browser

@@ -1,4 +1,4 @@
-uuid: 7321b8c6-fb87-4579-92c6-b4f42fbee873
+uuid: aed8ec3a-17ca-40ac-9f0f-f1ce8e351a0a
 langcode: en
 status: true
 dependencies:
@@ -9,12 +9,7 @@ dependencies:
     - image.style.medium
     - media.type.tweet
   module:
-    - field_layout
     - image
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 7POQWMMGHaAd5G2_zxlo9bWG9g3LLLyKp0jUb6hvnHU
 id: media.tweet.thumbnail

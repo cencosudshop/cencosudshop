@@ -1,0 +1,22 @@
+uuid: 5cffc934-7931-4ec8-b3a9-2a7f2686e83c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.marca
+id: node.marca.promote
+field_name: promote
+entity_type: node
+bundle: marca
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

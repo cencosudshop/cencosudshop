@@ -1,0 +1,21 @@
+uuid: 13f3db48-f36f-48ff-9d4f-aa38c203b7fc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion
+    - node.type.promocion
+  module:
+    - text
+id: node.promocion.field_descripcion
+field_name: field_descripcion
+entity_type: node
+bundle: promocion
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

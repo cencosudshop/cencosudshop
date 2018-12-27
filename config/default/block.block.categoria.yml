@@ -1,0 +1,29 @@
+uuid: 20cee3aa-b358-42bd-ac3b-b0ac06c0847f
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools_block
+  theme:
+    - bartik
+id: categoria
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'entity_field:node:field_categoria'
+settings:
+  id: 'entity_field:node:field_categoria'
+  label: Categoría
+  provider: ctools_block
+  label_display: visible
+  formatter:
+    label: above
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility: {  }

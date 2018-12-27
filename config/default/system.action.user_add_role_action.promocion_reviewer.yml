@@ -1,0 +1,14 @@
+uuid: ed0a4fe8-6886-4163-b12a-bbbb01dfd7e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.promocion_reviewer
+  module:
+    - user
+id: user_add_role_action.promocion_reviewer
+label: 'Add the Promoción reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: promocion_reviewer

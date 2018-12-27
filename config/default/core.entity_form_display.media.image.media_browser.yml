@@ -1,4 +1,4 @@
-uuid: 29e06292-a625-4047-8927-2eed6733e4fc
+uuid: c8a1916a-e478-4118-b23f-d172bdbd30c5
 langcode: en
 status: true
 dependencies:
@@ -10,15 +10,9 @@ dependencies:
     - media.type.image
   module:
     - content_moderation
-    - field_layout
     - image_widget_crop
-    - layout_discovery
     - lightning_media
     - path
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: iVmRBD7y3Gmddt29sSx9DwwH6Q4UaROqMu7FLyy_bvQ
 id: media.image.media_browser
