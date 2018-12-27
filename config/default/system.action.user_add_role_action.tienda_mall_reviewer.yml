@@ -1,0 +1,14 @@
+uuid: a0aa1c80-353f-4df6-86f5-21431460915a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tienda_mall_reviewer
+  module:
+    - user
+id: user_add_role_action.tienda_mall_reviewer
+label: 'Add the Tienda en Mall reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tienda_mall_reviewer

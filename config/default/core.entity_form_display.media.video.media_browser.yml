@@ -1,4 +1,4 @@
-uuid: 1285f820-d11f-4ac9-8190-0d1149cd8782
+uuid: 1cbc3c53-7a58-47ea-97f0-2c2ebda289fa
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,13 @@ dependencies:
     - media.type.video
   module:
     - content_moderation
+    - field_layout
+    - layout_discovery
     - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: Wft8ifOMAlgFjAvTyWmpKS_RnTcBkckjM2u90vzd7cM
 id: media.video.media_browser

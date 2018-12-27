@@ -1,4 +1,4 @@
-uuid: 9e0c2185-55c6-41ff-aa3e-579eb5b0d9e9
+uuid: b2c34ce6-7fa1-4610-ab44-e079526c09f6
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
     - search_api.index.content
   module:
     - search_api
+    - views_autocomplete_filters
 _core:
   default_config_hash: 8eXHpZgzJ58fVmB7evA4TNESdXWjMOW9AFPYSxEimE4
 id: search
@@ -77,10 +78,11 @@ display:
         options:
           view_modes:
             'entity:node':
+              banner: default
               landing_page: teaser
-              marca: default
-              promocion: default
+              page: teaser
               tienda: default
+              tienda_mall: default
       fields:
         rendered:
           table: search_api_index_content

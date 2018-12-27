@@ -1,0 +1,14 @@
+uuid: 3e41ea26-b522-45ee-b653-30f5f0186365
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.banner_reviewer
+  module:
+    - user
+id: user_remove_role_action.banner_reviewer
+label: 'Remove the Banner reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: banner_reviewer

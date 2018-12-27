@@ -1,10 +1,10 @@
-uuid: a2ee9b91-45f3-449a-848d-f2a3247446fb
-langcode: es
+uuid: daf8dfa0-00fa-46c9-8a35-9f4e9b858b02
+langcode: en
 status: true
 dependencies: {  }
 id: tienda_creator
 label: 'Tienda creator'
-weight: 9
+weight: 7
 is_admin: false
 permissions:
   - 'access contextual links'

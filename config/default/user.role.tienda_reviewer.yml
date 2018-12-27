@@ -1,10 +1,10 @@
-uuid: 58cada6a-720a-4a37-865f-72f57c9cb6b7
-langcode: es
+uuid: 12f86e8f-5aa6-4e96-b3f3-70b32d4447b4
+langcode: en
 status: true
 dependencies: {  }
 id: tienda_reviewer
 label: 'Tienda reviewer'
-weight: 10
+weight: 8
 is_admin: false
 permissions:
   - 'access content overview'

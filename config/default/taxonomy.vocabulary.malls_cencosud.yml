@@ -1,0 +1,9 @@
+uuid: 065145bc-0202-480d-bc83-add0b6721e7f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Malls Cencosud'
+vid: malls_cencosud
+description: 'Centros Comerciales de Cencosud'
+hierarchy: 0
+weight: 0

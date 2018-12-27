@@ -1,0 +1,7 @@
+status: '1'
+pattern: '[node:field_tienda_tmall] - [node:field_mall_tmall]'
+php: 0
+escape: 0
+dependencies:
+  config:
+    - node.type.tienda_mall

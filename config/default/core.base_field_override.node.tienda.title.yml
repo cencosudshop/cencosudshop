@@ -1,5 +1,5 @@
-uuid: b80285bb-b67d-41a1-9b4d-e1584ff21bf2
-langcode: es
+uuid: dc4fa0f6-5332-45af-9d5a-3ea826f35541
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ id: node.tienda.title
 field_name: title
 entity_type: node
 bundle: tienda
-label: Título
+label: Nombre
 description: ''
 required: true
 translatable: true

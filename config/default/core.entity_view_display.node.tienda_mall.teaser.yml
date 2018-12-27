@@ -1,0 +1,43 @@
+uuid: d1b81bc6-8d9d-4f4b-af82-6612d826566a
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tienda_mall.field_fotos_tmall
+    - field.field.node.tienda_mall.field_horario_tmall
+    - field.field.node.tienda_mall.field_mall_tmall
+    - field.field.node.tienda_mall.field_nivel_tmall
+    - field.field.node.tienda_mall.field_telefono_tmall
+    - field.field.node.tienda_mall.field_tienda_tmall
+    - node.type.tienda_mall
+  module:
+    - field_layout
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.tienda_mall.teaser
+targetEntityType: node
+bundle: tienda_mall
+mode: teaser
+content:
+  flag_favoritos:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_fotos_tmall: true
+  field_horario_tmall: true
+  field_mall_tmall: true
+  field_nivel_tmall: true
+  field_telefono_tmall: true
+  field_tienda_tmall: true
+  langcode: true

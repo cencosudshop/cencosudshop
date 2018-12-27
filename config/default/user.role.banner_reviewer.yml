@@ -1,0 +1,19 @@
+uuid: 5acefac9-90fc-42af-acab-0d4215dac2c3
+langcode: en
+status: true
+dependencies: {  }
+id: banner_reviewer
+label: 'Banner reviewer'
+weight: 12
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any banner content'
+  - 'edit any banner content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'
