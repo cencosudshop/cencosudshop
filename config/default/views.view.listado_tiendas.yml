@@ -19,6 +19,7 @@ dependencies:
     - node
     - options
     - taxonomy
+    - telephone
     - user
     - views_autocomplete_filters
     - views_infinite_scroll
@@ -88,7 +89,7 @@ display:
               bef_format: bef
               more_options:
                 bef_select_all_none: false
-                bef_collapsible: false
+                bef_collapsible: true
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
@@ -96,18 +97,10 @@ display:
               bef_format: bef
               more_options:
                 bef_select_all_none: false
-                bef_collapsible: false
+                bef_collapsible: true
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            field_categoria_tienda_target_id_1:
-              bef_format: default
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: '- Any -|Todas'
           text_input_required_format: rich_text
       pager:
         type: infinite_scroll
@@ -477,9 +470,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: telephone_link
           settings:
-            link_to_entity: false
+            title: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -910,65 +903,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: categorias_tiendas
-          hierarchy: false
-          error_message: false
-          plugin_id: taxonomy_index_tid
-        field_categoria_tienda_target_id_1:
-          id: field_categoria_tienda_target_id_1
-          table: node__field_categoria_tienda
-          field: field_categoria_tienda_target_id
-          relationship: field_tienda_tmall
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_categoria_tienda_target_id_1_op
-            label: 'Categoría 2'
-            description: ''
-            use_operator: false
-            operator: field_categoria_tienda_target_id_1_op
-            identifier: field_categoria_tienda_target_id_1
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              tienda_creator: '0'
-              tienda_reviewer: '0'
-              tienda_mall_creator: '0'
-              tienda_mall_reviewer: '0'
-              banner_creator: '0'
-              banner_reviewer: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
+          reduce_duplicates: true
           type: select
           limit: true
           vid: categorias_tiendas

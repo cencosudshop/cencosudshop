@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.banner.field_enlace_banner
-    - field.field.node.banner.field_fecha_activo_banner
+    - field.field.node.banner.field_fecha_vigencia_banner
     - field.field.node.banner.field_imagen_banner
     - node.type.banner
   module:
@@ -22,6 +22,6 @@ content:
     region: content
 hidden:
   field_enlace_banner: true
-  field_fecha_activo_banner: true
+  field_fecha_vigencia_banner: true
   field_imagen_banner: true
   langcode: true

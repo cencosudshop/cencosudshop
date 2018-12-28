@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.tienda_mall.field_fotos_tmall
     - field.field.node.tienda_mall.field_horario_tmall
     - field.field.node.tienda_mall.field_mall_tmall
+    - field.field.node.tienda_mall.field_mapa_tmall
     - field.field.node.tienda_mall.field_nivel_tmall
     - field.field.node.tienda_mall.field_telefono_tmall
     - field.field.node.tienda_mall.field_tienda_tmall
@@ -17,6 +18,7 @@ dependencies:
     - field_layout
     - layout_discovery
     - path
+    - telephone
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -28,13 +30,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   field_fotos_tmall:
     type: entity_browser_file
-    weight: 4
+    weight: 5
     settings:
       entity_browser: image_browser
       field_widget_edit: true
@@ -43,10 +45,11 @@ content:
       preview_image_style: thumbnail
       open: true
       selection_mode: selection_append
+      field_widget_replace: false
     region: content
     third_party_settings: {  }
   field_horario_tmall:
-    weight: 5
+    weight: 7
     settings:
       size: 60
       placeholder: 'De lunes a viernes, desde - hasta. Sábados y domingos, desde - hasta.'
@@ -54,24 +57,37 @@ content:
     type: string_textfield
     region: content
   field_mall_tmall:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_mapa_tmall:
+    type: entity_browser_file
+    weight: 6
+    settings:
+      entity_browser: image_browser
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      preview_image_style: thumbnail
+      field_widget_edit: true
+      field_widget_replace: false
+      view_mode: default
+    region: content
+    third_party_settings: {  }
   field_nivel_tmall:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_telefono_tmall:
-    weight: 6
+    weight: 8
     settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: telephone_default
     region: content
   field_tienda_tmall:
     weight: 1
@@ -91,13 +107,13 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 10
+    weight: 12
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -105,7 +121,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -118,7 +134,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60

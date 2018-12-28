@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.tienda_mall.field_fotos_tmall
     - field.field.node.tienda_mall.field_horario_tmall
     - field.field.node.tienda_mall.field_mall_tmall
+    - field.field.node.tienda_mall.field_mapa_tmall
     - field.field.node.tienda_mall.field_nivel_tmall
     - field.field.node.tienda_mall.field_telefono_tmall
     - field.field.node.tienda_mall.field_tienda_tmall
@@ -14,6 +15,7 @@ dependencies:
     - ds
     - ds_chains
     - field_layout
+    - image
     - options
     - panelizer
     - slick
@@ -242,6 +244,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_mapa_tmall:
+    weight: 11
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_nivel_tmall:
     weight: 7
     label: above
@@ -250,12 +261,11 @@ content:
     type: list_default
     region: content
   field_telefono_tmall:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
+    weight: 12
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: basic_string
     region: content
   field_tienda_tmall:
     weight: 6

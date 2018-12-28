@@ -1,17 +1,17 @@
-uuid: b0f0d01d-5b48-495b-9eb4-22270ab9687d
+uuid: ee33bce0-a286-4f0c-9458-31945ee89b77
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime_range
+    - datetime
     - node
-id: node.field_fecha_activo_banner
-field_name: field_fecha_activo_banner
+id: node.field_fecha_vigencia_banner
+field_name: field_fecha_vigencia_banner
 entity_type: node
-type: daterange
+type: datetime
 settings:
   datetime_type: date
-module: datetime_range
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

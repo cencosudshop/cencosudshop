@@ -4,12 +4,11 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_enlace_banner
-    - field.storage.node.field_fecha_activo_banner
+    - field.storage.node.field_fecha_vigencia_banner
     - field.storage.node.field_imagen_banner
     - node.type.banner
   module:
     - datetime
-    - datetime_range
     - image
     - link
     - node
@@ -167,71 +166,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_fecha_activo_banner:
-          id: field_fecha_activo_banner
-          table: node__field_fecha_activo_banner
-          field: field_fecha_activo_banner
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: daterange_default
-          settings:
-            timezone_override: ''
-            format_type: short
-            separator: '-'
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_imagen_banner:
           id: field_imagen_banner
           table: node__field_imagen_banner
@@ -296,6 +230,70 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_fecha_vigencia_banner:
+          id: field_fecha_vigencia_banner
+          table: node__field_fecha_vigencia_banner
+          field: field_fecha_vigencia_banner
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -317,61 +315,18 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_fecha_activo_banner_value:
-          id: field_fecha_activo_banner_value
-          table: node__field_fecha_activo_banner
-          field: field_fecha_activo_banner_value
+        field_fecha_vigencia_banner_value:
+          id: field_fecha_vigencia_banner_value
+          table: node__field_fecha_vigencia_banner
+          field: field_fecha_vigencia_banner_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '<='
+          operator: '>'
           value:
             min: ''
             max: ''
-            value: today
-            type: offset
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: datetime
-        field_fecha_activo_banner_end_value:
-          id: field_fecha_activo_banner_end_value
-          table: node__field_fecha_activo_banner
-          field: field_fecha_activo_banner_end_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '>='
-          value:
-            min: ''
-            max: ''
-            value: today
+            value: 'today +6 hours'
             type: offset
           group: 1
           exposed: false
@@ -434,7 +389,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_enlace_banner'
-        - 'config:field.storage.node.field_fecha_activo_banner'
+        - 'config:field.storage.node.field_fecha_vigencia_banner'
         - 'config:field.storage.node.field_imagen_banner'
   block_1:
     display_plugin: block
@@ -452,5 +407,5 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_enlace_banner'
-        - 'config:field.storage.node.field_fecha_activo_banner'
+        - 'config:field.storage.node.field_fecha_vigencia_banner'
         - 'config:field.storage.node.field_imagen_banner'

@@ -78,11 +78,4 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_categoria: true
-  field_centro_comercial: true
-  field_descripcion: true
-  field_logotipo: true
-  field_marca: true
-  field_sitio_web: true
-  field_telefono: true
   langcode: true

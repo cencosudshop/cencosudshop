@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.tienda_mall.field_fotos_tmall
     - field.field.node.tienda_mall.field_horario_tmall
     - field.field.node.tienda_mall.field_mall_tmall
+    - field.field.node.tienda_mall.field_mapa_tmall
     - field.field.node.tienda_mall.field_nivel_tmall
     - field.field.node.tienda_mall.field_telefono_tmall
     - field.field.node.tienda_mall.field_tienda_tmall
@@ -19,6 +20,7 @@ dependencies:
     - options
     - panelizer
     - slick
+    - telephone
     - user
 third_party_settings:
   field_layout:
@@ -211,6 +213,7 @@ third_party_settings:
         - field_nivel_tmall
         - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
         - field_fotos_tmall
+        - field_mapa_tmall
     fields:
       'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda':
         plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
@@ -323,6 +326,82 @@ content:
     third_party_settings: {  }
     type: string
     region: left
+  field_mapa_tmall:
+    type: slick_image
+    weight: 8
+    region: middle
+    label: above
+    settings:
+      style: ''
+      optionset: default
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: full
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      grid_header: ''
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      iframe_lazy: true
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
   field_nivel_tmall:
     weight: 5
     label: above
@@ -331,13 +410,13 @@ content:
     type: list_default
     region: middle
   field_telefono_tmall:
+    type: telephone_link
     weight: 4
+    region: left
     label: hidden
     settings:
-      link_to_entity: false
+      title: ''
     third_party_settings: {  }
-    type: string
-    region: left
   field_tienda_tmall:
     weight: 3
     label: hidden

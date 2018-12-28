@@ -42,6 +42,7 @@ module:
   flag_anon: 0
   fontawesome: 0
   help: 0
+  history: 0
   image: 0
   image_widget_crop: 0
   inline_entity_form: 0
@@ -51,6 +52,7 @@ module:
   libraries: 0
   lightning: 0
   lightning_api: 0
+  lightning_contact_form: 0
   lightning_core: 0
   lightning_install: 0
   lightning_landing_page: 0
@@ -64,6 +66,7 @@ module:
   lightning_media_slideshow: 0
   lightning_media_twitter: 0
   lightning_media_video: 0
+  lightning_page: 0
   lightning_roles: 0
   lightning_scheduler: 0
   lightning_search: 0
@@ -107,6 +110,7 @@ module:
   system: 0
   taxonomy: 0
   telephone: 0
+  telephone_validation: 0
   text: 0
   token: 0
   toolbar: 0
@@ -114,7 +118,6 @@ module:
   video_embed_field: 0
   video_embed_media: 0
   views_autocomplete_filters: 0
-  views_autosubmit: 0
   views_infinite_scroll: 0
   views_ui: 0
   workflows: 0

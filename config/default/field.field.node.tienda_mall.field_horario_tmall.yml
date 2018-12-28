@@ -10,10 +10,12 @@ field_name: field_horario_tmall
 entity_type: node
 bundle: tienda_mall
 label: Horario
-description: ''
+description: 'Ejemplo: De lunes a viernes, desde - hasta. Sábados y domingos, desde - hasta.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: ' '
 default_value_callback: ''
 settings: {  }
 field_type: string

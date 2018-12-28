@@ -10,7 +10,7 @@ id: node.tienda_mall.field_mall_tmall
 field_name: field_mall_tmall
 entity_type: node
 bundle: tienda_mall
-label: Mall
+label: 'Centro Comercial'
 description: ''
 required: true
 translatable: false

@@ -1,19 +1,27 @@
-uuid: 5791b19c-0e8e-4420-b4cd-fc019d840294
+uuid: 90524ce0-d98e-4c02-8941-0b436821e963
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_telefono_tmall
     - node.type.tienda_mall
+  module:
+    - telephone
+    - telephone_validation
+third_party_settings:
+  telephone_validation:
+    format: 0
+    country:
+      CL: CL
 id: node.tienda_mall.field_telefono_tmall
 field_name: field_telefono_tmall
 entity_type: node
 bundle: tienda_mall
 label: Teléfono
-description: ''
+description: 'Ingresar el número telefónico con código internacional +56'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: telephone

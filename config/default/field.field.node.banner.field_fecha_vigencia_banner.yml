@@ -1,0 +1,21 @@
+uuid: 7bae27dc-30d5-414f-88e4-40654bd95e99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_vigencia_banner
+    - node.type.banner
+  module:
+    - datetime
+id: node.banner.field_fecha_vigencia_banner
+field_name: field_fecha_vigencia_banner
+entity_type: node
+bundle: banner
+label: 'Fecha Vigencia'
+description: 'Fecha hasta la que estará vigente el banner en el slideshow del home.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

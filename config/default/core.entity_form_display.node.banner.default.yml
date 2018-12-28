@@ -5,12 +5,12 @@ dependencies:
   config:
     - entity_browser.browser.image_browser
     - field.field.node.banner.field_enlace_banner
-    - field.field.node.banner.field_fecha_activo_banner
+    - field.field.node.banner.field_fecha_vigencia_banner
     - field.field.node.banner.field_imagen_banner
     - node.type.banner
   module:
     - content_moderation
-    - datetime_range
+    - datetime
     - entity_browser
     - field_layout
     - layout_discovery
@@ -39,11 +39,11 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_fecha_activo_banner:
+  field_fecha_vigencia_banner:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: daterange_default
+    type: datetime_default
     region: content
   field_imagen_banner:
     type: entity_browser_file
@@ -56,14 +56,8 @@ content:
       field_widget_edit: true
       open: false
       view_mode: default
+      field_widget_replace: false
     region: content
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
@@ -102,5 +96,6 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  langcode: true
   promote: true
   sticky: true

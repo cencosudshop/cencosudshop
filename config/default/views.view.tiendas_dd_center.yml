@@ -1,35 +1,22 @@
-uuid: 91be4b6e-4c6a-4136-a99c-6d39c4a510d7
+uuid: 0935d7ef-2ff2-47ab-b1a4-b441f646baf0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_categoria_tienda
-    - field.storage.node.field_logo_tienda
+    - field.storage.node.field_mall_tmall
     - field.storage.node.field_nivel_tmall
-    - field.storage.node.field_telefono_tmall
-    - field.storage.node.field_website_tienda
-    - flag.flag.favoritos
     - node.type.tienda_mall
     - taxonomy.vocabulary.categorias_tiendas
-  content:
-    - 'taxonomy_term:categorias_tiendas:3d262ba3-969a-466f-af9e-97220414da93'
-    - 'taxonomy_term:categorias_tiendas:4416bb23-58ac-4f8b-b816-f3c891c98aa6'
-    - 'taxonomy_term:categorias_tiendas:50cba970-d73f-4e83-88f3-479228f96f3a'
-    - 'taxonomy_term:categorias_tiendas:af21d01f-b23b-4ee4-a366-67b827a00c9d'
   module:
     - better_exposed_filters
-    - flag
-    - image
-    - link
     - node
     - options
     - taxonomy
-    - telephone
     - user
     - views_autocomplete_filters
-    - views_infinite_scroll
-id: listado_restaurantes
-label: Restaurantes
+id: tiendas_dd_center
+label: 'Tiendas - Directorio Digital Costanera Center'
 module: views
 description: 'Listado de tiendas.'
 tag: ''
@@ -82,106 +69,110 @@ display:
               more_options:
                 is_secondary: false
                 placeholder_text: '¿Qué tienda buscas?'
-            flagged:
-              bef_format: bef_single
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: "- Any -|Todas\r\nTrue|Favoritas\r\nFalse|No favoritas"
             field_nivel_tmall_value:
-              bef_format: bef
+              bef_format: default
               more_options:
                 bef_select_all_none: false
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: ''
-            field_categoria_tienda_target_id:
-              bef_format: bef
+                  filter_rewrite_values: '- Any -|Todos'
+            field_categoria_tienda_target_id_1:
+              bef_format: default
               more_options:
                 bef_select_all_none: false
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: ''
+                  filter_rewrite_values: '- Any -|Todas'
           text_input_required_format: rich_text
       pager:
-        type: infinite_scroll
+        type: none
         options:
-          items_per_page: 20
           offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          views_infinite_scroll:
-            button_text: '+ Ver más...'
-            automatically_load_content: false
       style:
-        type: table
+        type: grid
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            field_logo_tienda: field_logo_tienda
-            title_1: title_1
-            field_nivel_tmall: title_1
-            field_telefono_tmall: field_telefono_tmall
-            field_website_tienda: field_telefono_tmall
-          info:
-            field_logo_tienda:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            title_1:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_nivel_tmall:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_telefono_tmall:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_website_tienda:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
+          grouping:
+            -
+              field: title
+              rendered: true
+              rendered_strip: false
+          columns: 4
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
       row:
         type: fields
       fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: field_tienda_tmall
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 1
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         view_node:
           id: view_node
           table: node
@@ -230,75 +221,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: ''
+          text: view
           output_url_as_text: true
-          absolute: true
+          absolute: false
           entity_type: node
           plugin_id: entity_link
-        field_logo_tienda:
-          id: field_logo_tienda
-          table: node__field_logo_tienda
-          field: field_logo_tienda
-          relationship: field_tienda_tmall
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: '{{ view_node }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: ''
-            image_link: ''
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         title_1:
           id: title_1
           table: node_field_data
@@ -309,10 +236,10 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<a href={{ view_node }}>{{ title_1 }}</a></ br>Nivel: '
             make_link: false
-            path: ''
+            path: '{{ view_node }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -374,7 +301,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '</ br>Nivel {{ field_nivel_tmall }}'
             make_link: false
             path: ''
@@ -416,136 +343,6 @@ display:
           type: list_default
           settings: {  }
           group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_telefono_tmall:
-          id: field_telefono_tmall
-          table: node__field_telefono_tmall
-          field: field_telefono_tmall
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: telephone_link
-          settings:
-            title: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_website_tienda:
-          id: field_website_tienda
-          table: node__field_website_tienda
-          field: field_website_tienda
-          relationship: field_tienda_tmall
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '</ br>{{ field_website_tienda }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: uri
-          type: link
-          settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: '0'
-            target: _blank
-          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -619,15 +416,15 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        link_flag:
-          id: link_flag
-          table: flagging
-          field: link_flag
-          relationship: flag_relationship
+        field_mall_tmall:
+          id: field_mall_tmall
+          table: node__field_mall_tmall
+          field: field_mall_tmall
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -667,8 +464,21 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          entity_type: flagging
-          plugin_id: flag_link
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -729,7 +539,7 @@ display:
               tienda_mall_reviewer: '0'
               banner_creator: '0'
               banner_reviewer: '0'
-            placeholder: '¿Qué restaurante buscas?'
+            placeholder: '¿Qué tienda buscas?'
             autocomplete_filter: 0
             autocomplete_min_chars: '0'
             autocomplete_items: '10'
@@ -752,58 +562,6 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: views_autocomplete_filters_string
-        flagged:
-          id: flagged
-          table: flagging
-          field: flagged
-          relationship: flag_relationship
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: All
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Favoritas
-            description: ''
-            use_operator: false
-            operator: flagged_op
-            identifier: flagged
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              tienda_creator: '0'
-              tienda_reviewer: '0'
-              tienda_mall_creator: '0'
-              tienda_mall_reviewer: '0'
-              banner_creator: '0'
-              banner_reviewer: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: flagging
-          plugin_id: flag_filter
         field_nivel_tmall_value:
           id: field_nivel_tmall_value
           table: node__field_nivel_tmall
@@ -824,7 +582,7 @@ display:
             identifier: field_nivel_tmall_value
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -865,70 +623,19 @@ display:
           group_type: group
           admin_label: ''
           operator: or
-          value:
-            6: 6
-            22: 22
-            27: 27
-            23: 23
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          type: select
-          limit: true
-          vid: categorias_tiendas
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_categoria_tienda_target_id:
-          id: field_categoria_tienda_target_id
-          table: node__field_categoria_tienda
-          field: field_categoria_tienda_target_id
-          relationship: field_tienda_tmall
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            6: 6
-            22: 22
-            27: 27
-            23: 23
+          value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_categoria_tienda_target_id_op
+            operator_id: field_categoria_tienda_target_id_1_op
             label: Categorías
             description: ''
             use_operator: false
-            operator: field_categoria_tienda_target_id_op
-            identifier: field_categoria_tienda_target_id
+            operator: field_categoria_tienda_target_id_1_op
+            identifier: field_categoria_tienda_target_id_1
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -946,7 +653,7 @@ display:
               tienda_mall_reviewer: '0'
               banner_creator: '0'
               banner_reviewer: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -981,7 +688,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      title: Restaurantes
+      title: Tiendas
       header: {  }
       footer: {  }
       empty: {  }
@@ -995,18 +702,6 @@ display:
           admin_label: 'field_tienda_tmall: Content'
           required: false
           plugin_id: standard
-        flag_relationship:
-          id: flag_relationship
-          table: node_field_data
-          field: flag_relationship
-          relationship: none
-          group_type: group
-          admin_label: Favoritas
-          required: false
-          flag: favoritos
-          user_scope: current
-          entity_type: node
-          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
@@ -1020,16 +715,13 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_categoria_tienda'
-        - 'config:field.storage.node.field_logo_tienda'
+        - 'config:field.storage.node.field_mall_tmall'
         - 'config:field.storage.node.field_nivel_tmall'
-        - 'config:field.storage.node.field_telefono_tmall'
-        - 'config:field.storage.node.field_website_tienda'
   page_1:
     display_plugin: page
     id: page_1
@@ -1037,21 +729,32 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: restaurantes
-      exposed_block: true
+      path: dd-tiendas-ccenter
+      exposed_block: false
+      menu:
+        type: 'default tab'
+        title: 'A - Z'
+        description: 'Vista alfabética de tiendas'
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: normal
+        title: 'A - Z'
+        description: ''
+        weight: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_categoria_tienda'
-        - 'config:field.storage.node.field_logo_tienda'
+        - 'config:field.storage.node.field_mall_tmall'
         - 'config:field.storage.node.field_nivel_tmall'
-        - 'config:field.storage.node.field_telefono_tmall'
-        - 'config:field.storage.node.field_website_tienda'

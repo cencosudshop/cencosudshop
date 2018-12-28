@@ -135,3 +135,5 @@ flag_follower: 4.0.0-alpha3
 bootstrap_layouts: 5.1.0
 flag_anon: 0.0.0
 fontawesome: 2.9.0
+telephone: 8.6.4
+telephone_validation: 2.1.0

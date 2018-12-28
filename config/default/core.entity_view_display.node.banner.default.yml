@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.banner.field_enlace_banner
-    - field.field.node.banner.field_fecha_activo_banner
+    - field.field.node.banner.field_fecha_vigencia_banner
     - field.field.node.banner.field_imagen_banner
     - node.type.banner
   module:
-    - datetime_range
+    - datetime
     - image
     - link
     - user
@@ -29,15 +29,14 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_fecha_activo_banner:
-    weight: 103
+  field_fecha_vigencia_banner:
+    weight: 105
     label: above
     settings:
-      separator: '-'
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    type: daterange_default
+    type: datetime_default
     region: content
   field_imagen_banner:
     weight: 102
