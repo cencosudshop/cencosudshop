@@ -13,4 +13,3 @@ new_revision: false
 source_configuration:
   source_field: image
 field_map: {  }
-

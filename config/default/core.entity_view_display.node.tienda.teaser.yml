@@ -27,8 +27,15 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_categoria: true
   field_categoria_tienda: true
+  field_centro_comercial: true
+  field_descripcion: true
   field_descripcion_tienda: true
   field_logo_tienda: true
+  field_logotipo: true
+  field_marca: true
+  field_sitio_web: true
+  field_telefono: true
   field_website_tienda: true
   langcode: true

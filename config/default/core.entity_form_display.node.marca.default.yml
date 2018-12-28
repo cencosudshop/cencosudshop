@@ -7,6 +7,10 @@ dependencies:
   module:
     - content_moderation
     - path
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.marca.default
 targetEntityType: node
 bundle: marca

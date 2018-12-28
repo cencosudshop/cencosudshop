@@ -14,6 +14,10 @@ dependencies:
     - entity_browser
     - path
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.promocion.default
 targetEntityType: node
 bundle: promocion
