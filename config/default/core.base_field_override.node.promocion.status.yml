@@ -1,0 +1,22 @@
+uuid: e31f7d10-8201-4944-9fbc-f706a0b560f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.promocion
+id: node.promocion.status
+field_name: status
+entity_type: node
+bundle: promocion
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

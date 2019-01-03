@@ -1,0 +1,14 @@
+uuid: f64e475a-ec43-4216-8594-f75d1fa35ba9
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.promocion_creator
+  module:
+    - user
+id: user_remove_role_action.promocion_creator
+label: 'Remove the Promoción creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: promocion_creator

@@ -14,5 +14,6 @@ permissions:
   - 'administer panelizer node banner defaults'
   - 'administer panelizer node landing_page defaults'
   - 'administer panelizer node page defaults'
+  - 'administer panelizer node promocion defaults'
   - 'administer panelizer node tienda defaults'
   - 'administer panelizer node tienda_mall defaults'

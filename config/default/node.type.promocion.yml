@@ -1,0 +1,17 @@
+uuid: 6aef9d99-706b-44f6-9f3c-20f6cfe6db31
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Promoción
+type: promocion
+description: 'Crea una nueva promoción.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
