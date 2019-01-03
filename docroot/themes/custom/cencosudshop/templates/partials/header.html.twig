@@ -1,0 +1,113 @@
+{% 
+  set container_classes = [
+    'bg-costanera-white',
+    theme.settings.fluid_container ? 'container-fluid' : 'container-fluid'
+  ]
+%}
+{# Navbar #}
+{#% if page.navigation or page.navigation_collapsible %#}
+    {%
+      set navbar_classes = [
+        'navbar',
+        theme.settings.navbar_inverse ? 'navbar-inverse' : 'bg-light navbar-light',
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+      ]
+    %}
+
+<header {{ attributes.addClass(container_classes) }} id="navbar">
+
+  <nav class="navbar navbar-expand-md  px-md-0">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="outline: none;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand m-0 p-0" href="#">
+        <img src="/themes/custom/cencosudshop/images/brand-cencosudshop2.png" alt="Costanera Center">
+    </a>
+    
+    <div class="collapse navbar-collapse flex-column" id="collapsibleNavbar">
+      <ul class="navbar-nav d-none d-md-flex aux-navigation" id="">
+        <li class="nav-item">
+          <a href="" class="nav-link ico-calendar"><img src="/themes/custom/cencosudshop/images/icons/own/quarter-clock.png" alt="">
+            <span>Horarios</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link ico-calendar"><img src="/themes/custom/cencosudshop/images/icons/own/pin.png" alt=""><span>C&oacute;mo llegar</span></a></li>
+        <li class="nav-item">
+          <a class="nav-link " href=""><hr class="vertical my-1 mx-0"></a>
+        </li>
+        <li class="nav-item mr-auto"  style="align-self: flex-end;">
+          <a class="nav-link "href="">Sitio Accesible</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link ico-face"><img src="/themes/custom/cencosudshop/images/icons/own/face.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link ico-twitt"><img src="/themes/custom/cencosudshop/images/icons/own/twitt.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link ico-insta"><img src="/themes/custom/cencosudshop/images/icons/own/insta.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href=""><hr class="vertical my-1 mx-0"></a>
+        </li>
+        <li style="align-self: flex-end;">
+          <form class="form-inline">
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Espa&ntilde;ol</option>
+              <option>English</option>
+              <option>Portugu&ecaron;se</option>
+            </select>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link ico-calendar">
+            <img src="/themes/custom/cencosudshop/images/icons/own/user.png" alt="login">
+            <span>Acceder</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav main-navigation">
+        <li class="d-md-none nav-item">
+          <a class="nav-link" href="/">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">TIENDAS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">CINE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PANORAMAS</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">ACTIVIDADES Y EVENTOS</a>
+            <a class="dropdown-item" href="#">SKY COSTANERA</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">RESTAURANTES</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">RESTAURANTES</a>
+            <a class="dropdown-item" href="#">SABORES COSTANERA</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">PROMOCIONES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">INFORMACI&Oacute;N</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">CONTACTO</a>
+              <a class="dropdown-item" href="#">HORARIOS</a>
+              <a class="dropdown-item" href="#">SERVICIOS</a>
+              <a class="dropdown-item" href="#">SOSTENIBILIDAD</a>
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">TURISMO</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
