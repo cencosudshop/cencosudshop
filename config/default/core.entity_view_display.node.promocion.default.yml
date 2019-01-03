@@ -1,0 +1,50 @@
+uuid: 1325f5ea-b9a0-4318-8bf4-9e0d233f0933
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.promocion.field_centro_comercial
+    - field.field.node.promocion.field_descripcion
+    - field.field.node.promocion.field_imagen_promocion
+    - node.type.promocion
+  module:
+    - image
+    - text
+    - user
+id: node.promocion.default
+targetEntityType: node
+bundle: promocion
+mode: default
+content:
+  field_centro_comercial:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_descripcion:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_imagen_promocion:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true

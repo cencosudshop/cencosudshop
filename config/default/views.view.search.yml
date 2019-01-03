@@ -81,6 +81,7 @@ display:
               banner: default
               landing_page: teaser
               page: teaser
+              promocion: default
               tienda: default
               tienda_mall: default
       fields:

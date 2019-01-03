@@ -1,0 +1,19 @@
+uuid: 367322a9-4e1f-4d26-a174-837551ad0334
+langcode: es
+status: true
+dependencies: {  }
+id: promocion_reviewer
+label: 'Promoción reviewer'
+weight: 14
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any promocion content'
+  - 'edit any promocion content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

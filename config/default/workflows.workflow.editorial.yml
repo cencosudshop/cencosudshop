@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.landing_page
     - node.type.page
+    - node.type.promocion
   module:
     - content_moderation
 _core:
@@ -75,3 +76,4 @@ type_settings:
     node:
       - landing_page
       - page
+      - promocion
