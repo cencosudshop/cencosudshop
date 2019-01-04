@@ -18,4 +18,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  content_moderation_control: true
+  field_centro_comercial: true
+  field_descripcion: true
+  field_imagen_promocion: true
   langcode: true
