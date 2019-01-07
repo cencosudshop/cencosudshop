@@ -19,6 +19,7 @@ dependencies:
     - options
     - panelizer
     - slick
+    - telephone
     - user
 third_party_settings:
   field_layout:
@@ -263,9 +264,10 @@ content:
   field_telefono_tmall:
     weight: 12
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_tienda_tmall:
     weight: 6
@@ -277,9 +279,9 @@ content:
     region: content
   flag_favoritos:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   links:
     weight: 0
     region: content
