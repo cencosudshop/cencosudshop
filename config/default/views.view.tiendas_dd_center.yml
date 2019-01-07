@@ -7,16 +7,14 @@ dependencies:
     - field.storage.node.field_mall_tmall
     - field.storage.node.field_nivel_tmall
     - node.type.tienda_mall
-    - taxonomy.vocabulary.categorias_tiendas
   module:
     - better_exposed_filters
     - node
     - options
-    - taxonomy
     - user
     - views_autocomplete_filters
 id: tiendas_dd_center
-label: 'Tiendas - Directorio Digital Costanera Center'
+label: 'Tiendas - DD Costanera Center - Alfabeto'
 module: views
 description: 'Listado de tiendas.'
 tag: ''
@@ -562,117 +560,6 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: views_autocomplete_filters_string
-        field_nivel_tmall_value:
-          id: field_nivel_tmall_value
-          table: node__field_nivel_tmall
-          field: field_nivel_tmall_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_nivel_tmall_value_op
-            label: Niveles
-            description: ''
-            use_operator: false
-            operator: field_nivel_tmall_value_op
-            identifier: field_nivel_tmall_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              tienda_creator: '0'
-              tienda_reviewer: '0'
-              tienda_mall_creator: '0'
-              tienda_mall_reviewer: '0'
-              banner_creator: '0'
-              banner_reviewer: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-        field_categoria_tienda_target_id_1:
-          id: field_categoria_tienda_target_id_1
-          table: node__field_categoria_tienda
-          field: field_categoria_tienda_target_id
-          relationship: field_tienda_tmall
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_categoria_tienda_target_id_1_op
-            label: Categorías
-            description: ''
-            use_operator: false
-            operator: field_categoria_tienda_target_id_1_op
-            identifier: field_categoria_tienda_target_id_1
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              tienda_creator: '0'
-              tienda_reviewer: '0'
-              tienda_mall_creator: '0'
-              tienda_mall_reviewer: '0'
-              banner_creator: '0'
-              banner_reviewer: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: categorias_tiendas
-          hierarchy: false
-          error_message: false
-          plugin_id: taxonomy_index_tid
       sorts:
         title:
           id: title
@@ -715,7 +602,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -729,7 +615,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: dd-tiendas-ccenter
+      path: dd-tiendas-ccenter/alfabetica
       exposed_block: false
       menu:
         type: 'default tab'
@@ -751,7 +637,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

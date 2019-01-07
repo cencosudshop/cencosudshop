@@ -5,17 +5,20 @@ dependencies:
   config:
     - field.storage.node.field_categoria_tienda
     - field.storage.node.field_logo_tienda
+    - field.storage.node.field_mall_tmall
     - field.storage.node.field_nivel_tmall
     - field.storage.node.field_telefono_tmall
     - field.storage.node.field_website_tienda
     - flag.flag.favoritos
     - node.type.tienda_mall
     - taxonomy.vocabulary.categorias_tiendas
+    - taxonomy.vocabulary.malls_cencosud
   content:
-    - 'taxonomy_term:categorias_tiendas:3d262ba3-969a-466f-af9e-97220414da93'
-    - 'taxonomy_term:categorias_tiendas:4416bb23-58ac-4f8b-b816-f3c891c98aa6'
-    - 'taxonomy_term:categorias_tiendas:50cba970-d73f-4e83-88f3-479228f96f3a'
-    - 'taxonomy_term:categorias_tiendas:af21d01f-b23b-4ee4-a366-67b827a00c9d'
+    - 'taxonomy_term:categorias_tiendas:02fb6043-5f59-46d1-877f-3b69c77c89b3'
+    - 'taxonomy_term:categorias_tiendas:04c92fc8-f078-46d6-ac5b-96b185e67f40'
+    - 'taxonomy_term:categorias_tiendas:19c4434d-4b0a-4025-abdf-5cf067270601'
+    - 'taxonomy_term:categorias_tiendas:6ba8aee1-2ab0-46c3-a6f4-7c16e5448641'
+    - 'taxonomy_term:malls_cencosud:4da7e2bd-1e6d-44cd-9d61-26406d0c7c48'
   module:
     - better_exposed_filters
     - flag
@@ -31,7 +34,7 @@ dependencies:
 id: listado_restaurantes
 label: Restaurantes
 module: views
-description: 'Listado de tiendas.'
+description: 'Listado de restaurantes.'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -669,6 +672,69 @@ display:
           hide_alter_empty: true
           entity_type: flagging
           plugin_id: flag_link
+        field_mall_tmall:
+          id: field_mall_tmall
+          table: node__field_mall_tmall
+          field: field_mall_tmall
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -866,10 +932,10 @@ display:
           admin_label: ''
           operator: or
           value:
-            6: 6
-            22: 22
-            27: 27
-            23: 23
+            271: 271
+            287: 287
+            292: 292
+            288: 288
           group: 1
           exposed: false
           expose:
@@ -913,10 +979,10 @@ display:
           admin_label: ''
           operator: or
           value:
-            6: 6
-            22: 22
-            27: 27
-            23: 23
+            271: 271
+            287: 287
+            292: 292
+            288: 288
           group: 1
           exposed: true
           expose:
@@ -965,6 +1031,50 @@ display:
           vid: categorias_tiendas
           hierarchy: false
           error_message: false
+          plugin_id: taxonomy_index_tid
+        field_mall_tmall_target_id:
+          id: field_mall_tmall_target_id
+          table: node__field_mall_tmall
+          field: field_mall_tmall_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            296: 296
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: malls_cencosud
+          hierarchy: false
+          error_message: true
           plugin_id: taxonomy_index_tid
       sorts:
         title:
@@ -1027,6 +1137,7 @@ display:
       tags:
         - 'config:field.storage.node.field_categoria_tienda'
         - 'config:field.storage.node.field_logo_tienda'
+        - 'config:field.storage.node.field_mall_tmall'
         - 'config:field.storage.node.field_nivel_tmall'
         - 'config:field.storage.node.field_telefono_tmall'
         - 'config:field.storage.node.field_website_tienda'
@@ -1052,6 +1163,7 @@ display:
       tags:
         - 'config:field.storage.node.field_categoria_tienda'
         - 'config:field.storage.node.field_logo_tienda'
+        - 'config:field.storage.node.field_mall_tmall'
         - 'config:field.storage.node.field_nivel_tmall'
         - 'config:field.storage.node.field_telefono_tmall'
         - 'config:field.storage.node.field_website_tienda'
