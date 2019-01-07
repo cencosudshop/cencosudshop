@@ -9,31 +9,30 @@ dependencies:
     - node.type.promocion
   module:
     - image
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.promocion.default
 targetEntityType: node
 bundle: promocion
 mode: default
 content:
-  field_centro_comercial:
-    weight: 103
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_descripcion:
-    weight: 101
-    label: above
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_imagen_promocion:
-    weight: 102
-    label: above
+    weight: 2
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -41,10 +40,11 @@ content:
     type: image
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   content_moderation_control: true
+  field_centro_comercial: true
   langcode: true
