@@ -1,0 +1,14 @@
+uuid: 857e269e-6625-4769-8c5d-e8dc6de72187
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.panorama_reviewer
+  module:
+    - user
+id: user_remove_role_action.panorama_reviewer
+label: 'Remove the Panorama reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: panorama_reviewer

@@ -1,0 +1,18 @@
+uuid: 56f99b5c-0d08-4066-b6c8-1af4161f7b1f
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.panorama
+id: node.panorama.title
+field_name: title
+entity_type: node
+bundle: panorama
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

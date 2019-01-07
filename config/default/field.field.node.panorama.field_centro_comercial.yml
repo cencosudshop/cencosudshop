@@ -1,0 +1,29 @@
+uuid: f3904a31-af90-4f0a-b5b3-2523fcbac5ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_centro_comercial
+    - node.type.panorama
+    - taxonomy.vocabulary.malls_cencosud
+id: node.panorama.field_centro_comercial
+field_name: field_centro_comercial
+entity_type: node
+bundle: panorama
+label: 'Centro Comercial'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      malls_cencosud: malls_cencosud
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 97d82737-6a4c-45ea-a9a6-12088307dd3f
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.panorama
+  module:
+    - user
+id: node.panorama.teaser
+targetEntityType: node
+bundle: panorama
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
