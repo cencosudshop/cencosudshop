@@ -155,8 +155,7 @@ third_party_settings:
         pattern: panelizer
         static_context: {  }
   ds_chains:
-    fields:
-      field_tienda_tmall: field_tienda_tmall
+    fields: {  }
   field_group:
     group_info_tienda:
       children:
@@ -178,65 +177,6 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Info Tienda'
-  ds:
-    layout:
-      id: ds_3col_stacked_fluid
-      library: ds/ds_3col_stacked_fluid
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          header: div
-          left: div
-          middle: div
-          right: div
-          footer: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      header:
-        - links
-      left:
-        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_logo_tienda'
-        - group_info_tienda
-        - field_horario_tmall
-        - field_telefono_tmall
-        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda'
-        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
-      middle:
-        - field_tienda_tmall
-        - flag_favoritos
-        - field_nivel_tmall
-        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
-        - field_fotos_tmall
-        - field_mapa_tmall
-    fields:
-      'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda':
-        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
-        weight: 6
-        label: hidden
-        formatter: entity_reference_label
-        settings:
-          link: false
-      'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda':
-        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
-        weight: 6
-        label: hidden
-        formatter: basic_string
-      'ds_chains:node/tienda_mall/field_tienda_tmall/field_logo_tienda':
-        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_logo_tienda'
-        weight: 1
-        label: hidden
-        formatter: blazy
-      'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda':
-        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_website_tienda'
-        weight: 5
-        label: hidden
-        formatter: link
 id: node.tienda_mall.full
 targetEntityType: node
 bundle: tienda_mall
@@ -317,7 +257,7 @@ content:
       ds:
         ds_limit: ''
     type: slick_image
-    region: middle
+    region: content
   field_horario_tmall:
     weight: 3
     label: hidden
@@ -325,11 +265,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: left
+    region: content
   field_mapa_tmall:
     type: slick_image
     weight: 8
-    region: middle
+    region: content
     label: above
     settings:
       style: ''
@@ -408,11 +348,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: middle
+    region: content
   field_telefono_tmall:
     type: telephone_link
     weight: 4
-    region: left
+    region: content
     label: hidden
     settings:
       title: ''
@@ -424,15 +364,15 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
-    region: middle
+    region: content
   flag_favoritos:
     weight: 4
-    region: middle
+    region: content
     settings: {  }
     third_party_settings: {  }
   links:
     weight: 0
-    region: header
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
