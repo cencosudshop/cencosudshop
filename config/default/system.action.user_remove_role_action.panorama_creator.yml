@@ -1,0 +1,14 @@
+uuid: e8f232ce-81da-4cc5-a5db-fbe66b194749
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.panorama_creator
+  module:
+    - user
+id: user_remove_role_action.panorama_creator
+label: 'Remove the Panorama creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: panorama_creator

@@ -1,0 +1,17 @@
+uuid: d1540aac-2d49-4562-add1-a0cf5dee6176
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Panorama
+type: panorama
+description: 'Crea un nuevo panorama.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,14 @@
+uuid: 11330892-ac20-4b85-b305-00e7c7d0b26e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.panorama_creator
+  module:
+    - user
+id: user_add_role_action.panorama_creator
+label: 'Add the Panorama creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: panorama_creator

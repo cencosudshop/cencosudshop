@@ -1,0 +1,49 @@
+uuid: 59c509a9-dd55-4ba7-8b43-f245d61539f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.panorama.field_centro_comercial
+    - field.field.node.panorama.field_descripcion
+    - field.field.node.panorama.field_imagen_panorama
+    - node.type.panorama
+  module:
+    - image
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.panorama.default
+targetEntityType: node
+bundle: panorama
+mode: default
+content:
+  field_descripcion:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_imagen_panorama:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_centro_comercial: true
+  langcode: true
