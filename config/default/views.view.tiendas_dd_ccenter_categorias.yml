@@ -526,7 +526,7 @@ display:
         description: 'Vista de tiendas por categorías'
         expanded: false
         parent: ''
-        weight: 0
+        weight: 5
         context: '0'
         menu_name: main
       tab_options:
