@@ -7,10 +7,14 @@ dependencies:
     - field.storage.node.field_mall_tmall
     - field.storage.node.field_nivel_tmall
     - node.type.tienda_mall
+    - taxonomy.vocabulary.malls_cencosud
+  content:
+    - 'taxonomy_term:malls_cencosud:4da7e2bd-1e6d-44cd-9d61-26406d0c7c48'
   module:
     - better_exposed_filters
     - node
     - options
+    - taxonomy
     - user
     - views_autocomplete_filters
 id: tiendas_dd_center
@@ -499,6 +503,50 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
+        field_mall_tmall_target_id:
+          id: field_mall_tmall_target_id
+          table: node__field_mall_tmall
+          field: field_mall_tmall_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            296: 296
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: malls_cencosud
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
         title:
           id: title
           table: node_field_data
@@ -602,6 +650,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -637,6 +686,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
