@@ -8,11 +8,13 @@ dependencies:
     - field.storage.node.field_nivel_tmall
     - node.type.tienda_mall
     - taxonomy.vocabulary.categorias_tiendas
+    - taxonomy.vocabulary.malls_cencosud
   content:
     - 'taxonomy_term:categorias_tiendas:02fb6043-5f59-46d1-877f-3b69c77c89b3'
     - 'taxonomy_term:categorias_tiendas:04c92fc8-f078-46d6-ac5b-96b185e67f40'
     - 'taxonomy_term:categorias_tiendas:19c4434d-4b0a-4025-abdf-5cf067270601'
     - 'taxonomy_term:categorias_tiendas:6ba8aee1-2ab0-46c3-a6f4-7c16e5448641'
+    - 'taxonomy_term:malls_cencosud:4da7e2bd-1e6d-44cd-9d61-26406d0c7c48'
   module:
     - better_exposed_filters
     - node
@@ -506,6 +508,50 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
+        field_mall_tmall_target_id:
+          id: field_mall_tmall_target_id
+          table: node__field_mall_tmall
+          field: field_mall_tmall_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            296: 296
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: malls_cencosud
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
         title:
           id: title
           table: node_field_data
