@@ -80,6 +80,17 @@ a {
     width: 100%;
 }
 
-.slick>div {
-    margin: 0 15px;
+.slick > div {
+    margin: 0;
+    //margin: 0 15px;
+}
+.slick-arrow {
+    &::before{
+        color: $costanera-white !important;
+    }
+    &::hover{
+        &::before{
+            color: $costanera-sky !important;
+        }
+    }
 }
