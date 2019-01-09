@@ -5,7 +5,6 @@ dependencies:
   config:
     - entity_browser.browser.image_browser
     - field.field.node.promocion.field_centro_comercial
-    - field.field.node.promocion.field_descripcion
     - field.field.node.promocion.field_imagen_promocion
     - node.type.promocion
   module:
@@ -14,7 +13,6 @@ dependencies:
     - field_layout
     - layout_discovery
     - path
-    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -38,14 +36,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_descripcion:
-    weight: 10
-    settings:
-      rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
     region: content
   field_imagen_promocion:
     type: entity_browser_file

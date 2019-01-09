@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.panorama.field_centro_comercial
-    - field.field.node.panorama.field_descripcion
     - field.field.node.panorama.field_imagen_panorama
     - node.type.panorama
   module:
     - image
     - panelizer
-    - text
     - user
 third_party_settings:
   panelizer:
@@ -23,13 +21,6 @@ targetEntityType: node
 bundle: panorama
 mode: default
 content:
-  field_descripcion:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_imagen_panorama:
     weight: 1
     label: hidden

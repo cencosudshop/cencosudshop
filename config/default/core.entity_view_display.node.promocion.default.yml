@@ -4,13 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.promocion.field_centro_comercial
-    - field.field.node.promocion.field_descripcion
     - field.field.node.promocion.field_imagen_promocion
     - node.type.promocion
   module:
     - image
     - panelizer
-    - text
     - user
 third_party_settings:
   panelizer:
@@ -23,13 +21,6 @@ targetEntityType: node
 bundle: promocion
 mode: default
 content:
-  field_descripcion:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_imagen_promocion:
     weight: 2
     label: hidden
