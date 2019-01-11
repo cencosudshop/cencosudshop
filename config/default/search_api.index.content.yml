@@ -2,19 +2,35 @@ uuid: bfb5b758-3588-4a5c-bec3-342df6c2b2df
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - search_api
   config:
+    - field.storage.node.field_tienda_tmall
+    - field.storage.node.field_descripcion_tienda
+    - field.storage.node.field_categoria_tienda
     - search_api.server.database
     - core.entity_view_mode.node.full
+  module:
+    - node
+    - taxonomy
+    - search_api
 _core:
   default_config_hash: qEX0c8Yf878jYMC-3TrFlGSSNQeGbl3u0Hs6GJfxA38
 id: content
-name: Content
+name: Contenidos
 description: 'An index of all content in your site.'
 read_only: false
 field_settings:
+  field_descripcion_tienda:
+    label: 'Tienda » Content » Descripción'
+    datasource_id: 'entity:node'
+    property_path: 'field_tienda_tmall:entity:field_descripcion_tienda'
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_tienda_tmall
+        - field.storage.node.field_descripcion_tienda
+      module:
+        - node
   label:
     label: Label
     property_path: aggregated_field
@@ -23,6 +39,28 @@ field_settings:
       type: first
       fields:
         - 'entity:node/title'
+  name:
+    label: 'Tienda » Content » Categoría » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_tienda_tmall:entity:field_categoria_tienda:entity:name'
+    type: text
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_tienda_tmall
+        - field.storage.node.field_categoria_tienda
+      module:
+        - node
+        - taxonomy
+        - taxonomy
+  name_1:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - taxonomy
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -42,11 +80,12 @@ field_settings:
           banner: default
           landing_page: full
           page: default
+          panorama: default
           promocion: default
           tienda: default
           tienda_mall: default
   status:
-    label: null
+    label: status
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
@@ -55,8 +94,20 @@ field_settings:
     dependencies:
       module:
         - node
+  title:
+    label: 'Tienda » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_tienda_tmall:entity:title'
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_tienda_tmall
+      module:
+        - node
+        - node
   uid:
-    label: null
+    label: uid
     datasource_id: 'entity:node'
     property_path: uid
     type: integer
@@ -68,8 +119,17 @@ field_settings:
 datasource_settings:
   'entity:node':
     bundles:
+      default: false
+      selected:
+        - tienda_mall
+    languages:
       default: true
       selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - categorias_tiendas
     languages:
       default: true
       selected: {  }
@@ -80,6 +140,7 @@ processor_settings:
     weights:
       preprocess_query: -10
   html_filter:
+    all_fields: false
     fields:
       - label
       - rendered
@@ -94,20 +155,28 @@ processor_settings:
     weights:
       preprocess_index: -10
       preprocess_query: -9
-    all_fields: false
   ignorecase:
+    all_fields: true
     fields:
+      - field_descripcion_tienda
       - label
+      - name
+      - name_1
       - rendered
+      - title
     weights:
       preprocess_index: -9
       preprocess_query: -8
-    all_fields: false
   rendered_item: {  }
   stopwords:
+    all_fields: true
     fields:
+      - field_descripcion_tienda
       - label
+      - name
+      - name_1
       - rendered
+      - title
     stopwords:
       - a
       - an
@@ -147,26 +216,33 @@ processor_settings:
     weights:
       preprocess_index: -5
       preprocess_query: -4
-    all_fields: false
   tokenizer:
+    all_fields: true
     fields:
+      - field_descripcion_tienda
       - label
+      - name
+      - name_1
       - rendered
+      - title
     spaces: ''
     overlap_cjk: 1
-    minimum_word_size: '3'
+    minimum_word_size: '2'
     weights:
       preprocess_index: -6
       preprocess_query: -5
-    all_fields: false
   transliteration:
+    all_fields: true
     fields:
+      - field_descripcion_tienda
       - label
+      - name
+      - name_1
       - rendered
+      - title
     weights:
       preprocess_index: -4
       preprocess_query: -3
-    all_fields: false
 tracker_settings:
   default:
     indexing_order: fifo
