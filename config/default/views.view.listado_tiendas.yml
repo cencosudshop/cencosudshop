@@ -128,56 +128,11 @@ display:
             button_text: '+ Ver más...'
             automatically_load_content: false
       style:
-        type: table
+        type: default
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            field_logo_tienda: field_logo_tienda
-            title_1: title_1
-            field_nivel_tmall: title_1
-            field_telefono_tmall: field_telefono_tmall
-            field_website_tienda: field_telefono_tmall
-          info:
-            field_logo_tienda:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            title_1:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_nivel_tmall:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_telefono_tmall:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_website_tienda:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
+          default_row_class: false
       row:
         type: fields
       fields:
@@ -308,10 +263,10 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '{{ title_1 }}</ br>Nivel: '
-            make_link: false
-            path: ''
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '{{ view_node }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -498,8 +453,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '</ br>{{ field_website_tienda }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1094,7 +1049,7 @@ display:
     display_options:
       display_extenders: {  }
       path: tiendas
-      exposed_block: true
+      exposed_block: false
     cache_metadata:
       max-age: -1
       contexts:

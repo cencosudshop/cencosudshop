@@ -10,6 +10,7 @@ dependencies:
     - node
     - search_api
     - views_autocomplete_filters
+    - views_infinite_scroll
 _core:
   default_config_hash: 8eXHpZgzJ58fVmB7evA4TNESdXWjMOW9AFPYSxEimE4
 id: search
@@ -67,12 +68,15 @@ display:
                   filter_rewrite_values: ''
           text_input_required_format: rich_text
       pager:
-        type: mini
+        type: infinite_scroll
         options:
           items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -81,9 +85,9 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          views_infinite_scroll:
+            button_text: 'Ver más'
+            automatically_load_content: false
       style:
         type: default
         options:
@@ -473,6 +477,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       title: Búsqueda
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
