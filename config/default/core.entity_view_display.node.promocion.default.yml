@@ -4,9 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.promocion.field_centro_comercial
+    - field.field.node.promocion.field_descripcion_promocion
     - field.field.node.promocion.field_imagen_promocion
+    - field.field.node.promocion.field_tienda_asociada
+    - field.field.node.promocion.field_vigencia_promocion
+    - image.style.large
     - node.type.promocion
   module:
+    - datetime_range
     - image
     - panelizer
     - user
@@ -21,14 +26,39 @@ targetEntityType: node
 bundle: promocion
 mode: default
 content:
+  field_descripcion_promocion:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_imagen_promocion:
     weight: 2
     label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_tienda_asociada:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_vigencia_promocion:
+    weight: 4
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short_date
+      separator: '- Hasta '
+    third_party_settings: {  }
+    type: daterange_default
     region: content
   links:
     weight: 0
