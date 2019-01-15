@@ -1,0 +1,19 @@
+uuid: 9bc75750-16a3-4618-813c-4589c0be1741
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_panorama
+    - node.type.panorama
+id: node.panorama.field_descripcion_panorama
+field_name: field_descripcion_panorama
+entity_type: node
+bundle: panorama
+label: 'Descripción panorama'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

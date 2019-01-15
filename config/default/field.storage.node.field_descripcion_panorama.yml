@@ -1,0 +1,19 @@
+uuid: 407f2c46-9e0e-4ebf-9f7d-4bda2a4674eb
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_descripcion_panorama
+field_name: field_descripcion_panorama
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
