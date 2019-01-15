@@ -6,8 +6,8 @@ Description: Bootstrap 4 with Sass
 // import files
 @import "import";
 
-/* GENERAL STYLES
--------------------------------------------------*/
+/* ----------- GENERAL STYLES ----------- */
+
 /*
 html {
 
@@ -16,7 +16,26 @@ html {
 body {
    @include font-size-map($html-font-size);
 }
-// Header
+
+/* place footer bottom */
+html, body {
+    height: 100%;
+}
+
+.dialog-off-canvas-main-canvas,
+#page-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.p-relativeToFooter{
+    padding-bottom: 35em;
+    @include breakpoint(768px) {
+        padding-bottom: 10.56rem;
+    }
+}
+
+/* Header */
 $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
 #collapsibleNavbar {
     @include breakpoint($md,$lg) {
@@ -39,23 +58,18 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
         top: auto;
     }
 }
+/* Buscador en Header */
+#block-exposedformsearchpage-2 .content{
+    background: #e2e2e2;
+    padding: 15px;
+    margin: 0 -15px;
 
-/* place footer bottom */
-html, body {
-    height: 100%;
-}
+    #edit-keywords {
+        margin-top: 0;
+    }
 
-.dialog-off-canvas-main-canvas,
-#page-wrapper {
-    min-height: 100%;
-    position: relative;
-}
-
-
-.p-relativeToFooter{
-    padding-bottom: 35em;
-    @include breakpoint(768px) {
-        padding-bottom: 10.56rem;
+    #edit-actions {
+        display: none;
     }
 }
 

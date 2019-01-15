@@ -117,5 +117,7 @@
       </ul>
     </div>
   </nav>
-  <div style="background : black;"></div>
+  {% if page.highlighted %}
+    {{ page.highlighted }}
+  {% endif %}
 </header>
