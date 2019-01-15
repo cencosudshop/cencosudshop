@@ -40,6 +40,24 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
     }
 }
 
+/* place footer bottom */
+html, body {
+    height: 100%;
+}
+
+.dialog-off-canvas-main-canvas,
+#page-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+
+.p-relativeToFooter{
+    padding-bottom: 35em;
+    @include breakpoint(768px) {
+        padding-bottom: 10.56rem;
+    }
+}
 
 /* COLORS 
 --------------------------------------------------*/
@@ -64,7 +82,6 @@ a {
     color: $primary-shade;
 }
 */
-
 
 .card-group img {
     margin: 0;

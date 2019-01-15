@@ -67,10 +67,9 @@
  * @see html.html.twig
  */
 #}
-{% include directory ~ '/templates/partials/header.html.twig' %}
 <div id="page-wrapper" style="margin-bottom: 1rem;">
-  <div id="page">
-    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+    {% include directory ~ '/templates/partials/header.html.twig' %}
+    <div id="main-wrapper" class="layout-main-wrapper clearfix p-relativeToFooter">
       {% block content %}
       <div id="main" class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left clearfix">
@@ -83,6 +82,5 @@
       </div>
       {% endblock %}
     </div>
-  </div>
+    {% include directory ~ '/templates/partials/footer.html.twig' %}
 </div>
-{% include directory ~ '/templates/partials/footer.html.twig' %}
