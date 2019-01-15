@@ -1,0 +1,28 @@
+uuid: e8569688-850a-40f6-aa2b-b10f6903ea9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tienda_asociada
+    - node.type.promocion
+    - node.type.tienda
+id: node.promocion.field_tienda_asociada
+field_name: field_tienda_asociada
+entity_type: node
+bundle: promocion
+label: 'Tienda asociada'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tienda: tienda
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,26 @@
+uuid: 282a01fe-520c-49f0-b411-dd334d18cdec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vigencia_promocion
+    - node.type.promocion
+  module:
+    - datetime_range
+id: node.promocion.field_vigencia_promocion
+field_name: field_vigencia_promocion
+entity_type: node
+bundle: promocion
+label: 'Vigencia Promoción'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: ''
+    default_end_date: ''
+default_value_callback: ''
+settings: {  }
+field_type: daterange
