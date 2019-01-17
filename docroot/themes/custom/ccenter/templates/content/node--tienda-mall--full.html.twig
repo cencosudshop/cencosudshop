@@ -59,65 +59,66 @@
  * @see template_preprocess_node()
  */
 #}
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<div class="col-md-12"style="height:50px;background:#15B7E2;margin-bottom:4%;">
-<h6 style="color:#fff;padding:1%;">TIENDAS</h6>
+<div class="row">
+   <h6 >TIENDAS</h6>
 </div>
-<div class="col-md-3" style="float:left;">
-   <div class="col-md-12" style="background:#5f585836; height:100px;margin-bottom: 5%; text-align:center;">
-      <img src="{{ file_url(node.field_tienda_tmall.entity.field_logo_tienda.entity.fileuri) }}" >
+<div class="row">
+   <div class="col-md-4 m-1 text-center " style="background:aliceblue;">
+         {{ content.field_logo_tienda}}
+         <img src="{{ file_url(node.field_tienda_tmall.entity.field_logo_tienda.entity.fileuri) }}" >
+         <p>
+            <i class="far fa-clock"></i>{{ node.field_horario_tmall.value }}
+         </p>
+         <p>
+            <i class="fas fa-phone"></i>{{ node.field_telefono_tmall.value }}
+         </p>
+         <p>
+            <a href="{{ node.field_tienda_tmall.entity.field_website_tienda.0.url }}" target="_blank">
+               {{ node.field_tienda_tmall.entity.field_website_tienda.0.url }}
+            </a>
+         </p>
+         {% if node.field_tienda_tmall.entity.field_categoria_tienda.entity|length > 1 %}
+            <ul>
+               {%- for item in node.field_tienda_tmall.entity.field_categoria_tienda.entity -%}
+                  <li>
+                     {{ item.label }}
+                  </li>
+               {%- endfor -%}
+            </ul>
+         {% endif %}
+   </div> 
+   <div class="col-md-8">
+      <div class="col-md-12">
+         <h4>{{ node.field_tienda_tmall.entity.title.value }}</h4>
+      </div>
+      <div class="col-md-12">
+         <div>
+            <span>Nivel </span>
+            {%- for item in node.field_nivel_tmall -%}
+            <span>{{ item.value }} - </span>
+            {%- endfor -%}
+         </div>
+      </div>
+      <div class="col-md-12" style="padding: 3%;text-align: justify;">
+         {{ node.field_tienda_tmall.entity.field_descripcion_tienda.value }}
+      </div>
+      <div class="col-md-12" style="padding: 3%;text-align: justify;">
+         {{ node.field_mall_tmall.value }}
+      </div>
+      <div class="col-md-12">
+         <div style="background:#15B7E2;height:10em;">
+            <div style="width:100px;">{{ content.field_fotos_tmalls}}</div>
+         </div>
+      </div>
+      <div class="col-md-12" style="padding: 3%;text-align: justify;">
+         <h5>Tienda en mapa</h5>
+         <div style="background:#15B7E2;height:10em;">
+         </div>
+      </div>
+      <div class="col-md-12" style="padding: 3%;text-align: justify;">
+         <h5>Promociones</h5>
+         <div style="background:#15B7E2;height:10em;"></div>
+      </div>
    </div>
-   <div class="col-md-12" style="float:left;background: #cbe5ec; padding: 3%; color:#5a5a5a;">
-        <div class="col-md-12" style="">
-          <i class="far fa-clock"></i>{{ node.field_horario_tmall.value }}
-        </div>
-        <div class="col-md-12" style="">
-           <i class="fas fa-phone"></i>&nbsp; {{ node.field_telefono_tmall.value }}
-        </div>
-        <div class="col-md-12" style="">
-          <a href="{{ node.field_tienda_tmall.entity.field_website_tienda.0.url }}" target="_blank">
-              {{ node.field_tienda_tmall.entity.field_website_tienda.0.url }}
-          </a>
-        </div>
-        <div class="col-md-12" style="">
-        {%- for item in node.field_tienda_tmall.entity.field_categoria_tienda.entity -%}
-          {{ item.label }} 
-          {%- endfor -%}
-       </div>
-    </div>
-</div> 
-<div class="col-md-8" style="float:left; margin-left:10px;border-left-style: solid;border-left-color: #15B7E2;">
-    <div class="col-md-12">
-      <h4>{{ node.field_tienda_tmall.entity.title.value }}</h4>
-    </div>
-    <div class="col-md-12">
-       <div>
-         <span>Nivel </span>
-         {%- for item in node.field_nivel_tmall -%}
-             <span>{{ item.value }} - </span>
-         {%- endfor -%}
-       </div>
-    </div>
-    <div class="col-md-12" style="padding: 3%;text-align: justify;">
-       {{ node.field_tienda_tmall.entity.field_descripcion_tienda.value }}
-    </div>
-    <div class="col-md-12" style="padding: 3%;text-align: justify;">
-      {{ node.field_mall_tmall.value }}
-    </div>
-    <div class="col-md-12">
-       <div style="background:#15B7E2;height:22em;">
-        <div style="width:100px;">{{ content.field_fotos_tmall}}</div>
-       </div>
-    </div>
-    <div class="col-md-12" style="padding: 3%;text-align: justify;">
-       <h5>Tienda en mapa</h5>
-         <div style="background:#15B7E2;height:50em;">
-               {{ content.field_mapa_tmall}}
-       </div>
-    </div>
-    <div class="col-md-12" style="padding: 3%;text-align: justify;">
-        <h5>Promociones</h5>
-        <div style="background:#15B7E2;height:10em;"></div>
-     </div>
 </div>
+   

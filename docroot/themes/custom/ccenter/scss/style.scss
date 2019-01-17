@@ -6,16 +6,40 @@ Description: Bootstrap 4 with Sass
 // import files
 @import "import";
 
-/* GENERAL STYLES
--------------------------------------------------*/
-/*
-html {
+/* ----------- GENERAL STYLES ----------- */
 
-}
-*/
+
 body {
    @include font-size-map($html-font-size);
 }
+
+/* place footer bottom */
+html, body {
+    height: 100%;
+}
+
+.dialog-off-canvas-main-canvas {
+    position: relative;
+}
+
+.dialog-off-canvas-main-canvas,
+#page-wrapper {
+    min-height: 100%;
+    
+}
+
+.p-relativeToFooter{
+    padding-bottom: 35em;
+    @include breakpoint(768px) {
+        padding-bottom: 10.56rem;
+    }
+}
+
+footer.footer{
+    position: absolute;
+    bottom: 0;
+}
+
 // Header
 $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
 #collapsibleNavbar {
@@ -47,13 +71,46 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
         top: auto;        
     }
 }
+/* Buscador en header */
+.views-exposed-form .content{
+    background: #e2e2e2;
+    padding: 15px;
+    margin: 0 -15px;
+    
+    #edit-keywords {
+        margin-top: 0;
+    }
 
+    #edit-actions {
+        display: none;
+    }
+}
+
+/* Seccion "para hacer" */
 .s-parahacer {
     p {
         font-size: 2em;
     }
     img {
         border-radius: 2px;
+    }
+}
+
+/* Tiendas */
+
+.logoTienda {
+    width: 260px;
+    margin: 0 auto;
+    @include breakpoint(768px) {
+        width: unset;
+        margin: unset;
+    }
+}
+
+.infoShop {
+    font-size: 1rem;
+    @include breakpoint(768px) {
+        font-size: .8rem;
     }
 }
 

@@ -67,57 +67,59 @@
  * @see html.html.twig
  */
 #}
-{% include directory ~ '/templates/partials/header.html.twig' %}
 
-<div id="s-content" class="container-fluid">
-  {% if page.highlighted %}
+<div id="page-wrapper">
+  {% include directory ~ '/templates/partials/header.html.twig' %}
+  <div id="s-content" class="container-fluid p-relativeToFooter">
+    {% if page.highlighted %}
     <div class="highlighted">
       <aside class="{{ container }} section clearfix" role="complementary">
         {{ page.highlighted }}
       </aside>
     </div>
-  {% endif %}
-  {# Seccion Para hacer#}
-  <div class="s-parahacer container-fluid">
-    <div class="row"><h3>Para hacer</h3></div>
-    <div class="row text-center">
-      <div class="col-6 col-lg p-1">
-        <a class="" href="#">
-          <img alt="Comprar" src="/themes/custom/ccenter/images/comprar.jpg"/>
-          <p>COMPRAR</p>
-        </a>
+    {% endif %}
+    {# Seccion Para hacer#}
+    <div class="s-parahacer container-fluid">
+      <div class="row"><h3>Para hacer</h3></div>
+      <div class="row text-center">
+        <div class="col-6 col-lg p-1">
+          <a class="" href="#">
+            <img alt="Comprar" src="/themes/custom/ccenter/images/comprar.jpg"/>
+            <p>COMPRAR</p>
+          </a>
+        </div>
+        <div class="col-6 col-lg p-1">
+          <!-- <div class="d-flex flex-column p-1"> -->
+            <a class="" href="#">
+              <img alt="Comer" src="/themes/custom/ccenter/images/comer.jpg"/>
+              <p>VITRINEAR</p>
+            </a>
+          </div>
+          <div class="col-6 col-lg p-1">
+            <a class="" href="#">
+              <img alt="Compartir" src="/themes/custom/ccenter/images/cine.jpg"/>
+              <p>COMPARTIR</p>
+            </a>
+          </div>
+          <div class="col-6 col-lg p-1">
+            <a class="" href="#">
+              <img alt="Pasarlo bien" src="/themes/custom/ccenter/images/sky.jpg"/>
+              <p>PASARLO BIEN</p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-6 col-lg p-1">
-      <!-- <div class="d-flex flex-column p-1"> -->
-        <a class="" href="#">
-          <img alt="Comer" src="/themes/custom/ccenter/images/comer.jpg"/>
-          <p>VITRINEAR</p>
-        </a>
+      <div class="bg-black" style="height: 500px"></div>
+      {#Panoramas, promociones y mapa#}
+      {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
+      <div class="featured-bottom">
+        <aside class="{{ container }} clearfix" role="complementary">
+          {{ page.featured_bottom_first }}
+          {{ page.featured_bottom_second }}
+          {{ page.featured_bottom_third }}
+        </aside>
       </div>
-      <div class="col-6 col-lg p-1">
-        <a class="" href="#">
-          <img alt="Compartir" src="/themes/custom/ccenter/images/cine.jpg"/>
-          <p>COMPARTIR</p>
-        </a>
-      </div>
-      <div class="col-6 col-lg p-1">
-        <a class="" href="#">
-          <img alt="Pasarlo bien" src="/themes/custom/ccenter/images/sky.jpg"/>
-          <p>PASARLO BIEN</p>
-        </a>
-      </div>
+      {% endif %}
     </div>
-  </div>
-  <div class="bg-black" style="height: 500px"></div>
-  {#Panoramas, promociones y mapa#}
-  {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
-    <div class="featured-bottom">
-      <aside class="{{ container }} clearfix" role="complementary">
-        {{ page.featured_bottom_first }}
-        {{ page.featured_bottom_second }}
-        {{ page.featured_bottom_third }}
-      </aside>
-    </div>
-  {% endif %}
+    {% include directory ~ '/templates/partials/footer.html.twig' %}
 </div>
-{% include directory ~ '/templates/partials/footer.html.twig' %}
