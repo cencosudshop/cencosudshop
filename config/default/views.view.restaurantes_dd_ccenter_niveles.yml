@@ -270,7 +270,7 @@ display:
           settings: {  }
           group_column: value
           group_columns: {  }
-          group_rows: true
+          group_rows: false
           delta_limit: 0
           delta_offset: 0
           delta_reversed: false
@@ -580,19 +580,17 @@ display:
           error_message: true
           plugin_id: taxonomy_index_tid
       sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: field_tienda_tmall
+        field_nivel_tmall_value:
+          id: field_nivel_tmall_value
+          table: node__field_nivel_tmall
+          field: field_nivel_tmall_value
+          relationship: none
           group_type: group
           admin_label: ''
           order: ASC
           exposed: false
           expose:
             label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: standard
       title: Restaurantes
       header: {  }
