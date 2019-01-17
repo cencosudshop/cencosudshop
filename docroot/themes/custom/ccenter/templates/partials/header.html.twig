@@ -8,8 +8,8 @@
 {#% if page.navigation or page.navigation_collapsible %#}
     {%
       set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'bg-light navbar-light',
+      'navbar',
+      theme.settings.navbar_inverse ? 'navbar-inverse' : 'bg-light navbar-light',
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
@@ -114,5 +114,7 @@
       </ul>
     </div>
   </nav>
-  <div style="background : black;"></div>
+ 
+  {{ page.header }}
+
 </header>
