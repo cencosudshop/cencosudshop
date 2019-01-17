@@ -1,0 +1,128 @@
+nav {
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .subcontainer {
+    padding: 10px;
+  }
+  
+  .subcontainer .searchbar,
+  .subcontainer .menu {
+    display: block;
+  }
+  
+  .subcontainer .searchbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .subcontainer .searchbar .bar {
+    background: #999;
+    height: 20px;
+    width: 70%;
+  }
+  
+  .subcontainer .searchbar button {
+    width: 25%;
+  }
+  
+  .subcontainer .menu ul{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .subcontainer .menu ul li{
+    list-style: none;
+    padding: 0 10px;
+  }
+  
+  .text {
+    background: #eee;
+    display: flex;
+    align-items: center;
+  }
+  
+  .text p {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .bg-costanera .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(53, 151, 225, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  
+  
+
+  <nav role="navigation">
+        <div class="row">
+          <div class="logo col-2 col-sm-2 col-md-1">
+            {#{ page.header }#}
+            <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg">
+            <img src="/themes/custom/ccenter/images/brand-ccenter.png" alt="Costanera Center">
+          </div>
+          <div class="subcontainer col-10 col-sm-10 col-md-11">
+            <div class="auxiliar-nav">
+                <ul class="nolist">
+                    <li>
+                      <a href="" class="ico-calendar"><img src="/themes/custom/ccenter/images/icons/own/quarter-clock.png" alt="">
+                        <span>Horarios</span>
+                      </a>
+                    </li>
+                    <li><a href="" class="ico-calendar"><img src="/themes/custom/ccenter/images/icons/own/pin.png" alt=""><span>C&oacute;mo llegar</span></a></li>
+                    <li><hr class="vertical"></li>
+                    <li class="mr-auto"><a style="vertical-align: middle;" href="">Sitio Accesible</a></li>
+                    <li><a href="" class="ico-face"><img src="/themes/custom/ccenter/images/icons/own/face.png" alt=""></a></li>
+                    <li><a href="" class="ico-twitt"><img src="/themes/custom/ccenter/images/icons/own/twitt.png" alt=""></a></li>
+                    <li><a href="" class="ico-insta"><img src="/themes/custom/ccenter/images/icons/own/insta.png" alt=""></a></li>
+                    <li><hr class="vertical"></li>
+                    <li><a href="" class="ico-calendar"><img src="/themes/custom/ccenter/images/icons/own/user.png" alt=""><span>Acceder</span></a></li>
+                  </ul>
+            </div>
+            <div class="main-menu">
+              <ul class="nolist">
+                <li class="d-md-none">
+                  <a class="" href="/">Inicio</a>
+                </li>
+                <li>
+                  <a class="" href="/">Tiendas</a>
+                </li>
+                <li>
+                  <a class="" href="/">Cine</a>
+                </li>
+                <li>
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Panormas</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Actividades y Eventos</a>
+                    <a class="dropdown-item" href="#">Sky Costanera</a>
+                  </div>
+                </li>
+                <li>
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Restaurantes</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Restaurantes</a>
+                    <a class="dropdown-item" href="#">Sabores Costanera</a>
+                  </div>
+                </li>
+                <li>Promociones</li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Informaci&oacute;n</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Contacto</a>
+                      <a class="dropdown-item" href="#">Horarios</a>
+                      <a class="dropdown-item" href="#">Servicios</a>
+                      <a class="dropdown-item" href="#">Sostenibilidad</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>

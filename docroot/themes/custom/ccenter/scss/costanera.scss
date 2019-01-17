@@ -1,0 +1,209 @@
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// breakpoint mixin
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: min-width) {
+    @if $mq2 == false {
+        @media ($maxmin: $mq01) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $mq01) and (max-width: $mq2) {
+            @content;
+        }
+    }
+}
+
+// import files
+@import "variables";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+// html
+
+body {
+    background: $white;
+    color: $costanera-sky;
+}
+
+img {
+    width: 100%;
+}
+
+hr.vertical{
+    border: none;
+    border-left: 1px solid $costanera-sky;
+    height: 1rem;
+    width: 1px;
+}
+// footer
+ul.nolist{
+    padding: 0.25rem;
+    margin: 0;
+    li{
+        list-style: none;
+        padding: 0.25rem;
+    }
+}
+
+
+/* COLORS 
+--------------------------------------------------*/
+.bg-costanera-white {
+    /* All Text */
+    * {
+        color: $costanera-sky;
+    }
+    
+    color: $costanera-sky;
+    /* Links */
+    a{
+        color: $costanera-sky;
+        &:hover {
+            color: $costanera-sky;
+            text-decoration: none;
+        }
+        & span{
+            vertical-align: middle;
+        }
+    }
+    $link-color: $white;
+    $link-decoration: none;
+    $link-hover-color: $white;
+
+    hr{
+        margin: 0.25rem 0.5rem;
+        border-top: 1px solid $white;
+    }
+    .navbar-brand {
+        @include breakpoint(0px,767px) {
+            max-width: 12rem;
+        }
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(53, 151, 225, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); 
+    }
+}
+
+.bg-costanera-sky {
+    /* All Text */
+    color: $white;
+    /* Links */
+    a{
+        color: $white;
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+        &[class*="ico-"] img{
+            width: 1.5rem;
+        }
+        & span{
+            vertical-align: middle;
+        }
+    }
+    $link-color: $white;
+    $link-decoration: none;
+    $link-hover-color: $white;
+
+    hr{
+        margin: 0.25rem 0.5rem;
+        border-top: 1px solid $white;
+    }
+}
+
+.dropdown-item{
+    color: $costanera-sky-light25;
+}
+
+.bg-inverse {
+    background: $primary-shade !important;
+}
+
+.site-footer {
+    background: $accent-shade !important;
+}
+
+.menu--main li a {
+    color: $primary-shade;
+}
+
+.menu--account li a {
+    color: $primary-shade;
+}
+
+.site-name-slogan a {
+    text-decoration: none;
+}
+
+.card-group img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.card-group .field--type-image {
+    margin: 0
+}
+
+.slick {
+    width: 100%;
+}
+
+/* Header */
+nav {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/*
+.subcontainer {
+    padding: 0.5rem;
+    ul{
+        width: inherit;
+        display: flex;
+        li{
+            padding: 0 0.25rem;
+        }
+    }
+    
+    .auxiliar-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-menu {
+        display: block;
+        ul{
+            justify-content: space-between;
+        }
+    }
+}
+*/
+@media (min-width: 768px) {
+    #collapsibleNavbar{
+        width: 100%;
+        flex-grow: 0;
+        ul{
+            width: 100%;
+
+            &.main-navigation{
+                justify-content: space-between;
+            }
+            .nav-link{
+                padding-right: 0.25rem;
+                padding-left: 0.25rem;
+            }
+    
+        }
+    }
+}

@@ -8,15 +8,58 @@ Description: Bootstrap 4 with Sass
 
 /* GENERAL STYLES
 -------------------------------------------------*/
+/*
+html {
 
+}
+*/
 body {
-    background: $white;
+   @include font-size-map($html-font-size);
+}
+// Header
+$header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
+#collapsibleNavbar {
+    .aux-navigation {
+        a{
+            &[class*="ico-"] img{
+                width: 1.5rem;
+            }
+        }
+    }
+
+    @include breakpoint($md,$lg) {
+        white-space: nowrap;
+    }
+
+    a {
+        @each $breakpoint, $font-size in $header-resize {
+            @include breakpoint($breakpoint) {
+              font-size: $font-size;
+            }
+        }
+        @include breakpoint(0px,767px) {
+            text-align: center;
+        }
+    }
+    .dropdown-menu{
+        font-size: 1em;
+        left: auto;
+        top: auto;        
+    }
 }
 
+.s-parahacer {
+    p {
+        font-size: 2em;
+    }
+    img {
+        border-radius: 2px;
+    }
+}
 
 /* COLORS 
 --------------------------------------------------*/
-
+/*
 a {
     color: $accent-shade;
 }
@@ -36,10 +79,8 @@ a {
 .menu--account li a {
     color: $primary-shade;
 }
+*/
 
-.site-name-slogan a {
-    text-decoration: none;
-}
 
 .card-group img {
     margin: 0;

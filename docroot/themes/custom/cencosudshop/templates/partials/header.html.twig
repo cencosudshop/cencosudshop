@@ -21,10 +21,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand m-0 p-0" href="#">
-        <img src="/themes/custom/cencosudshop/images/brand-cencosudshop2.png" alt="Costanera Center">
+    <a class="navbar-brand m-0 p-0" href="/">
+      <img src="/themes/custom/cencosudshop/images/brand-ccenter2.png" alt="Costanera Center">
     </a>
     
+    <a href="" class="ico-calendar d-md-none">
+      <img src="/themes/custom/ccenter/images/icons/own/user.png" alt="login"  style="max-width: 2.5rem;">
+    </a>
+
     <div class="collapse navbar-collapse flex-column" id="collapsibleNavbar">
       <ul class="navbar-nav d-none d-md-flex aux-navigation" id="">
         <li class="nav-item">
@@ -33,7 +37,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link ico-calendar"><img src="/themes/custom/cencosudshop/images/icons/own/pin.png" alt=""><span>C&oacute;mo llegar</span></a></li>
+          <a href="https://goo.gl/maps/ybXcCY8hPSs" target="_blank" class="nav-link ico-calendar">
+            <img src="/themes/custom/cencosudshop/images/icons/own/pin.png" alt=""><span>C&oacute;mo llegar</span>
+          </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link " href=""><hr class="vertical my-1 mx-0"></a>
         </li>
@@ -73,7 +80,7 @@
           <a class="nav-link" href="/">INICIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">TIENDAS</a>
+          <a class="nav-link" href="/tiendas">TIENDAS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">CINE</a>
@@ -110,4 +117,7 @@
       </ul>
     </div>
   </nav>
+  {% if page.highlighted %}
+    {{ page.highlighted }}
+  {% endif %}
 </header>

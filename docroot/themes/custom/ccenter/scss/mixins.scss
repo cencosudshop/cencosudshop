@@ -16,3 +16,38 @@ $value in $theme-colors {
         @include button-outline-variant($value);
     }
 }
+
+@each $color,
+$value in $theme-colors {
+    .bg-#{$color} {
+        background-color: $value; 
+    }
+}
+
+// mixin para hacer responsive el tamaño de la fuente
+// breakpoint mixin
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: min-width) {
+    @if $mq2 == false {
+        @media ($maxmin: $mq01) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $mq01) and (max-width: $mq2) {
+            @content;
+        }
+    }
+}
+
+// responsive font size mixin
+@mixin font-size-map($font-size-map) {
+    @each $breakpoint, $font-size in $font-size-map {
+        @if $breakpoint == null {
+            font-size: $font-size;
+        } @else {
+            @include breakpoint($breakpoint) {
+                font-size: $font-size;
+            }
+        }
+    }
+}

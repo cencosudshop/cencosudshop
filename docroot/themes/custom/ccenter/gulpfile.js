@@ -7,7 +7,7 @@ var uglify = require("gulp-uglify");
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/style.scss'])
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/style.scss','scss/costanera.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest("css"))
         .pipe(sass({ outputStyle: 'compressed' }))
