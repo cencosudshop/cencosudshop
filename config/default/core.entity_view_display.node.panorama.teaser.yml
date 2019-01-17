@@ -18,7 +18,13 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  content_moderation_control: true
   field_centro_comercial: true
   field_descripcion: true
+  field_descripcion_panorama: true
+  field_horario_panorama: true
   field_imagen_panorama: true
+  field_panorama_slideshow: true
+  field_ubicacion_panorama: true
+  field_vigencia_panorama: true
   langcode: true
