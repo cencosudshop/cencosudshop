@@ -1,6 +1,6 @@
 uuid: 432f3dfb-f2b3-4ddd-a404-b4db459e155a
 langcode: en
-status: false
+status: true
 dependencies: {  }
 id: ccenter
 label: ccenter
@@ -10,8 +10,8 @@ module: {  }
 theme: {  }
 blacklist: {  }
 graylist:
-  - system.theme
   - system.site
+  - system.theme
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
