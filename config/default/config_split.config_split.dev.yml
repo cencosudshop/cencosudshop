@@ -6,9 +6,11 @@ id: dev
 label: Dev
 description: ''
 folder: ../config/envs/dev
-module: {  }
+module:
+  acquia_connector: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - acquia_connector.settings
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
