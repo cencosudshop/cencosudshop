@@ -56,9 +56,9 @@ display:
             general:
               allow_secondary: false
               secondary_label: 'Advanced options'
-              autosubmit: false
-              autosubmit_exclude_textfield: false
-              autosubmit_hide: false
+              autosubmit: true
+              autosubmit_exclude_textfield: true
+              autosubmit_hide: true
             search_api_fulltext:
               bef_format: default
               more_options:
@@ -477,7 +477,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       title: Búsqueda
-      use_ajax: false
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:

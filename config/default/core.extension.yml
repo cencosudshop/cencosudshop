@@ -8,6 +8,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  conditional_fields: 0
   config: 0
   config_filter: 0
   config_split: 0
@@ -27,6 +28,7 @@ module:
   dropzonejs: 0
   ds_chains: 0
   editor: 0
+  email_registration: 0
   embed: 0
   entity_block: 0
   entity_browser: 0
@@ -94,6 +96,8 @@ module:
   quickedit: 0
   rdf: 0
   responsive_tables_filter: 0
+  rut: 0
+  rut_field: 0
   schemata: 0
   schemata_json_schema: 0
   search_api: 0

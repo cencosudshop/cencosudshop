@@ -1,0 +1,67 @@
+uuid: e56bca8e-10dd-4264-856c-332c00e5863f
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_apellido_user
+    - field.field.user.user.field_direccion_user
+    - field.field.user.user.field_dni_user
+    - field.field.user.user.field_fecha_nacimiento_user
+    - field.field.user.user.field_genero_user
+    - field.field.user.user.field_identidad_user
+    - field.field.user.user.field_imagen_user
+    - field.field.user.user.field_nombre_user
+    - field.field.user.user.field_rut_user
+  module:
+    - field_layout
+    - layout_discovery
+    - rut_field
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dni_user:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_identidad_user:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_rut_user:
+    weight: 2
+    settings:
+      validate_js: true
+      message_js: ''
+    third_party_settings: {  }
+    type: rut_field_widget
+    region: content
+hidden:
+  contact: true
+  field_apellido_user: true
+  field_direccion_user: true
+  field_fecha_nacimiento_user: true
+  field_genero_user: true
+  field_imagen_user: true
+  field_nombre_user: true
+  langcode: true
+  language: true
+  path: true
