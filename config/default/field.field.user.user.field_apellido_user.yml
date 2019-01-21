@@ -1,0 +1,20 @@
+uuid: 8b73c992-a1cf-482d-8c91-a68c9fc7c558
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_apellido_user
+  module:
+    - user
+id: user.user.field_apellido_user
+field_name: field_apellido_user
+entity_type: user
+bundle: user
+label: Apellido(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

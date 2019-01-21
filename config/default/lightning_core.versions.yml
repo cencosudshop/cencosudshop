@@ -137,3 +137,8 @@ flag_anon: 0.0.0
 fontawesome: 2.9.0
 telephone: 8.6.4
 telephone_validation: 2.1.0
+rut: 1.1.0
+rut_field: 1.1.0
+mail_login: 1.0.0
+email_registration: 1.0.0-rc6
+conditional_fields: 1.0.0-alpha4

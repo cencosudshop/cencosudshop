@@ -1,0 +1,19 @@
+uuid: e6d29f56-76e3-45c1-9242-408db09c2e34
+langcode: es
+status: true
+dependencies:
+  module:
+    - rut_field
+    - user
+id: user.field_rut_user
+field_name: field_rut_user
+entity_type: user
+type: rut_field_rut
+settings: {  }
+module: rut_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

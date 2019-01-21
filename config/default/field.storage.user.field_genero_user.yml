@@ -1,0 +1,27 @@
+uuid: a36953f6-3852-44d4-9113-48cb7fc14c14
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_genero_user
+field_name: field_genero_user
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Mujer
+      label: Mujer
+    -
+      value: Hombre
+      label: Hombre
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

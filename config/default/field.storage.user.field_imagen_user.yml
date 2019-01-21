@@ -1,0 +1,30 @@
+uuid: 95cf8c39-eb52-4dbb-b870-3651601a4331
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - user
+id: user.field_imagen_user
+field_name: field_imagen_user
+entity_type: user
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: 6cf8b1f5-52ec-45bc-82d1-bb8bfd2003ed
+    alt: ''
+    title: ''
+    width: 269
+    height: 269
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

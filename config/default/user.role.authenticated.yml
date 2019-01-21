@@ -12,4 +12,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'cancel account'
+  - 'flag favoritos'
+  - 'unflag favoritos'
   - 'view media'
