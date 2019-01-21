@@ -1,0 +1,20 @@
+uuid: ca8568ec-2f18-4f04-b417-d9c4ff7e35d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_dni_user
+  module:
+    - user
+id: user.user.field_dni_user
+field_name: field_dni_user
+entity_type: user
+bundle: user
+label: DNI
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
