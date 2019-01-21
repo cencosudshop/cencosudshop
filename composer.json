@@ -6,6 +6,7 @@
     "prefer-stable": true,
     "require": {
         "acquia/blt": "^9.2.0",
+        "drupal/acquia_contenthub": "^1.36",
         "drupal/admin_toolbar": "^1.24",
         "drupal/auto_entitylabel": "^2.1@beta",
         "drupal/better_exposed_filters": "^3.0@alpha",
