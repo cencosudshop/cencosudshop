@@ -1,4 +1,5 @@
 module:
+  acquia_contenthub: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   auto_entitylabel: 0
@@ -96,6 +97,7 @@ module:
   quickedit: 0
   rdf: 0
   responsive_tables_filter: 0
+  rest: 0
   rut: 0
   rut_field: 0
   schemata: 0
