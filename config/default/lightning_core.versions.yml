@@ -142,3 +142,5 @@ rut_field: 1.1.0
 mail_login: 1.0.0
 email_registration: 1.0.0-rc6
 conditional_fields: 1.0.0-alpha4
+rest: 8.6.7
+acquia_contenthub: 1.36.0

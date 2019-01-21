@@ -24,4 +24,5 @@ hidden:
   field_enlace_banner: true
   field_fecha_vigencia_banner: true
   field_imagen_banner: true
+  field_mall_banner: true
   langcode: true
