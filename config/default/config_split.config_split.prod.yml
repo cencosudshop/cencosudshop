@@ -5,10 +5,12 @@ dependencies: {  }
 id: prod
 label: Prod
 description: ''
-folder: ../config/ptemuco/envs/prod
-module: {  }
+folder: ../config/envs/prod
+module:
+  acquia_connector: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - acquia_connector.settings
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true

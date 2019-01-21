@@ -5,10 +5,12 @@ dependencies: {  }
 id: stage
 label: Stage
 description: ''
-folder: ../config/ptemuco/envs/stage
-module: {  }
+folder: ../config/envs/stage
+module:
+  acquia_connector: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - acquia_connector.settings
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
