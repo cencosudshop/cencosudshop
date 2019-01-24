@@ -1,0 +1,20 @@
+uuid: c2ee751f-1cf6-4aa1-b5d5-53ed341e8530
+langcode: es
+status: true
+dependencies:
+  theme:
+    - cencosudshop
+id: tabs
+theme: cencosudshop
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
