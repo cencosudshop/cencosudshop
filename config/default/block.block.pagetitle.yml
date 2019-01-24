@@ -1,0 +1,18 @@
+uuid: caa0599c-9f14-4e70-914f-c8d086d0e829
+langcode: es
+status: false
+dependencies:
+  theme:
+    - cencosudshop
+id: pagetitle
+theme: cencosudshop
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

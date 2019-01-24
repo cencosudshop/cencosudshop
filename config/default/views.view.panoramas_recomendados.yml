@@ -1,4 +1,4 @@
-uuid: a62893b0-48e8-4a6b-85e5-4c7f30a24e45
+uuid: 8f80ffee-7f51-4691-9b32-504a97ae2f1d
 langcode: es
 status: true
 dependencies:
@@ -13,8 +13,8 @@ dependencies:
 id: panoramas_recomendados
 label: 'Panoramas recomendados'
 module: views
-description: 'Panoramas recomendados en la ficha del panorama'
-tag: Panoramas
+description: ''
+tag: ''
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -103,7 +103,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -128,6 +128,9 @@ display:
           id: title
           table: node_field_data
           field: title
+          settings:
+            link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -164,18 +167,16 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -186,7 +187,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
       filters:
         status:
           value: '1'
@@ -203,40 +203,8 @@ display:
           id: type
           table: node_field_data
           field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
           value:
             panorama: panorama
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            argument: null
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle

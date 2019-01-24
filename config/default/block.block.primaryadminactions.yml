@@ -1,0 +1,18 @@
+uuid: ccdbc4cb-8dc7-4029-8ee3-5c578d42cf9d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - cencosudshop
+id: primaryadminactions
+theme: cencosudshop
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

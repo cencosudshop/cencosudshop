@@ -1,0 +1,27 @@
+app_id: '1037730099748473'
+app_secret: 2bf8c9261f14bcba39ae9ebd0f1bccfc
+api_version: v3.2
+post_login_path: user
+redirect_user_form: 1
+disable_admin_login: 1
+disabled_roles:
+  administrator: '0'
+  page_creator: '0'
+  layout_manager: '0'
+  page_reviewer: '0'
+  landing_page_creator: '0'
+  landing_page_reviewer: '0'
+  media_creator: '0'
+  media_manager: '0'
+  tienda_creator: '0'
+  tienda_reviewer: '0'
+  tienda_mall_creator: '0'
+  tienda_mall_reviewer: '0'
+  banner_creator: '0'
+  banner_reviewer: '0'
+  promocion_creator: '0'
+  promocion_reviewer: '0'
+  panorama_creator: '0'
+  panorama_reviewer: '0'
+_core:
+  default_config_hash: WndXFDY9CEEG_AqDRG0TFa79Q6hhtkyRw4Ec108U5KM

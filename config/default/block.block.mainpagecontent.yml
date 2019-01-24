@@ -1,0 +1,20 @@
+uuid: 1315fe5c-bb39-4e7e-8f44-d005824f2746
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cencosudshop
+id: mainpagecontent
+theme: cencosudshop
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

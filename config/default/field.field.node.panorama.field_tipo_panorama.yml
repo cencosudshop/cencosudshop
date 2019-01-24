@@ -1,0 +1,23 @@
+uuid: 215da4a7-bc56-4dfe-b5fb-0b5f274e7be3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_panorama
+    - node.type.panorama
+  module:
+    - options
+id: node.panorama.field_tipo_panorama
+field_name: field_tipo_panorama
+entity_type: node
+bundle: panorama
+label: 'Tipo Panorama'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: actividades
+default_value_callback: ''
+settings: {  }
+field_type: list_string
