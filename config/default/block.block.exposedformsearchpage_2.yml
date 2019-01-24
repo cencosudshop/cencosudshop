@@ -1,0 +1,23 @@
+uuid: 65bb108c-d067-44e3-a697-aadc8db13058
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - views
+  theme:
+    - cencosudshop
+id: exposedformsearchpage_2
+theme: cencosudshop
+region: header
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-page'
+settings:
+  id: 'views_exposed_filter_block:search-page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

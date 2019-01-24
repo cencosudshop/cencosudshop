@@ -1,0 +1,20 @@
+uuid: abccdb00-6637-4fd8-a3cc-d33b05d20696
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cencosudshop
+id: messages
+theme: cencosudshop
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

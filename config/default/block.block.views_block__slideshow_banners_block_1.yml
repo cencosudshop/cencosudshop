@@ -1,5 +1,5 @@
-uuid: fedc929a-526b-46ed-845c-94d5937fe21a
-langcode: en
+uuid: 6e657c37-c578-4ff5-9a6e-b01950e4574e
+langcode: es
 status: true
 dependencies:
   config:
@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - bartik
+    - cencosudshop
 id: views_block__slideshow_banners_block_1
-theme: bartik
+theme: cencosudshop
 region: highlighted
 weight: 0
 provider: null

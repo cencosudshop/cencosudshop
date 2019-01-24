@@ -1,14 +1,14 @@
 uuid: e87a0901-d0d9-4f56-8fa7-1b29a8e46b66
 langcode: en
 status: false
-dependencies: { }
+dependencies: {  }
 id: plareina
 label: plareina
 description: ''
 folder: ../config/plareina
-module: { }
-theme: { }
-blacklist: { }
+module: {  }
+theme: {  }
+blacklist: {  }
 graylist:
   - system.theme
   - system.site

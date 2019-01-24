@@ -78,6 +78,11 @@ display:
           default_row_class: false
       row:
         type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         field_imagen_promocion:
           id: field_imagen_promocion
@@ -261,7 +266,7 @@ display:
           settings:
             timezone_override: ''
             format_type: short_date
-            separator: '- Hasta'
+            separator: ' Hasta'
           group_column: value
           group_columns: {  }
           group_rows: true
