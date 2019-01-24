@@ -22,6 +22,7 @@
         "drupal/responsive_tables_filter": "^1.1",
         "drupal/rut": "^1.1",
         "drupal/search_api_autocomplete": "^1.1",
+        "drupal/simple_fb_connect": "^3.1",
         "drupal/slick_views": "^1.0@RC",
         "drupal/telephone_validation": "^2.1",
         "drupal/twig_tweak": "^2.1",
