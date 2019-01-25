@@ -15,6 +15,8 @@ body {
 
 /* place footer bottom */
 html, body {
+    font-family: $own-font-family-base;
+    /* place footer bottom */
     height: 100%;
 }
 
@@ -50,6 +52,10 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
                 width: 1.5rem;
             }
         }
+    }
+    
+    #exampleFormControlSelect1 {
+        border: none;
     }
 
     @include breakpoint($md,$lg) {
@@ -98,7 +104,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
 }
 
 
-/* Tiendas */
+/* Tienda */
 
 .logoTienda {
     width: 260px;
@@ -115,25 +121,70 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
         font-size: .8rem;
     }
 }
+.imagen-promocion {
+    img {
+        height: 100%;
+    }
+}
+
+/* Listado Tiendas */
+.view-listado-restaurantes,
+.view-listado-tiendas {
+    div.view-filters {
+        @include breakpoint(768px) {
+            float: left;
+        }
+        .form-item-flagged {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+
+    div.view-content {
+        .logo-lista-tienda {
+            max-width: 100px;
+            @include breakpoint(768px) {
+                padding-left: 15px;
+            }
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .container-each-store > .row {
+            margin: 0;
+            @include breakpoint(768px) {
+                margin: unset;
+            }
+        }
+
+        .row {
+            align-items: center;
+        }
+    }
+        
+}
+
+/* Footer */
+
+
 /* COLORS 
 --------------------------------------------------*/
 /*
 a {
     color: $accent-shade;
 }
-
 .bg-inverse {
     background: $primary-shade !important;
 }
-
 .site-footer {
     background: $accent-shade !important;
 }
-
 .menu--main li a {
     color: $primary-shade;
 }
-
 .menu--account li a {
     color: $primary-shade;
 }
