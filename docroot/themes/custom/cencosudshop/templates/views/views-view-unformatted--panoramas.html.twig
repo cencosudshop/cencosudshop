@@ -1,0 +1,27 @@
+
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+    <div class="col-12 col-md-8" style="height:150px;margin-bottom:3%;">
+          <img src="/themes/custom/ccenter/images/skycostanera.jpg">                
+     </div>
+     <div class="col-12 col-md-4" style="height:150px;margin-bottom:3%;">
+        <h4>SKY COSTANERA</h4>
+        <p>Somos el mirador mas alto de Latinoamerica</p>      
+        <p>Lunes a Domingo - 10:00 hrs a 22:00 hrs</p>
+        <i class="fas fa-globe-americas"></i><a href="http://www.skycostanera.cl"> http://www.skycostanera.cl</a>
+     </div>
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+      'col-12 col-md-4',
+    ]
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{ row.content }}
+  </div>
+{% endfor %} 
+
+
