@@ -1,5 +1,5 @@
 uuid: b2c34ce6-7fa1-4610-ab44-e079526c09f6
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ dependencies:
 _core:
   default_config_hash: 8eXHpZgzJ58fVmB7evA4TNESdXWjMOW9AFPYSxEimE4
 id: search
-label: Search
+label: Búsqueda
 module: views
 description: ''
 tag: ''
@@ -43,7 +43,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Buscar
+          submit_button: Búsqueda
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
