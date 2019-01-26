@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 _core:
   default_config_hash: qCqe51QUGCjFMMWcfQx44zG5_Ki6QsavYxwwrQZwJrg
-name: 'Landing page'
+name: 'Página de entrada'
 type: landing_page
 description: 'A special page with its own one-off layout and content.'
 help: ''
