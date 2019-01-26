@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: 8aTzJfhfIZ2Twd4_TsRkj1OcwgrlV-GtbGmNGRqAv_s
 id: landing_page
-label: 'Landing page'
+label: 'Página de entrada'
 type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
