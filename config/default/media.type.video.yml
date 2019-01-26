@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: CDRaWPhGJXLhi1p3SiKLfu8Qq7S8OB3oG3DroYiiDjk
 id: video
-label: Video
+label: Vídeo
 description: 'A video hosted by YouTube, Vimeo, or some other provider.'
 source: video_embed_field
 queue_thumbnail_downloads: false

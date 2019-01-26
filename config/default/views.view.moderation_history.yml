@@ -20,7 +20,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Master
+    display_title: Máster
     position: 0
     display_options:
       access:
@@ -41,10 +41,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Aplicar
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -203,7 +203,7 @@ display:
           field: moderation_state
           relationship: moderation_state
           group_type: group
-          admin_label: 'Moderation state'
+          admin_label: 'Estado de moderación'
           label: ''
           exclude: false
           alter:
@@ -305,7 +305,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Todo(s)
           title_enable: false
           title: ''
           default_argument_type: node
@@ -347,14 +347,14 @@ display:
   page:
     display_plugin: page
     id: page
-    display_title: Page
+    display_title: Página
     position: 1
     display_options:
       display_extenders: {  }
       path: node/%node/moderation-history
       menu:
         type: tab
-        title: History
+        title: Historial
         description: ''
         expanded: false
         parent: ''
