@@ -11,6 +11,6 @@ third_party_settings:
 _core:
   default_config_hash: f_DojbcC2b9kUiXE-CtRR_l61_Njy68gJMsP4M_6F6w
 id: media.thumbnail
-label: Thumbnail
+label: Miniatura
 targetEntityType: media
 cache: true

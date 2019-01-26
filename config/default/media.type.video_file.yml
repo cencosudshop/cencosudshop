@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: oGxRqcXSgI5hGMORFBVykuU8eBeHk1KG9LiDTocLsm0
 id: video_file
-label: 'Video file'
+label: 'Archivo de vídeo'
 description: 'A locally hosted video file'
 source: video_file
 queue_thumbnail_downloads: false

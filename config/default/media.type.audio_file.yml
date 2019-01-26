@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: 4vymcW_86DaD-9XFuOUZ4BD5Mn_ioPbOEBfBl9-L9ZE
 id: audio_file
-label: 'Audio file'
+label: 'Archivo de audio'
 description: 'A locally hosted audio file, such as an MP3.'
 source: audio_file
 queue_thumbnail_downloads: false

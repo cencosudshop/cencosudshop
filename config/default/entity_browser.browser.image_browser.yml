@@ -31,7 +31,7 @@ widgets:
       upload_validators: {  }
     uuid: 44d52e51-9627-43b5-a637-3b0462041d1c
     weight: -9
-    label: Upload
+    label: 'Subir al servidor'
     id: file_upload
   9a381de0-c65d-40a4-a69f-65408458e490:
     settings:

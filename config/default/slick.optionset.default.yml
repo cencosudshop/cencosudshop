@@ -9,7 +9,7 @@ _core:
   default_config_hash: Zyx4BsKtbNFnRU7WTHAF0DGHMenI0b_Czn4dwl1bQTc
 id: default
 name: default
-label: Default
+label: 'Por defecto'
 weight: -10
 group: ''
 skin: default
