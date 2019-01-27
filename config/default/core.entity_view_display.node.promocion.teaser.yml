@@ -21,5 +21,8 @@ hidden:
   content_moderation_control: true
   field_centro_comercial: true
   field_descripcion: true
+  field_descripcion_promocion: true
   field_imagen_promocion: true
+  field_tienda_asociada: true
+  field_vigencia_promocion: true
   langcode: true
