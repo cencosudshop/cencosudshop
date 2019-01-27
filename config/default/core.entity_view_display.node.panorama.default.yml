@@ -86,4 +86,5 @@ content:
 hidden:
   content_moderation_control: true
   field_centro_comercial: true
+  field_tipo_panorama: true
   langcode: true

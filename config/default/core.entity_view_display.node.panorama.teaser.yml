@@ -25,6 +25,7 @@ hidden:
   field_horario_panorama: true
   field_imagen_panorama: true
   field_panorama_slideshow: true
+  field_tipo_panorama: true
   field_ubicacion_panorama: true
   field_vigencia_panorama: true
   langcode: true
