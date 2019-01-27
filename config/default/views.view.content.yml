@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
-label: Content
+label: Contenido
 module: node
 description: 'Encontrar y administrar contenido.'
 tag: default
@@ -574,7 +574,7 @@ display:
           entity_type: node
           plugin_id: moderation_state_filter
       sorts: {  }
-      title: Content
+      title: Contenido
       empty:
         area_text_custom:
           id: area_text_custom
@@ -618,14 +618,14 @@ display:
       path: admin/content/node
       menu:
         type: 'default tab'
-        title: Content
+        title: Contenido
         description: ''
         menu_name: admin
         weight: -10
         context: ''
       tab_options:
         type: normal
-        title: Content
+        title: Contenido
         description: 'Encontrar y administrar contenido'
         menu_name: admin
         weight: -10
