@@ -93,7 +93,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
     }
 }
 
-/* Seccion "para hacer" */
+/* Seccion "para hacer" only home */
 .s-parahacer {
     p {	
         font-size: 2em;
@@ -103,6 +103,14 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
    }
 }
 
+/* Title content */
+.row-title {
+    .title{
+        margin: 1rem 0;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+}
 
 /* Tienda */
 
@@ -133,20 +141,33 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
     div.view-filters {
         @include breakpoint(768px) {
             float: left;
+            width: 30%
         }
-        .form-item-flagged {
+
+        .form-item-flagged { //Filtro Favoritos
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
+        .details-wrapper {
+            padding: 0.5em .7em;
+        }
     }
-
-
+    
     div.view-content {
-        .logo-lista-tienda {
-            max-width: 100px;
+        overflow: hidden;
+
+        .views-infinite-scroll-content-wrapper {
             @include breakpoint(768px) {
                 padding-left: 15px;
             }
+        }
+        
+        .void-container {
+            margin-bottom: .25rem;
+        }
+
+        .logo-lista-tienda {
+            max-width: 100px;
 
             img {
                 height: 100%;
@@ -155,6 +176,8 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
 
         .container-each-store > .row {
             margin: 0;
+            border: 1px solid #e2e2e2;
+            border-radius: 2px;
             @include breakpoint(768px) {
                 margin: unset;
             }

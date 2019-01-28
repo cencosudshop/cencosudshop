@@ -16,6 +16,10 @@
 #}
 {{ title_prefix }}
 {% if title %}
-  <h1{{ title_attributes.addClass('title') }}>{{ title }}</h1>
+<div class="row mb-2 row-title">
+  <div class="col bg-costanera-sky">
+    <h4 {{ title_attributes.addClass('title') }}>{{ title }}</h4>
+  </div>
+</div>
 {% endif %}
 {{ title_suffix }}
