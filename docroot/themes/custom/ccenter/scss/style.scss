@@ -28,14 +28,14 @@ html, body {
     
 }
 
-.p-relativeToFooter {
+.p-relativeToFooter{
     padding-bottom: 35em;
     @include breakpoint(768px) {
         padding-bottom: 10.56rem;
     }
 }
 
-footer.footer {
+footer.footer{
     position: absolute;
     bottom: 0;
 }

@@ -1,68 +1,93 @@
-<div class="container-each-store">
-    <div class="row" style="font-size:.8em; align-items:center;">
-      <div class="col-2 p-0">
-        <div class="logo-lista-tienda">
-          {{ fields.field_logo_tienda.content }}
-        </div>
-      </div>
-      <div class="col-10">
-        <div class="row">
-          <div class="col-12 col-md-5 pr-0">
-            <div>
-              <strong>
-                {{ fields.title_1.content }}
-              </strong>
-            </div>
-            <div>
-              Nivel: {{ fields.field_nivel_tmall.content }}
-            </div>
-          </div>
-          <div class="col-10 col-md-6 pr-0">
-            <div>
+
+
+<style>
+/*bloque de filtros listado de tiendas*/
+#views-exposed-form-listado-tiendas-page-1{
+  float:left;
+  width:30%;
+}
+
+#views-exposed-form-listado-tiendas-page-1 .form-item{
+  float:left;
+  width:80%;
+}
+
+#views-exposed-form-listado-tiendas-page-1 .form-check-label{
+  margin-left: 23px;
+}
+
+.table td{
+  border-top: 1px solid #15B7E2;
+  border-bottom: 1px solid #15B7E2;
+}
+
+
+
+@media (max-width: 576px) {
+#views-exposed-form-listado-tiendas-page-1{
+  float:none;
+  width:100%;
+}
+}
+
+</style>
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-12" style="float:left; margin-left:10px;border-left-style: solid;border-left-color: #15B7E2;">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td style="height:50px;widht.50px;background:#15B7E2;">
+            {{ fields.field_logo_tienda.content }}
+            </td>
+            <td>
+              {{ fields.title_1.content }}<br>
+              Nivel:{{ fields.field_nivel_tmall.content }}
+            </td>          
+            <td>
               <i class="fas fa-phone"></i>{{ fields.field_telefono_tmall.content }}
-            </div>
-            <div>
               <i class="fas fa-globe-americas"></i>{{ fields.field_website_tienda.content }}
-            </div>
-            
-          </div>
-          <div class="col-2 col-md-1 text-center p-0" style="font-size:1.5rem">
-          {% if (logged_in==true) %}
-            <div>{{ fields.link_flag.content }}</div>
-          {% else %}
-            <div>
-              <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
-                <i data-target="#myModal" class="far fa-heart"></i>
-              </button>
-            </div>
-          {% endif %}
-          </div>
-        </div>
-      </div> <!-- col-md-10 -->
-    </div> <!-- row -->
-  </div> <!-- .content -->
-  
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Favoritos</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          Debe estar <a href="user/login">logeado</a> o <a href="user/register">registrarse</a> para añadir a favoritos
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-        </div>
-  
+            </td>
+            {% if (logged_in==true) %}
+              <td>{{ fields.link_flag.content }}</td>
+              {% else %}
+              <td>
+                
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    <i  data-target="#myModal" class="far fa-heart"></i>
+                    
+                  </button>
+                </td>
+              {% endif %}
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Favoritos</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Debe estar <a href="user/login">logeado</a> o <a href="user/register">registrarse</a> para añadir a favoritos
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+
     </div>
   </div>
+</div>

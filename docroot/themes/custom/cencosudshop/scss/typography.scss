@@ -5,15 +5,7 @@
 
 //@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic");
 //@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900");
-
-/* font families per site */
-@font-face {
-    font-family: futura-costanera;
-    src: url(../fonts/futura_std-light.otf);
-}
-
-// font families fallback
-
+// font families
 $font-lato: 'Lato',
 Arial,
 Verdana,
@@ -25,8 +17,7 @@ sans-serif;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif-override: futura-costanera,
--apple-system,
+$font-family-sans-serif: -apple-system,
 system-ui,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -44,8 +35,7 @@ Consolas,
 "Liberation Mono",
 "Courier New",
 monospace;
-
-$own-font-family-base: $font-family-sans-serif-override;
+$font-family-base: $font-family-sans-serif;
 
 // Tamaños de fuentes universales para los sitios
 //$html-font-size: (null: 13px, $sm: 14px, $md: 16px, $lg: 18px);
