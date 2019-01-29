@@ -11,10 +11,9 @@ dependencies:
     - field.field.user.user.field_identidad_user
     - field.field.user.user.field_imagen_user
     - field.field.user.user.field_nombre_user
-    - field.field.user.user.field_rut_user
+    - field.field.user.user.field_rut
     - image.style.thumbnail
   module:
-    - conditional_fields
     - datetime
     - field_layout
     - image
@@ -132,47 +131,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_rut_user:
-    weight: 1
+  field_rut:
+    weight: 10
     settings:
       validate_js: true
       message_js: ''
-    third_party_settings:
-      conditional_fields:
-        0cb4d21b-4d29-48c4-8d9c-3ee97393634f:
-          dependee: field_identidad_user
-          settings:
-            state: visible
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: '0'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: user
-          bundle: user
-        df51e8e9-ac31-4708-9c4b-cede65b13f95:
-          dependee: field_identidad_user
-          settings:
-            state: required
-            condition: value
-            grouping: AND
-            values_set: 1
-            value: ''
-            values: {  }
-            value_form:
-              -
-                value: '0'
-            effect: show
-            effect_options: {  }
-            selector: ''
-          entity_type: user
-          bundle: user
+    third_party_settings: {  }
     type: rut_field_widget
     region: content
 hidden:

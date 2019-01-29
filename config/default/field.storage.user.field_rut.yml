@@ -1,12 +1,12 @@
-uuid: e6d29f56-76e3-45c1-9242-408db09c2e34
+uuid: 9d2af6ad-c315-45d5-a065-57021f509c63
 langcode: es
 status: true
 dependencies:
   module:
     - rut_field
     - user
-id: user.field_rut_user
-field_name: field_rut_user
+id: user.field_rut
+field_name: field_rut
 entity_type: user
 type: rut_field_rut
 settings: {  }
