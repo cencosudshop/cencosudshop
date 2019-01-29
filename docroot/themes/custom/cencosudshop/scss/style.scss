@@ -8,9 +8,17 @@ Description: Bootstrap 4 with Sass
 
 /* ----------- GENERAL STYLES ----------- */
 
+/* globals */
 
 body {
    @include font-size-map($html-font-size);
+}
+
+p {
+    margin-bottom: .5rem;
+    @include breakpoint(768px) {
+        margin-bottom: 1rem;
+    }
 }
 
 /* place footer bottom */
@@ -115,7 +123,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
 /* Tienda */
 
 .logoTienda {
-    width: 260px;
+    max-width: 200px;
     margin: 0 auto;
     @include breakpoint(768px) {
         width: unset;

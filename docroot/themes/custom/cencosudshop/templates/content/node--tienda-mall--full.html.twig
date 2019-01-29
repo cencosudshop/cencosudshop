@@ -62,147 +62,147 @@
 
 
 <div class="row mb-2">
-      <div class="col bg-costanera-sky">
-         <h4 class="my-3">TIENDAS</h4>
-      </div>
+   <div class="col bg-costanera-sky">
+      <h4 class="my-2 my-md-3">TIENDAS</h4>
    </div>
-   <div class="row">
-      <div class="col-md-4 col-lg-3">
-         <div class="logoTienda">
-            <img src="{{ file_url(node.field_tienda_tmall.entity.field_logo_tienda.entity.fileuri) }}">
-         </div>
-         <div class="infoShop bg-aliceblue pl-3 py-2">
-            <p>
-               <i class="far fa-clock"></i> {{ node.field_horario_tmall.value }}
-            </p>
-            <p>
-               <i class="fas fa-phone"></i> {{ node.field_telefono_tmall.value }}
-            </p>
-            <p>
-               <i class="fas fa-globe-americas"></i>
-               <a href="{{ node.field_tienda_tmall.entity.field_website_tienda.0.url }}" target="_blank">
-                  {{ node.field_tienda_tmall.entity.field_website_tienda.0.title }}
-               </a>
-            </p>
-            <p>
-               <i class="fas fa-tag"></i>&nbsp;
-               {%- for item in node.field_tienda_tmall.entity.field_categoria_tienda %}
-                  {{ item.entity.label }}
-                  {% if not loop.last %} - {% endif %}
-               {% endfor -%}
-            </p>
-         </div>
+</div>
+<div class="row">
+   <div class="col-md-4 col-lg-3">
+      <div class="logoTienda pb-2">
+         <img src="{{ file_url(node.field_tienda_tmall.entity.field_logo_tienda.entity.fileuri) }}">
       </div>
-   
-      <div class="col-md-8 col-lg-9">
-         <p><h4 class="font-weight-bold">{{ node.field_tienda_tmall.entity.title.value }}</h4></p>
+      <div class="infoShop bg-aliceblue pl-3 py-2">
          <p>
-            <span>NIVEL </span>
-            {%- for item in node.field_nivel_tmall -%}
-               <span>{{ item.value }} {% if not loop.last %} - {% endif %}</span>
-            {%- endfor -%}
+            <i class="far fa-clock"></i> {{ node.field_horario_tmall.value }}
          </p>
          <p>
-            {{ node.field_tienda_tmall.entity.field_descripcion_tienda.value }}
+            <i class="fas fa-phone"></i> {{ node.field_telefono_tmall.value }}
          </p>
-         <div class="carousel_container">
-            <div id="insideShop_carousel" class="carousel slide" data-ride="carousel">
-               <!-- Indicators -->
-               <ul class="carousel-indicators">
-                  <li data-target="#insideShop_carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#insideShop_carousel" data-slide-to="1"></li>
-               </ul>
-               <!-- The slideshow -->
-               <div class="carousel-inner">
-                  {%- for item in node.field_fotos_tmall -%}
-                     {% if loop.first %}
-                        <div class="carousel-item active">
-                           <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
-                        </div>
-                     {% else %}
-                        <div class="carousel-item">
-                           <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
-                        </div>
-                     {% endif %}
-                  {%- endfor -%}
-               </div>
-               <!--
-               <ul class="slick-dots" style="" role="tablist">
-                  <li class="slick-active" role="presentation">
-                  <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 2"
-                     tabindex="0" aria-selected="true">1</button></li>
-                  <li role="presentation" class="">
-                  <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 2"
-                     tabindex="-1">2</button>
-                  </li>
-               </ul>
-               -->
-               <!-- Left and right controls -->
-               <a class="carousel-control-prev" href="#insideShop_carousel" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-               </a>
-               <a class="carousel-control-next" href="#insideShop_carousel" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-               </a>
-            </div>
-         </div>
-         <br>
-         <br>
-         <div class="carousel_container ">
-            <h5>Tienda en mapa</h5>
-            <div id="mapShop_carousel" class="carousel slide" data-ride="carousel">
-               <!-- Indicators -->
-               <ul class="carousel-indicators">
-                  <li data-target="#mapShop_carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#mapShop_carousel" data-slide-to="1"></li>
-               </ul>
-               <!-- The slideshow -->
-               <div class="carousel-inner">
-                  {%- for item in node.field_mapa_tmall -%}
-                     {% if loop.first %}
-                        <div class="carousel-item active">
-                           <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
-                        </div>
-                     {% else %}
-                        <div class="carousel-item">
-                           <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
-                        </div>
-                     {% endif %}
-                  {%- endfor -%}
-               </div>
-               <!--
-               <ul class="slick-dots" style="" role="tablist">
-                  <li class="slick-active" role="presentation">
-                  <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 2"
-                     tabindex="0" aria-selected="true">1</button></li>
-                  <li role="presentation" class="">
-                  <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 2"
-                     tabindex="-1">2</button>
-                  </li>
-               </ul>
-               -->
-               <!-- Left and right controls -->
-               <a class="carousel-control-prev" href="#mapShop_carousel" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-               </a>
-               <a class="carousel-control-next" href="#mapShop_carousel" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-               </a>
-            </div>
-         </div>
-         <br>
-         <br>
-         <div class="viewPromocionesTiendas">
-            <h5>Promociones Recomendadas</h5>
-            {% set foo = ""%}
-            {% for item in node.field_tienda_tmall.entity.field_categoria_tienda %}
-               {% if loop.last %}
-                  {% set foo = foo ~ item.target_id %}
-               {% else %}
-                  {% set foo = foo ~ item.target_id ~", "  %}
-               {% endif %}
-            {% endfor %}
-            {{ drupal_view('promociones_recomendadas', 'block_2', foo) }}
-         </div>
+         <p>
+            <i class="fas fa-globe-americas"></i>
+            <a href="{{ node.field_tienda_tmall.entity.field_website_tienda.0.url }}" target="_blank">
+               {{ node.field_tienda_tmall.entity.field_website_tienda.0.title }}
+            </a>
+         </p>
+         <p>
+            <i class="fas fa-tag"></i>&nbsp;
+            {%- for item in node.field_tienda_tmall.entity.field_categoria_tienda %}
+               {{ item.entity.label }}
+               {% if not loop.last %} - {% endif %}
+            {% endfor -%}
+         </p>
       </div>
    </div>
+
+   <div class="col-md-8 col-lg-9">
+      <p><h4 class="font-weight-bold">{{ node.field_tienda_tmall.entity.title.value }}</h4></p>
+      <p>
+         <span>NIVEL </span>
+         {%- for item in node.field_nivel_tmall -%}
+            <span>{{ item.value }} {% if not loop.last %} - {% endif %}</span>
+         {%- endfor -%}
+      </p>
+      <p>
+         {{ node.field_tienda_tmall.entity.field_descripcion_tienda.value }}
+      </p>
+      <div class="carousel_container">
+         <div id="insideShop_carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+               <li data-target="#insideShop_carousel" data-slide-to="0" class="active"></li>
+               <li data-target="#insideShop_carousel" data-slide-to="1"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+               {%- for item in node.field_fotos_tmall -%}
+                  {% if loop.first %}
+                     <div class="carousel-item active">
+                        <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
+                     </div>
+                  {% else %}
+                     <div class="carousel-item">
+                        <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
+                     </div>
+                  {% endif %}
+               {%- endfor -%}
+            </div>
+            <!--
+            <ul class="slick-dots" style="" role="tablist">
+               <li class="slick-active" role="presentation">
+               <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 2"
+                  tabindex="0" aria-selected="true">1</button></li>
+               <li role="presentation" class="">
+               <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 2"
+                  tabindex="-1">2</button>
+               </li>
+            </ul>
+            -->
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#insideShop_carousel" data-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#insideShop_carousel" data-slide="next">
+               <span class="carousel-control-next-icon"></span>
+            </a>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div class="carousel_container ">
+         <h5>Tienda en mapa</h5>
+         <div id="mapShop_carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+               <li data-target="#mapShop_carousel" data-slide-to="0" class="active"></li>
+               <li data-target="#mapShop_carousel" data-slide-to="1"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+               {%- for item in node.field_mapa_tmall -%}
+                  {% if loop.first %}
+                     <div class="carousel-item active">
+                        <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
+                     </div>
+                  {% else %}
+                     <div class="carousel-item">
+                        <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
+                     </div>
+                  {% endif %}
+               {%- endfor -%}
+            </div>
+            <!--
+            <ul class="slick-dots" style="" role="tablist">
+               <li class="slick-active" role="presentation">
+               <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 2"
+                  tabindex="0" aria-selected="true">1</button></li>
+               <li role="presentation" class="">
+               <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 2"
+                  tabindex="-1">2</button>
+               </li>
+            </ul>
+            -->
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#mapShop_carousel" data-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#mapShop_carousel" data-slide="next">
+               <span class="carousel-control-next-icon"></span>
+            </a>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div class="viewPromocionesTiendas">
+         <h5>Promociones Recomendadas</h5>
+         {% set foo = ""%}
+         {% for item in node.field_tienda_tmall.entity.field_categoria_tienda %}
+            {% if loop.last %}
+               {% set foo = foo ~ item.target_id %}
+            {% else %}
+               {% set foo = foo ~ item.target_id ~", "  %}
+            {% endif %}
+         {% endfor %}
+         {{ drupal_view('promociones_recomendadas', 'block_2', foo) }}
+      </div>
+   </div>
+</div>
