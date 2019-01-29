@@ -52,6 +52,7 @@ hidden:
   field_genero_user: true
   field_imagen_user: true
   field_nombre_user: true
+  field_rut: true
   langcode: true
   language: true
   path: true
