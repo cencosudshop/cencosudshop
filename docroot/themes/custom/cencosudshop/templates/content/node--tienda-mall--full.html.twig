@@ -37,7 +37,7 @@
  *   - node--unpublished: Appears on unpublished nodes visible only to site
  *     admins.
  * - title_attributes: Same as attributes, except applied to the main title
- *   tag that appears in the template.
+ *   tag that appears in the template.cyftyytf
  * - content_attributes: Same as attributes, except applied to the main
  *   content tag that appears in the template.
  * - author_attributes: Same as attributes, except applied to the author of
@@ -148,14 +148,11 @@
          </div>
          <br>
          <br>
+         {% if node.field_mapa_tmall.entity.fileuri %}
          <div class="carousel_container ">
             <h5>Tienda en mapa</h5>
             <div id="mapShop_carousel" class="carousel slide" data-ride="carousel">
-               <!-- Indicators -->
-               <ul class="carousel-indicators">
-                  <li data-target="#mapShop_carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#mapShop_carousel" data-slide-to="1"></li>
-               </ul>
+              
                <!-- The slideshow -->
                <div class="carousel-inner">
                   {%- for item in node.field_mapa_tmall -%}
@@ -164,6 +161,11 @@
                            <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
                         </div>
                      {% else %}
+                      <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                           <li data-target="#mapShop_carousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#mapShop_carousel" data-slide-to="1"></li>
+                        </ul>
                         <div class="carousel-item">
                            <img src="{{ file_url(item.entity.fileuri) }}" alt="First slide" style="height:100%;">
                         </div>
@@ -190,6 +192,7 @@
                </a>
             </div>
          </div>
+          {% endif %}   
          <br>
          <br>
          <div class="viewPromocionesTiendas">
