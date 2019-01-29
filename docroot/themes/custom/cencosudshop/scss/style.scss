@@ -8,13 +8,23 @@ Description: Bootstrap 4 with Sass
 
 /* ----------- GENERAL STYLES ----------- */
 
+/* globals */
 
 body {
    @include font-size-map($html-font-size);
 }
 
+p {
+    margin-bottom: .5rem;
+    @include breakpoint(768px) {
+        margin-bottom: 1rem;
+    }
+}
+
 /* place footer bottom */
 html, body {
+    font-family: $own-font-family-base;
+    /* place footer bottom */
     height: 100%;
 }
 
@@ -50,6 +60,10 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
                 width: 1.5rem;
             }
         }
+    }
+    
+    #exampleFormControlSelect1 {
+        border: none;
     }
 
     @include breakpoint($md,$lg) {
@@ -87,7 +101,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
     }
 }
 
-/* Seccion "para hacer" */
+/* Seccion "para hacer" only home */
 .s-parahacer {
     p {	
         font-size: 2em;
@@ -97,11 +111,19 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
    }
 }
 
+/* Title content */
+.row-title {
+    .title{
+        margin: 1rem 0;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+}
 
-/* Tiendas */
+/* Tienda */
 
 .logoTienda {
-    width: 260px;
+    max-width: 200px;
     margin: 0 auto;
     @include breakpoint(768px) {
         width: unset;
@@ -115,25 +137,85 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
         font-size: .8rem;
     }
 }
+.imagen-promocion {
+    img {
+        height: 100%;
+    }
+}
+
+/* Listado Tiendas */
+.view-listado-restaurantes,
+.view-listado-tiendas {
+    div.view-filters {
+        @include breakpoint(768px) {
+            float: left;
+            width: 30%
+        }
+
+        .form-item-flagged { //Filtro Favoritos
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .details-wrapper {
+            padding: 0.5em .7em;
+        }
+    }
+    
+    div.view-content {
+        overflow: hidden;
+
+        .views-infinite-scroll-content-wrapper {
+            @include breakpoint(768px) {
+                padding-left: 15px;
+            }
+        }
+        
+        .void-container {
+            margin-bottom: .25rem;
+        }
+
+        .logo-lista-tienda {
+            max-width: 100px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .container-each-store > .row {
+            margin: 0;
+            border: 1px solid #e2e2e2;
+            border-radius: 2px;
+            @include breakpoint(768px) {
+                margin: unset;
+            }
+        }
+
+        .row {
+            align-items: center;
+        }
+    }
+        
+}
+
+/* Footer */
+
+
 /* COLORS 
 --------------------------------------------------*/
 /*
 a {
     color: $accent-shade;
 }
-
 .bg-inverse {
     background: $primary-shade !important;
 }
-
 .site-footer {
     background: $accent-shade !important;
 }
-
 .menu--main li a {
     color: $primary-shade;
 }
-
 .menu--account li a {
     color: $primary-shade;
 }
