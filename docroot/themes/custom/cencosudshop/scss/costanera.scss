@@ -81,7 +81,7 @@ ul.nolist{
     }
     .navbar-brand {
         @include breakpoint(0px,767px) {
-            max-width: 10rem;
+            max-width: 12rem;
         }
     }
     .navbar-toggler-icon {
@@ -158,6 +158,9 @@ ul.nolist{
     width: 100%;
 }
 
+.slick>div {
+    margin: 0 5px;
+}
 /* Header */
 nav {
     width: 100%;
