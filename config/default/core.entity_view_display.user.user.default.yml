@@ -11,7 +11,7 @@ dependencies:
     - field.field.user.user.field_identidad_user
     - field.field.user.user.field_imagen_user
     - field.field.user.user.field_nombre_user
-    - field.field.user.user.field_rut_user
+    - field.field.user.user.field_rut
     - image.style.medium
   module:
     - datetime
@@ -87,8 +87,8 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_rut_user:
-    weight: 2
+  field_rut:
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }

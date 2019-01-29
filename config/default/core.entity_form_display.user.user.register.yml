@@ -12,11 +12,9 @@ dependencies:
     - field.field.user.user.field_identidad_user
     - field.field.user.user.field_imagen_user
     - field.field.user.user.field_nombre_user
-    - field.field.user.user.field_rut_user
   module:
     - field_layout
     - layout_discovery
-    - rut_field
     - user
 third_party_settings:
   field_layout:
@@ -46,14 +44,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_rut_user:
-    weight: 2
-    settings:
-      validate_js: true
-      message_js: ''
-    third_party_settings: {  }
-    type: rut_field_widget
-    region: content
 hidden:
   contact: true
   field_apellido_user: true
