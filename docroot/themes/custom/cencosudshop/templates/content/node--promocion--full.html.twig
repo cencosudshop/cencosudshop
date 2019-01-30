@@ -1,0 +1,43 @@
+<div class="content ficha-promocion">
+    <div class="row">
+        <div class="col-md-4 col-lg-6 order-md-2">
+            <div class="imagen-promocion">
+                <img src="{{ file_url(node.field_imagen_promocion.entity.fileuri) }}"  alt="promocion_1">
+            </div>
+        </div><!-- End column foto promoción -->
+        
+        <div class="col-md-8 col-lg-6 order-md-1 pr-0">
+            <div class="logo-container float-left">
+                <img src="{{ file_url(node.field_tienda_asociada.entity.field_logo_tienda.entity.fileuri) }}">
+            </div>
+            <div class="promo-text clearfix">
+                <h4><strong>{{ node.field_tienda_asociada.entity.title.value }}</strong></h4>
+                <p>{{ node.title.value }}</p>
+                <p>
+                    <i class="far fa-clock"></i> 
+                    Desde {{ node.field_vigencia_promocion.value|date(format='d/m/Y') }} 
+                    Hasta {{ node.field_vigencia_promocion.end_value|date(format='d/m/Y') }}
+                </p>
+            </div>
+        </div><!-- End column foto promoción -->
+    </div> <!-- Fin row -->
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="descripcion-promo">
+                <p class="text-justify"> {{ node.field_descripcion_promocion.value }} </p>
+            </div>
+            <div class="botonsito text-center text-md-left">
+                {% set idtienda = node.field_tienda_asociada.entity.nid.value %}
+                <button type="button" class="btn btn-info"> {{drupal_view('enlace_tienda_promocion', 'block_1', idtienda)}} </button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <h4 class="pl-3"><strong>Promociones Recomendadas</strong></h4>
+        <div class="col-md-12">
+            {{ drupal_view('promociones_recomendadas', 'block_1') }}
+        </div>
+    </div>
+</div>

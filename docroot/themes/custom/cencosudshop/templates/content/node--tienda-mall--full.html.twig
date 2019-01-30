@@ -61,14 +61,14 @@
 #}
 
 
-<div class="row">
+<div class="row mb-2">
    <div class="col bg-costanera-sky">
-      <h4 class="my-3">TIENDAS</h4>
+      <h4 class="my-2 my-md-3">TIENDAS</h4>
    </div>
 </div>
 <div class="row">
    <div class="col-md-4 col-lg-3">
-      <div class="logoTienda">
+      <div class="logoTienda pb-2">
          <img src="{{ file_url(node.field_tienda_tmall.entity.field_logo_tienda.entity.fileuri) }}">
       </div>
       <div class="infoShop bg-aliceblue pl-3 py-2">
@@ -95,7 +95,7 @@
    </div>
 
    <div class="col-md-8 col-lg-9">
-      <p><h4>{{ node.field_tienda_tmall.entity.title.value }}</h4></p>
+      <p><h4 class="font-weight-bold">{{ node.field_tienda_tmall.entity.title.value }}</h4></p>
       <p>
          <span>NIVEL </span>
          {%- for item in node.field_nivel_tmall -%}
@@ -192,17 +192,17 @@
       </div>
       <br>
       <br>
-      <div class="row">
-         <div class="col-12"><h5>Promociones</h5></div>
-         <div class="col-4" style="height:5em;">
-            <div style="background:#15B7E2;"></div>
-         </div>
-         <div class="col-4" style="height:5em;">
-            <div style="background:#15B7E2;"></div>
-         </div>
-         <div class="col-4" style="height:5em;">
-            <div style="background:#15B7E2"></div>
-         </div>
+      <div class="viewPromocionesTiendas">
+         <h5>Promociones Recomendadas</h5>
+         {% set foo = ""%}
+         {% for item in node.field_tienda_tmall.entity.field_categoria_tienda %}
+            {% if loop.last %}
+               {% set foo = foo ~ item.target_id %}
+            {% else %}
+               {% set foo = foo ~ item.target_id ~", "  %}
+            {% endif %}
+         {% endfor %}
+         {{ drupal_view('promociones_recomendadas', 'block_2', foo) }}
       </div>
    </div>
 </div>
