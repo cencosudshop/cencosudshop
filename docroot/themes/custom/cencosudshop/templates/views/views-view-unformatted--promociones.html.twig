@@ -15,17 +15,14 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+<div class="col-md-12" id="titulo_promociones" style="height:50px;background:#15B7E2;margin-bottom:4%;display:none;">
+    <h6 style="color:#fff;padding:1%;">PROMOCIONES</h6>
+</div>
 {% if title %}
-  <h3>{{ title }}</h3>
+    <h3>{{ title }}</h3>
 {% endif %}
-{% for row in rows %}
-  {%
-    set row_classes = [
-      'void-container',
-      default_row_class ? 'views-row'
-    ]
-  %}
-  <div{{ row.attributes.addClass(row_classes) }}>
-    {{ row.content }}
-  </div>
-{% endfor %}
+<div class="row">
+    {% for row in rows %}
+        {{ row.content }}
+    {% endfor %}
+</div>
