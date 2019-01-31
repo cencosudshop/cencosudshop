@@ -1,0 +1,18 @@
+uuid: a68f0e4a-ba11-4842-9020-f0d8e124a8f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.malls_cencosud
+id: taxonomy_term.malls_cencosud.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: malls_cencosud
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

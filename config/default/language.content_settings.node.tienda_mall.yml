@@ -1,0 +1,18 @@
+uuid: 84044223-4df7-4dad-99ef-f0dc3b3348ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tienda_mall
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.tienda_mall
+target_entity_type_id: node
+target_bundle: tienda_mall
+default_langcode: site_default
+language_alterable: true

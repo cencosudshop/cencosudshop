@@ -1,0 +1,18 @@
+uuid: aa1480d8-9302-4b6e-bdbe-30124b51ab73
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: block_content.basic.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: block_content
+bundle: basic
+label: null
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

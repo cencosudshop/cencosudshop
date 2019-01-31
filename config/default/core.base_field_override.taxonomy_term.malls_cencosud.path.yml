@@ -1,0 +1,20 @@
+uuid: bd88139a-6b7a-45bc-b14c-41d13a9ac810
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.malls_cencosud
+  module:
+    - path
+id: taxonomy_term.malls_cencosud.path
+field_name: path
+entity_type: taxonomy_term
+bundle: malls_cencosud
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
