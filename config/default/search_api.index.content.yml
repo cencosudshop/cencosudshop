@@ -3,9 +3,11 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.storage.node.field_descripcion_panorama
+    - field.storage.node.field_descripcion_promocion
     - field.storage.node.field_tienda_tmall
-    - field.storage.node.field_descripcion_tienda
     - field.storage.node.field_categoria_tienda
+    - field.storage.node.field_descripcion_tienda
     - search_api.server.database
     - core.entity_view_mode.node.full
   module:
@@ -19,6 +21,24 @@ name: Contenido
 description: 'An index of all content in your site.'
 read_only: false
 field_settings:
+  field_descripcion_panorama:
+    label: 'Descripción panorama'
+    datasource_id: 'entity:node'
+    property_path: field_descripcion_panorama
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_descripcion_panorama
+  field_descripcion_promocion:
+    label: 'Descripción promoción'
+    datasource_id: 'entity:node'
+    property_path: field_descripcion_promocion
+    type: text
+    boost: !!float 2
+    dependencies:
+      config:
+        - field.storage.node.field_descripcion_promocion
   field_descripcion_tienda:
     label: 'Tienda » Content » Descripción'
     datasource_id: 'entity:node'
@@ -52,14 +72,6 @@ field_settings:
       module:
         - node
         - taxonomy
-        - taxonomy
-  name_1:
-    label: Name
-    datasource_id: 'entity:taxonomy_term'
-    property_path: name
-    type: text
-    dependencies:
-      module:
         - taxonomy
   node_grants:
     label: 'Node access information'
@@ -106,6 +118,15 @@ field_settings:
       module:
         - node
         - node
+  title_1:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 2
+    dependencies:
+      module:
+        - node
   uid:
     label: uid
     datasource_id: 'entity:node'
@@ -121,15 +142,9 @@ datasource_settings:
     bundles:
       default: false
       selected:
+        - panorama
+        - promocion
         - tienda_mall
-    languages:
-      default: true
-      selected: {  }
-  'entity:taxonomy_term':
-    bundles:
-      default: false
-      selected:
-        - categorias_tiendas
     languages:
       default: true
       selected: {  }
@@ -158,12 +173,14 @@ processor_settings:
   ignorecase:
     all_fields: true
     fields:
+      - field_descripcion_panorama
+      - field_descripcion_promocion
       - field_descripcion_tienda
       - label
       - name
-      - name_1
       - rendered
       - title
+      - title_1
     weights:
       preprocess_index: -9
       preprocess_query: -8
@@ -171,12 +188,14 @@ processor_settings:
   stopwords:
     all_fields: true
     fields:
+      - field_descripcion_panorama
+      - field_descripcion_promocion
       - field_descripcion_tienda
       - label
       - name
-      - name_1
       - rendered
       - title
+      - title_1
     stopwords:
       - a
       - an
@@ -219,12 +238,14 @@ processor_settings:
   tokenizer:
     all_fields: true
     fields:
+      - field_descripcion_panorama
+      - field_descripcion_promocion
       - field_descripcion_tienda
       - label
       - name
-      - name_1
       - rendered
       - title
+      - title_1
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '2'
@@ -234,12 +255,14 @@ processor_settings:
   transliteration:
     all_fields: true
     fields:
+      - field_descripcion_panorama
+      - field_descripcion_promocion
       - field_descripcion_tienda
       - label
       - name
-      - name_1
       - rendered
       - title
+      - title_1
     weights:
       preprocess_index: -4
       preprocess_query: -3
