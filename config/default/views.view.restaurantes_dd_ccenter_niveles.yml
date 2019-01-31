@@ -631,7 +631,7 @@ display:
       path: dd-restaurantes-ccenter/niveles
       exposed_block: false
       menu:
-        type: tab
+        type: none
         title: Niveles
         description: 'Vista de tiendas por niveles'
         expanded: false

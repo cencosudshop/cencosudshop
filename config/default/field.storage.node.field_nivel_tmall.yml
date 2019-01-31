@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: '-1'
+      label: '-1'
+    -
       value: '0'
       label: PB
     -

@@ -1,0 +1,22 @@
+uuid: 2eb39265-c3e2-4c07-9993-51d4df9728d3
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: patch_tiendas
+label: Tiendas
+type: 'canonical_entities:node'
+pattern: 'tiendas/[node:field_tienda_tmall]'
+selection_criteria:
+  e69707c4-c70d-4827-85ea-b568a0b85111:
+    id: node_type
+    bundles:
+      tienda_mall: tienda_mall
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e69707c4-c70d-4827-85ea-b568a0b85111
+selection_logic: and
+weight: -5
+relationships: {  }

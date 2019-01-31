@@ -4,27 +4,83 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.panorama.field_centro_comercial
+    - field.field.node.panorama.field_descripcion_panorama
+    - field.field.node.panorama.field_horario_panorama
+    - field.field.node.panorama.field_imagen_panorama
+    - field.field.node.panorama.field_panorama_slideshow
+    - field.field.node.panorama.field_tipo_panorama
+    - field.field.node.panorama.field_ubicacion_panorama
+    - field.field.node.panorama.field_vigencia_panorama
     - node.type.panorama
   module:
+    - ds
+    - ds_chains
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_descripcion_panorama
+        - links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+  ds_chains:
+    fields: {  }
 id: node.panorama.teaser
 targetEntityType: node
 bundle: panorama
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_descripcion_panorama:
+    type: basic_string
+    weight: 1
+    region: ds_content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
+  links:
+    weight: 2
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   field_centro_comercial: true
   field_descripcion: true
-  field_descripcion_panorama: true
   field_horario_panorama: true
   field_imagen_panorama: true
   field_panorama_slideshow: true
+  field_tipo_panorama: true
   field_ubicacion_panorama: true
   field_vigencia_panorama: true
   langcode: true

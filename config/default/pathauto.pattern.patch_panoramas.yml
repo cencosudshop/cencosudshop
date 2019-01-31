@@ -1,0 +1,22 @@
+uuid: df6f1142-da4e-4d84-a8b0-90b7e582de49
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: patch_panoramas
+label: Panoramas
+type: 'canonical_entities:node'
+pattern: 'panoramas/[node:title]'
+selection_criteria:
+  66b6b66f-c42c-4305-9758-578d20b43033:
+    id: node_type
+    bundles:
+      panorama: panorama
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 66b6b66f-c42c-4305-9758-578d20b43033
+selection_logic: and
+weight: -5
+relationships: {  }

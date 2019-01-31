@@ -3,17 +3,23 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.storage.node.field_centro_comercial
     - field.storage.node.field_imagen_panorama
     - field.storage.node.field_vigencia_panorama
     - image.style.large
     - node.type.panorama
+    - taxonomy.vocabulary.malls_cencosud
+  content:
+    - 'taxonomy_term:malls_cencosud:4da7e2bd-1e6d-44cd-9d61-26406d0c7c48'
   module:
+    - datetime
     - datetime_range
     - image
     - node
+    - taxonomy
     - user
 id: panoramas_front
-label: 'Panoramas front'
+label: 'Panoramas Front'
 module: views
 description: 'Panoramas mostrados en la página de inicio'
 tag: Panoramas
@@ -260,6 +266,69 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_centro_comercial:
+          id: field_centro_comercial
+          table: node__field_centro_comercial
+          field: field_centro_comercial
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -351,6 +420,93 @@ display:
           entity_type: node
           entity_field: promote
           plugin_id: boolean
+        field_centro_comercial_target_id:
+          id: field_centro_comercial_target_id
+          table: node__field_centro_comercial
+          field: field_centro_comercial_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            296: 296
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: malls_cencosud
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_vigencia_panorama_end_value:
+          id: field_vigencia_panorama_end_value
+          table: node__field_vigencia_panorama
+          field: field_vigencia_panorama_end_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: 'today +6 hours'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
       sorts:
         sticky:
           id: sticky
@@ -366,22 +522,20 @@ display:
           entity_type: node
           entity_field: sticky
           plugin_id: standard
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+        field_vigencia_panorama_value:
+          id: field_vigencia_panorama_value
+          table: node__field_vigencia_panorama
+          field: field_vigencia_panorama_value
           relationship: none
           group_type: group
           admin_label: ''
+          order: DESC
           exposed: false
           expose:
             label: ''
           granularity: second
-      title: 'Panoramas front'
+          plugin_id: datetime
+      title: 'Panoramas Front'
       header: {  }
       footer: {  }
       empty: {  }
@@ -397,9 +551,11 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_centro_comercial'
         - 'config:field.storage.node.field_imagen_panorama'
         - 'config:field.storage.node.field_vigencia_panorama'
   block_1:
@@ -416,8 +572,10 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_centro_comercial'
         - 'config:field.storage.node.field_imagen_panorama'
         - 'config:field.storage.node.field_vigencia_panorama'
