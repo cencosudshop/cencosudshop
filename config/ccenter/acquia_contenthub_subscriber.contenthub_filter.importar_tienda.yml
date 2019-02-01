@@ -1,0 +1,16 @@
+uuid: 242c8ebd-42ed-44cd-affe-b73805f44a68
+langcode: es
+status: true
+dependencies: {  }
+id: importar_tienda
+name: Importar_tienda
+publish_setting: import
+search_term: Tienda
+from_date: ''
+to_date: ''
+source: ''
+entity_types:
+  - tienda
+bundles: {  }
+tags: ''
+author: 1

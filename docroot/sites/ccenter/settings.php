@@ -796,6 +796,8 @@ if ($is_ah_env) {
       # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_stage'; //Unique
       $config['acquia_contenthub.admin_settings']['client_name'] = 'ccenter_test';
       $config['acquia_contenthub.admin_settings']['origin'] = 'd525849a-147b-4a3d-56b4-d3b07de0710b';
+      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = 'caf36e6d-89f0-47d7-5890-138be135854b';
+      $config['acquia_contenthub.admin_settings']['webhook_url'] = 'http://ccenter.realmedianetwork.com/acquia-contenthub/webhook';
       break;
 
     case 'dev':

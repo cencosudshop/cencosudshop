@@ -3,3 +3,5 @@ client_name: cencosud_dev
 hostname: 'https://us-east-1.content-hub.acquia.com'
 api_key: tbPs41fPcIQeIia2lf5w
 secret_key: v5ml8t36gxov9P8RcF7plmzdjt6fdyEGr5vuDMsv
+webhook_uuid: 6ea318bb-071c-46c3-50ab-250a301cda8b
+webhook_url: 'http://default.realmedianetwork.com/acquia-contenthub/webhook'
