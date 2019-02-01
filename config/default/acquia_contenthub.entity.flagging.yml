@@ -1,0 +1,12 @@
+uuid: 702c8732-3c5c-427a-99ea-36dd07d84f0e
+langcode: es
+status: true
+dependencies:
+  module:
+    - flag
+id: flagging
+bundles:
+  favoritos:
+    enable_index: false
+    enable_viewmodes: false
+    rendering: {  }
