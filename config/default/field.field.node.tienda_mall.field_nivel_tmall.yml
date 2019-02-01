@@ -12,7 +12,7 @@ field_name: field_nivel_tmall
 entity_type: node
 bundle: tienda_mall
 label: Nivel
-description: ''
+description: "Costanera Center\r\nNiveles: PB, 1, 2, 3, 4, 5, 6.\r\n\r\nAlto Las Condes\r\nNiveles: 1, 2, 3.\r\n\r\nPortal La Dehesa\r\nNiveles: -1, 1, 2.\r\n\r\nPortal Florida Center\r\nNiveles: -1, 1, 2, 3.\r\n\r\nPortal Ñuñoa\r\nNiveles: 1, 2, 3, 4.\r\n\r\nPortal Belloto\r\nNivel: 1.\r\n\r\nPortal Rancagua\r\nNivel: 1.\r\n\r\nPortal Temuco\r\nNiveles: 1, 2, 3.\r\n\r\nPortal Osorno\r\nNiveles: 1, 2, 3.\r\n\r\nPortal La Reina\r\nNiveles: 1, 2."
 required: true
 translatable: false
 default_value: {  }

@@ -4,19 +4,72 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.promocion.field_centro_comercial
+    - field.field.node.promocion.field_descripcion_promocion
+    - field.field.node.promocion.field_imagen_promocion
+    - field.field.node.promocion.field_tienda_asociada
+    - field.field.node.promocion.field_vigencia_promocion
     - node.type.promocion
   module:
+    - ds
+    - ds_chains
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_descripcion_promocion
+        - links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: ''
+          class: ''
+          link: false
+  ds_chains:
+    fields: {  }
 id: node.promocion.teaser
 targetEntityType: node
 bundle: promocion
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_descripcion_promocion:
+    type: basic_string
+    weight: 1
+    region: ds_content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
+  links:
+    weight: 2
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
   field_centro_comercial: true

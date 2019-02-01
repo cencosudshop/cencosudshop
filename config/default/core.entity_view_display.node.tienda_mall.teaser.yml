@@ -1,6 +1,6 @@
 uuid: d1b81bc6-8d9d-4f4b-af82-6612d826566a
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -9,30 +9,79 @@ dependencies:
     - field.field.node.tienda_mall.field_mall_tmall
     - field.field.node.tienda_mall.field_mapa_tmall
     - field.field.node.tienda_mall.field_nivel_tmall
+    - field.field.node.tienda_mall.field_telefono_tmall
     - field.field.node.tienda_mall.field_tienda_tmall
     - node.type.tienda_mall
   module:
+    - ds
+    - ds_chains
     - field_layout
+    - panelizer
     - user
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_tienda_tmall
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
+        - 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
+        - links
+    fields:
+      'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda':
+        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_categoria_tienda'
+        weight: 2
+        label: hidden
+        formatter: entity_reference_label
+        settings:
+          link: false
+      'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda':
+        plugin_id: 'ds_chains:node/tienda_mall/field_tienda_tmall/field_descripcion_tienda'
+        weight: 1
+        label: hidden
+        formatter: basic_string
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds_chains:
+    fields:
+      field_tienda_tmall: field_tienda_tmall
 id: node.tienda_mall.teaser
 targetEntityType: node
 bundle: tienda_mall
 mode: teaser
 content:
-  flag_favoritos:
-    weight: 10
-    settings: {  }
+  field_tienda_tmall:
+    type: entity_reference_label
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      link: false
     third_party_settings: {  }
-    region: content
   links:
-    weight: 100
+    weight: 3
+    region: ds_content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_fotos_tmall: true
   field_horario_tmall: true
@@ -40,5 +89,5 @@ hidden:
   field_mapa_tmall: true
   field_nivel_tmall: true
   field_telefono_tmall: true
-  field_tienda_tmall: true
+  flag_favoritos: true
   langcode: true

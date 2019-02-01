@@ -514,7 +514,7 @@ display:
       path: dd-tiendas-ccenter/niveles
       exposed_block: false
       menu:
-        type: tab
+        type: none
         title: Niveles
         description: 'Vista de tiendas por niveles'
         expanded: false

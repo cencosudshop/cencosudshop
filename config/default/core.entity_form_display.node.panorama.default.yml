@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.panorama.field_horario_panorama
     - field.field.node.panorama.field_imagen_panorama
     - field.field.node.panorama.field_panorama_slideshow
+    - field.field.node.panorama.field_tipo_panorama
     - field.field.node.panorama.field_ubicacion_panorama
     - field.field.node.panorama.field_vigencia_panorama
     - image.style.thumbnail
@@ -54,7 +55,7 @@ content:
     type: string_textarea
     region: content
   field_horario_panorama:
-    weight: 28
+    weight: 15
     settings:
       size: 60
       placeholder: ''
@@ -71,7 +72,7 @@ content:
     third_party_settings: {  }
   field_panorama_slideshow:
     type: entity_browser_file
-    weight: 26
+    weight: 13
     settings:
       entity_browser: image_browser
       field_widget_edit: true
@@ -83,8 +84,14 @@ content:
       selection_mode: selection_append
     region: content
     third_party_settings: {  }
+  field_tipo_panorama:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_ubicacion_panorama:
-    weight: 27
+    weight: 14
     settings:
       size: 60
       placeholder: ''

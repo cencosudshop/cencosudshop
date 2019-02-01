@@ -1,0 +1,22 @@
+uuid: ae0c73c8-2829-435d-a12f-caeb0079e713
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: patch_promociones
+label: Promociones
+type: 'canonical_entities:node'
+pattern: 'promociones/[node:title]'
+selection_criteria:
+  b4631c57-db08-44a1-904e-115fe9e9a2b9:
+    id: node_type
+    bundles:
+      promocion: promocion
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b4631c57-db08-44a1-904e-115fe9e9a2b9
+selection_logic: and
+weight: -5
+relationships: {  }
