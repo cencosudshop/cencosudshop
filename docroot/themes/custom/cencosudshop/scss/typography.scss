@@ -49,7 +49,8 @@ $own-font-family-base: $font-family-sans-serif-override;
 
 // Tamaños de fuentes universales para los sitios
 //$html-font-size: (null: 13px, $sm: 14px, $md: 16px, $lg: 18px);
-$html-font-size: (null: 0.8125rem, $sm: 0.875rem, $md: 1rem, $lg: 1.0625rem, $xl: 1.125);
+//$html-font-size: (null: 0.8125rem, $sm: 0.875rem, $md: 1rem, $lg: 1.0625rem, $xl: 1.125);
+$html-font-size: (null: 0.8125rem, $sm: 0.875rem, $md: .9rem, $lg: 1rem, $xl: 1.0625rem);
 //$paragraph-font-size: (null: 18px, $lg: 17px, $md: 16px, $sm: 15px, $xs: 14px);
 $paragraph-font-size: (null: 14px, $sm: 15px, $md: 16px,  $lg: 17px);
 

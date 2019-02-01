@@ -18,13 +18,20 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 p {
     margin-bottom: .5rem;
-    @include breakpoint(768px) {
+    @include breakpoint(880px) {
         margin-bottom: 1rem;
     }
 }
 
-.clearfix {
+.clearFloat-bottom {
     overflow: auto;
+}
+
+/* Paginador */
+ul.pager {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
 
 /* place footer bottom */
@@ -133,6 +140,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
     margin: 0 auto;
     @include breakpoint(768px) {
         width: unset;
+        max-width: unset;
         margin: unset;
     }
 }
@@ -184,7 +192,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
             max-width: 100px;
 
             img {
-                height: 100%;
+                max-height: 76px;
             }
         }
 
@@ -205,6 +213,12 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
 }
 
 /* Promociones */
+.ficha-promocion {
+    .logo-container {
+        max-width: 140px;
+    }
+}
+
 .imagen-promocion {
     margin-bottom: .5rem;
     @include breakpoint(768px) {
@@ -215,12 +229,13 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
         border-radius: 2px;
     }
 }
-.ficha-promocion {
-    .logo-container {
-        max-width: 140px;
+/* Promociones */
+.img-container {
+    margin-bottom: .5rem;
+    @include breakpoint(768px) {
+        margin-bottom: 1rem;
     }
 }
-
 
 /* Footer */
 
