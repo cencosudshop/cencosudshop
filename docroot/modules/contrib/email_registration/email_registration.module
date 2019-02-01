@@ -122,23 +122,10 @@ function email_registration_cleanup_username($name) {
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
-//function email_registration_form_user_form_alter(&$form, FormStateInterface $form_state) {
-// ACARRASCO, en la versión rc6 la función email_registration_form_user_register_form_alter es sustituída (su nombre) por email_registration_form_user_form_alter
-// y genera como error que cada vez que se edita el usuario cambia el username por la forma 'email_registration_' . user_password()
-// por lo tanto, se modifica como estaba en la versión rc5: email_registration_form_user_register_form_alter
-// hasta que se actualice a una nueva versión del módulo que solvente éste error de funcionamiento.
-function email_registration_form_user_register_form_alter(&$form, FormStateInterface $form_state) {
+function email_registration_form_user_form_alter(&$form, FormStateInterface $form_state) {
   $form['account']['name']['#type'] = 'value';
   $form['account']['name']['#value'] = 'email_registration_' . user_password();
   $form['account']['mail']['#title'] = t('Email');
-}
-
-// ACARRASCO, agregando la función email_registration_form_user_form_alter tal como está en la versión rc5
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function email_registration_form_user_form_alter(&$form, FormStateInterface $form_state) {
-  $form['account']['name']['#title'] = t('Display name');
 }
 
 /**
