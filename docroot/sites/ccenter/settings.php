@@ -773,4 +773,37 @@ if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/cencosudshop/ccenter-settings.inc';
 }
 
+
+#Content Hub  and Lift configuration
+$ah_env = isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : NULL;
+$is_ah_env = (bool) $ah_env;
+$is_local_env = !$is_ah_env;
+if ($is_ah_env) {
+
+
+  $config['acquia_contenthub.admin_settings']['hostname'] = 'https://us-east-1.content-hub.acquia.com';
+  $config['acquia_contenthub.admin_settings']['api_key'] = 'tbPs41fPcIQeIia2lf5w';
+  $config['acquia_contenthub.admin_settings']['secret_key'] = 'v5ml8t36gxov9P8RcF7plmzdjt6fdyEGr5vuDMsv';
+
+  switch ($ah_env) {
+    case 'prod':
+      #$config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_prod'; //Unique
+      $config['acquia_contenthub.admin_settings']['client_name'] = 'ccenter_prod';
+      $config['acquia_contenthub.admin_settings']['origin'] = '';
+      break;
+
+    case 'test':
+      # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_stage'; //Unique
+      $config['acquia_contenthub.admin_settings']['client_name'] = 'ccenter_test';
+      $config['acquia_contenthub.admin_settings']['origin'] = 'd525849a-147b-4a3d-56b4-d3b07de0710b';
+      break;
+
+    case 'dev':
+      # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_dev'; //Unique
+      $config['acquia_contenthub.admin_settings']['client_name'] = 'ccenter_dev';
+      $config['acquia_contenthub.admin_settings']['origin'] = 'cbb57b0b-b97a-4d6f-7a8e-3f9f3e02e25f';
+      break;
+  }
+}
+
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";

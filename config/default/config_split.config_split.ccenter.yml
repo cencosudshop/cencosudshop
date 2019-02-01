@@ -12,6 +12,7 @@ blacklist: {  }
 graylist:
   - system.site
   - system.theme
+  - acquia_contenthub.*
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
