@@ -1,0 +1,12 @@
+uuid: 55a1e553-0a7d-4d43-8d6b-0f5c5ae3fb4c
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: content_moderation_state
+bundles:
+  content_moderation_state:
+    enable_index: false
+    enable_viewmodes: false
+    rendering: {  }

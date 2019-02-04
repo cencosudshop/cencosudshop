@@ -68,6 +68,7 @@
  *
  * One example of the simplest connection array is shown below. To use the
  * sample settings, copy and uncomment the code below between the @code and
+ *
  * @endcode lines and paste it after the $databases declaration. You will need
  * to replace the database username and password and possibly the host and port
  * with the appropriate credentials for your database system.
@@ -122,6 +123,7 @@ $databases = [];
  * traditionally referred to as master/slave in database server documentation).
  *
  * The general format for the $databases array is as follows:
+ *
  * @code
  * $databases['default']['default'] = $info_array;
  * $databases['default']['replica'][] = $info_array;
@@ -245,6 +247,7 @@ $databases = [];
  * array key CONFIG_ACTIVE_DIRECTORY.
  *
  * Example:
+ *
  * @code
  *   $config_directories = array(
  *     CONFIG_SYNC_DIRECTORY => '/directory/outside/webroot',
@@ -276,6 +279,7 @@ $config_directories = [];
  * stored with backups of your database.
  *
  * Example:
+ *
  * @code
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
@@ -704,6 +708,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * like to allow.
  *
  * For example:
+ *
  * @code
  * $settings['trusted_host_patterns'] = array(
  *   '^www\.example\.com$',
@@ -771,6 +776,40 @@ $settings['entity_update_batch_size'] = 50;
 
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/cencosudshop/cencosudshop-settings.inc';
+}
+
+#Content Hub  and Lift configuration
+$ah_env = isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : NULL;
+$is_ah_env = (bool) $ah_env;
+$is_local_env = !$is_ah_env;
+if ($is_ah_env) {
+
+
+  $config['acquia_contenthub.admin_settings']['hostname'] = 'https://us-east-1.content-hub.acquia.com';
+  $config['acquia_contenthub.admin_settings']['api_key'] = 'tbPs41fPcIQeIia2lf5w';
+  $config['acquia_contenthub.admin_settings']['secret_key'] = 'v5ml8t36gxov9P8RcF7plmzdjt6fdyEGr5vuDMsv';
+
+  switch ($ah_env) {
+    case 'prod':
+      #$config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_prod'; //Unique
+      $config['acquia_contenthub.admin_settings']['client_name'] = 'cencosud_prod';
+      $config['acquia_contenthub.admin_settings']['origin'] = '';
+      break;
+
+    case 'test':
+      # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_stage'; //Unique
+      $config['acquia_contenthub.admin_settings']['client_name'] = 'cencosud_stage_4f9b31ff-53c0-4e14-bf48-34a862cf67bf';
+      $config['acquia_contenthub.admin_settings']['origin'] = '16896391-50d0-4d5d-7025-c0eb27c08e14';
+      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = '6ea318bb-071c-46c3-50ab-250a301cda8b';
+      $config['acquia_contenthub.admin_settings']['webhook_url'] = 'http://default.realmedianetwork.com/acquia-contenthub/webhook';
+      break;
+
+    case 'dev':
+      # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_dev'; //Unique
+      $config['acquia_contenthub.admin_settings']['client_name'] = 'cencosud_dev';
+      $config['acquia_contenthub.admin_settings']['origin'] = 'f18a09fc-44c7-42af-55aa-521c9b801653';
+      break;
+  }
 }
 
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";

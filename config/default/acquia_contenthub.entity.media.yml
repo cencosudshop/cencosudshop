@@ -1,0 +1,45 @@
+uuid: c6ffe8a7-13cb-4fbb-809d-5a97f29b7703
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - media
+id: media
+bundles:
+  audio_file:
+    enable_index: false
+    enable_viewmodes: false
+    rendering:
+      default: default
+  document:
+    enable_index: false
+    enable_viewmodes: false
+    rendering:
+      default: default
+  image:
+    enable_index: true
+    enable_viewmodes: false
+    rendering:
+      default: default
+  instagram:
+    enable_index: false
+    enable_viewmodes: false
+    rendering:
+      default: default
+  tweet:
+    enable_index: false
+    enable_viewmodes: false
+    rendering:
+      default: default
+  video:
+    enable_index: false
+    enable_viewmodes: false
+    rendering:
+      default: default
+  video_file:
+    enable_index: false
+    enable_viewmodes: false
+    rendering:
+      default: default

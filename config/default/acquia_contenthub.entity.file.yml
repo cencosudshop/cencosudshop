@@ -1,0 +1,12 @@
+uuid: fe210250-45c2-4e09-ab28-032b38296651
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+id: file
+bundles:
+  file:
+    enable_index: true
+    enable_viewmodes: false
+    rendering: {  }
