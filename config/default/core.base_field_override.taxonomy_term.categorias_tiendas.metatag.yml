@@ -1,0 +1,18 @@
+uuid: d2e3e090-a2c6-48b9-b88d-b3014af35182
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorias_tiendas
+id: taxonomy_term.categorias_tiendas.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: categorias_tiendas
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,18 @@
+uuid: acb84243-764e-4cba-97e0-15e2ed56cd55
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.malls_cencosud
+id: taxonomy_term.malls_cencosud.name
+field_name: name
+entity_type: taxonomy_term
+bundle: malls_cencosud
+label: Nombre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

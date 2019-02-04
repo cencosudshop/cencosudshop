@@ -1,0 +1,20 @@
+uuid: f7b920fc-121d-4d29-8a01-3c5b1fc27707
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorias_tiendas
+  module:
+    - text
+id: taxonomy_term.categorias_tiendas.description
+field_name: description
+entity_type: taxonomy_term
+bundle: categorias_tiendas
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
