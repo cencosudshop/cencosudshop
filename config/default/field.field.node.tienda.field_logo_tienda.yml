@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_logo_tienda
     - node.type.tienda
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.tienda.field_logo_tienda
 field_name: field_logo_tienda
 entity_type: node
@@ -14,7 +21,7 @@ bundle: tienda
 label: Logo
 description: 'Logo de la tienda.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

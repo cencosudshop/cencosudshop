@@ -12,7 +12,7 @@ bundle: tienda_mall
 label: Horario
 description: "Ejemplo:<br>\r\nLunes a Domingo de 10:00 a 22:00 hrs.<br>\r\nLunes a Domingo de 11:00 a 21:00 hrs.<br>\r\nLunes a Sábado de 08:30 a 22:00 hrs y Domingo y Festivos de 09:00 a 22:00 hrs."
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: ' '
