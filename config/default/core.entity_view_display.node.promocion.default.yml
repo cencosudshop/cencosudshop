@@ -12,6 +12,7 @@ dependencies:
     - node.type.promocion
   module:
     - datetime_range
+    - ds_chains
     - image
     - panelizer
     - user
@@ -21,11 +22,22 @@ third_party_settings:
     custom: false
     allow: false
     default: default
+  ds_chains:
+    fields: {  }
 id: node.promocion.default
 targetEntityType: node
 bundle: promocion
 mode: default
 content:
+  field_centro_comercial:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
   field_descripcion_promocion:
     weight: 5
     label: hidden
@@ -60,6 +72,15 @@ content:
     third_party_settings: {  }
     type: daterange_default
     region: content
+  langcode:
+    type: language
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
   links:
     weight: 0
     region: content
@@ -67,5 +88,3 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_centro_comercial: true
-  langcode: true
