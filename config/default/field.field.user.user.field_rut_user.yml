@@ -1,19 +1,19 @@
-uuid: d4e2ca09-e076-472f-be93-430c7e6b3fdb
+uuid: 91b3203f-af77-4760-9732-de4739203942
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.user.field_rut
+    - field.storage.user.field_rut_user
   module:
     - rut_field
     - user
-id: user.user.field_rut
-field_name: field_rut
+id: user.user.field_rut_user
+field_name: field_rut_user
 entity_type: user
 bundle: user
-label: Rut
+label: RUT
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
