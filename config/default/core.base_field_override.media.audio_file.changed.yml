@@ -1,0 +1,18 @@
+uuid: 6dcb037c-9896-46cb-ac7d-2b8c3ff81267
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.audio_file
+id: media.audio_file.changed
+field_name: changed
+entity_type: media
+bundle: audio_file
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

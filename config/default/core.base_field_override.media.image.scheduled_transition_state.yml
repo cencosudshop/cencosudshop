@@ -1,0 +1,18 @@
+uuid: ae83110c-ad84-402d-bad6-b5357f5f336d
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: media
+bundle: image
+label: null
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
