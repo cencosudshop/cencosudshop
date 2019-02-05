@@ -1,0 +1,44 @@
+<style>
+.view-tiendas-dd-center h3{ 
+ margin:2%;
+    width: 3%;
+    padding: 0.4%;
+    text-align: center;
+    color: #495057;
+    border-bottom:5px solid #e2e2e2;
+}
+.borde{
+    padding-top:1%;
+    border-bottom:1px solid #cccccc6b;
+}
+
+.nivel{
+color: #495057;text-align:right;background:#e2e2e2;width:auto;float:right;padding:1%;
+}
+
+.attachment-before{
+    position: fixed;
+    margin-left: 94% !important;
+    z-index:999;
+}
+
+.list-group{
+    background: #e2e2e2 !important;
+    padding: 15px !important;
+    border: 1px solid #aaa !important;
+}
+
+</style>
+
+<div class="row col-12 justify-content-center">
+    <div class="col-6 borde">
+      {{ fields.title_1.content }}
+    </div>
+    <div class="col-5 borde"> 
+       <p class="nivel"> Nivel:{{ fields.field_nivel_tmall.content }}</p>
+    </div>
+</div>
+
+
+
+

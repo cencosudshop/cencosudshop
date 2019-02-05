@@ -1,28 +1,7 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<div class="col-md-12"style="height:50px;background:#15B7E2;margin-bottom:4%;">
-<h6 style="color:#fff;padding:1%;">TIENDAS</h6>
-</div>
-<div class="col-md-12" style="margin-bottom:30%;">
-<div class="col-md-3" style="float:left;">
-   <div class="col-md-12" style="float:left;background: #cbe5ec;padding: 3%;height:200px;"> 
-    </div>
-</div> 
-<div class="col-md-8" style="float:left; margin-left:10px;border-left-style: solid;border-left-color:#15B7E2;height:200px;">
-<table class="table">
-  <tbody>
-    <tr>
-      <th scope="row" style="background:#15B7E2"></th>
-      <td>{{ node.title.value }}</td>
-      <td>
-      <ul{{ attributes }}>
-          {% for item in items %}
-              <li>{{ item.content.title }}</li>
-         {% endfor %}
-      </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="container">
+      <div class="row justify-content-md-center">
+            <div class="col-md-6 p-3 mb-3"  style="background:#cdf1e2cc;"> 
+               <p><h5 class="text-center">La tienda <strong>{{ node.title.value }} </strong> se ha creado con èxito</h5></p>
+            </div>
+      </div>
 </div>

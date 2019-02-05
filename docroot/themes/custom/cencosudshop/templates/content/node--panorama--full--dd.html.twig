@@ -1,0 +1,32 @@
+<style>
+.ui-dialog .ui-dialog-titlebar-close {
+    text-decoration: none;
+    background-image: url("/themes/custom/ccenter/images/equis.jpg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+button:focus {
+    outline: none;
+}
+</style>
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12 float-left mt-4">
+                <div class="col-md-12 float-left mb-3">
+                  <img src="{{ file_url(node.field_imagen_panorama.entity.fileuri) }}"  height="300" width="100">                                              
+                </div>
+                <div class="col-md-12">
+                   <h4>{{ node.title.value }}</h4>
+                   <p style="font-size:15px;">VALIDO  DESDE {{ node.field_vigencia_panorama.value|date(format='d/m/Y') }} HASTA {{ node.field_vigencia_panorama.end_value|date(format='d/m/Y') }}</p>                
+                   <p style="text-align:justify;">{{ node.field_descripcion_panorama.value }}</p>
+                 </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
