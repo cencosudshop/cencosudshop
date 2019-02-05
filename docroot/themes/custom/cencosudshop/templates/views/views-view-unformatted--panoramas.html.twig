@@ -1,11 +1,8 @@
 {% if title %}
-  <h3>{{ title }}</h3>
+<h3>{{ title }}</h3>
 {% endif %}
-<ol>
-    {% for key, value in page  %}
-        <li>{{ key }}</li>
-    {% endfor %}
-</ol>
+{# Pintar cabecera caundo no este en el front #}
+{% if  is_front != TRUE %}
 <div class="row pm-3">
     <div class="col-md-8">
         <div class="img-container">
@@ -24,10 +21,13 @@
         </p>
     </div>
 </div>
+<hr>
+{% endif %}
+
 {% if rows %}
-    <div class="row">
-    {% for row in rows %}
-        {{ row.content }}
-    {% endfor %}
-    </div>
+<div class="row justify-content-around">
+{% for row in rows %}
+    {{ row.content }}
+{% endfor %}
+</div>
 {% endif %}
