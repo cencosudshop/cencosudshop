@@ -536,3 +536,23 @@ display:
         - 'config:field.storage.node.field_centro_comercial'
         - 'config:field.storage.node.field_imagen_promocion'
         - 'config:field.storage.node.field_vigencia_promocion'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Página
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: promociones-front-dd
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_centro_comercial'
+        - 'config:field.storage.node.field_imagen_promocion'
+        - 'config:field.storage.node.field_vigencia_promocion'

@@ -1,13 +1,15 @@
 uuid: caa0599c-9f14-4e70-914f-c8d086d0e829
 langcode: es
-status: false
+status: true
 dependencies:
+  module:
+    - system
   theme:
     - cencosudshop
 id: pagetitle
 theme: cencosudshop
 region: content
-weight: 0
+weight: -3
 provider: null
 plugin: page_title_block
 settings:
@@ -15,4 +17,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/tiendas/*'
+    negate: true
+    context_mapping: {  }

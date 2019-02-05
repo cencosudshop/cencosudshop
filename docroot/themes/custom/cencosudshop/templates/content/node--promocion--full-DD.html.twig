@@ -1,0 +1,33 @@
+<style>
+.ui-dialog .ui-dialog-titlebar-close {
+    text-decoration: none;
+    background-image: url("/themes/custom/ccenter/images/equis.jpg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+button:focus {
+    outline: none;
+}
+</style>
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-12 float-left mt-4">
+                <div class="col-md-12 float-left mb-3">
+                  <img src="{{ file_url(node.field_imagen_promocion.entity.fileuri) }}"  height="300" width="100">                                              
+                </div>
+                <div class="col-md-12">
+                   <h4>{{ node.title.value }}</h4>
+                   <p style="font-size:12px;"><i class="far fa-clock"></i> Desde {{ node.field_vigencia_promocion.value|date(format='d/m/Y') }} Hasta {{ node.field_vigencia_promocion.end_value|date(format='d/m/Y') }}</p>                
+                   <p style="text-align:justify;">{{ node.field_descripcion_promocion.value }}</p>
+                </div>
+                <div class="botonsito text-center text-md-left">
+                    {% set idtienda = node.field_tienda_asociada.entity.nid.value %}
+                    <button type="button" class="btn btn-info"> {{drupal_view('enlace_tienda_promocion', 'block_1', idtienda)}} </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
