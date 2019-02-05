@@ -74,7 +74,7 @@
   {{ page.highlighted }}
   <div id="s-content" class="container-fluid p-relativeToFooter">
     {# Seccion Para hacer#}
-    <div class="s-parahacer container-fluid">
+    <div class="s-parahacer container-fluid mb-3">
       <div class="row"><h3>Para hacer este template es de cencosudshop</h3></div>
       <div class="row text-center">
         <div class="col-6 col-lg p-1">
@@ -113,6 +113,11 @@
         </div>
       {% endif %}#}
     {# Promociones #}
+    {% if page.featured_bottom_first %}
+      <div class="featured-bottom-panoramas">
+          {{ page.featured_bottom_first }}
+      </div>
+    {% endif %}
     {% if page.featured_bottom_second %}
       <div class="featured-bottom-promocion">
           {{ page.featured_bottom_second }}

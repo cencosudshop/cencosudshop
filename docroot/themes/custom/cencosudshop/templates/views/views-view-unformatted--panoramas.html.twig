@@ -25,9 +25,16 @@
 {% endif %}
 
 {% if rows %}
-<div class="row justify-content-around">
-{% for row in rows %}
-    {{ row.content }}
-{% endfor %}
-</div>
+    <div class="row justify-content-around">
+        {% for row in rows %}
+            {{ row.content }}
+        {% endfor %}
+        {# Ir a subhome de panoramas desde home #}
+        {% if  is_front %}
+        <div class="col-12 text-center">
+            <a href="/panoramas" class="btn btn-outline-primary" role="button" aria-pressed="true">Ver más Panoramas</a>
+        </div>
+        {% endif %}
+    </div>
+
 {% endif %}

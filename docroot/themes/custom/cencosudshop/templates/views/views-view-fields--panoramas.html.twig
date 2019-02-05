@@ -1,24 +1,6 @@
-{#
-    
-    <div class="content">
-        <div class="row">
-                <div class="col-md-12" style="height:auto;float:left;margin-bottom: 10%;margin-top:30%;">
-                <div class="imagen-promocion">{{ fields.field_imagen_panorama.content }}</div>
-            </div>
-            <div class="col-md-12">
-                <h5>{{ fields.title.content }}</h5>
-            </div>
-            <div class="col-md-12">
-                Desde {{ fields.field_vigencia_panorama.content }}
-            </div>
-        </div>
-    </div>
-#}
-
 <div class="col-md-4">
     <div class="imagen-promocion">{{ fields.field_imagen_panorama.content }}</div>
     <h5><strong>{{ fields.title.content }}</strong></h5>
-    
     {% if fields.field_vigencia_panorama.content %}
         <p>Desde {{ fields.field_vigencia_panorama.content }}</p>
     {% endif %}
