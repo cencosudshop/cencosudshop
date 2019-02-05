@@ -1,0 +1,35 @@
+<style>
+.slick-dots{
+  top:20px;
+  text-align:right;
+  height:5%;
+}
+</style>
+<div id="page-wrapper">
+  {% include directory ~ '/templates/partials/header.html.twig' %}
+  {{ page.highlighted }}
+  <div id="s-content" class="container-fluid p-relativeToFooter">
+    {# Seccion Para hacer#}
+    <div class="s-parahacer container-fluid">
+      <div class="row">
+      </div>   
+      <div class="row justify-content-md-center mt-5">
+          <div class="col-md-10">
+              {{ drupal_view('panoramas_front_dd', 'block_1', 3) }}
+          </div>
+      </div> 
+      <div class="row justify-content-md-center mt-5">
+          <div class="col-md-10">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              {{ drupal_view('promociones_front_dd', 'block_1', 3) }}
+          </div>
+           </div> 
+      </div>        
+    </div>
+  </div>
+
+</div>
+
+
+
+
