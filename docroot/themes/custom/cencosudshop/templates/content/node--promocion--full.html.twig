@@ -10,7 +10,7 @@
             <div class="logo-container float-left">
                 <img src="{{ file_url(node.field_tienda_asociada.entity.field_logo_tienda.entity.fileuri) }}">
             </div>
-            <div class="promo-text clearfix">
+            <div class="promo-text clearFloat-bottom">
                 <h4><strong>{{ node.field_tienda_asociada.entity.title.value }}</strong></h4>
                 <p>{{ node.title.value }}</p>
                 <p>
@@ -23,7 +23,7 @@
     </div> <!-- Fin row -->
     <br>
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <div class="descripcion-promo">
                 <p class="text-justify"> {{ node.field_descripcion_promocion.value }} </p>
             </div>

@@ -1,0 +1,40 @@
+{% if title %}
+<h3>{{ title }}</h3>
+{% endif %}
+{# Pintar cabecera caundo no este en el front #}
+{% if  is_front != TRUE %}
+<div class="row pm-3">
+    <div class="col-md-8">
+        <div class="img-container">
+            <img src="/themes/custom/ccenter/images/sky_costanera.jpg">                
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h4><strong>SKY COSTANERA</strong></h4>
+        <p>Somos el mirador mas alto de Latinoamerica</p>      
+        <p>
+            <i class="far fa-clock"></i>
+            Lunes a Domingo - 10:00 a 22:00 Horas</p>
+        <p>
+            <i class="fas fa-globe-americas"></i>
+            <a href="http://www.skycostanera.cl"> skycostanera.cl</a>
+        </p>
+    </div>
+</div>
+<hr>
+{% endif %}
+
+{% if rows %}
+    <div class="row justify-content-around">
+        {% for row in rows %}
+            {{ row.content }}
+        {% endfor %}
+        {# Ir a subhome de panoramas desde home #}
+        {% if  is_front %}
+        <div class="col-12 text-center">
+            <a href="/panoramas" class="btn btn-outline-primary" role="button" aria-pressed="true">Ver más Panoramas</a>
+        </div>
+        {% endif %}
+    </div>
+
+{% endif %}

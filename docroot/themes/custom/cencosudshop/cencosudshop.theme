@@ -30,3 +30,14 @@ function cencosudshop_form_system_theme_settings_alter(&$form, FormStateInterfac
     'bg-transparent' => t('Transparent'),
   ];
 }
+
+function cencosudshop_preprocess(&$variables, $hook) {
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+  // Ensure the cache varies correctly (new in Drupal 8.3).
+  $variables['#cache']['contexts'][] = 'url.path.is_front';
+}

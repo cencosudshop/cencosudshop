@@ -74,7 +74,7 @@
   {{ page.highlighted }}
   <div id="s-content" class="container-fluid p-relativeToFooter">
     {# Seccion Para hacer#}
-    <div class="s-parahacer container-fluid">
+    <div class="s-parahacer container-fluid mb-3">
       <div class="row"><h3>Para hacer este template es de cencosudshop</h3></div>
       <div class="row text-center">
         <div class="col-6 col-lg p-1">
@@ -104,17 +104,27 @@
         </div>
       </div>
     </div>
-    {#Panoramas, promociones y mapa#}
-    {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
-      <div class="featured-bottom">
-        <aside class="{{ container }} clearfix" role="complementary">
+    {# Panoramas 
+      {% if page.featured_bottom_first %}
+        <div class="featured-bottom-panorama">
+            {{ page.featured_bottom_first }}
+            {{ page.featured_bottom_second }}
+            {{ page.featured_bottom_third }}
+        </div>
+      {% endif %}#}
+    {# Promociones #}
+    {% if page.featured_bottom_first %}
+      <div class="featured-bottom-panoramas">
           {{ page.featured_bottom_first }}
+      </div>
+    {% endif %}
+    {% if page.featured_bottom_second %}
+      <div class="featured-bottom-promocion">
           {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
-        </aside>
       </div>
     {% endif %}
   </div>
+
 {% include directory ~ '/templates/partials/footer.html.twig' %}
 
 </div>
