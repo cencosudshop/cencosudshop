@@ -6,12 +6,20 @@ id: ccenter
 label: ccenter
 description: ''
 folder: ../config/ccenter
-module: {  }
+module:
+  acquia_contenthub_subscriber: 0
+  acquia_connector: 0
+  shield: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - acquia_contenthub_subscriber.contenthub_filter.importar_tienda
 graylist:
+  - rest.resource.contenthub_filter
   - system.site
   - system.theme
+  - 'acquia_contenthub.*'
+  - acquia_connector.settings
+  - shield.settings
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

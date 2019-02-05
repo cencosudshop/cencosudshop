@@ -1,0 +1,12 @@
+uuid: 98008889-cf0e-4e75-8420-426f51332f24
+langcode: es
+status: true
+dependencies:
+  module:
+    - consumers
+id: consumer
+bundles:
+  consumer:
+    enable_index: false
+    enable_viewmodes: false
+    rendering: {  }

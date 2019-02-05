@@ -20,7 +20,7 @@ bundle: tienda_mall
 label: Teléfono
 description: 'Ingresar el número telefónico con código internacional +56'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

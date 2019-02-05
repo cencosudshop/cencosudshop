@@ -1,0 +1,22 @@
+uuid: 95a56d8c-7d2a-48f7-a9aa-5a7920bf3846
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorias_tiendas
+id: taxonomy_term.categorias_tiendas.status
+field_name: status
+entity_type: taxonomy_term
+bundle: categorias_tiendas
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

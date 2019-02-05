@@ -1,0 +1,18 @@
+uuid: b9acc598-a759-44c8-abc1-0ead2c3520f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.malls_cencosud
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.malls_cencosud
+target_entity_type_id: taxonomy_term
+target_bundle: malls_cencosud
+default_langcode: site_default
+language_alterable: false

@@ -14,7 +14,7 @@ bundle: banner
 label: 'Fecha Vigencia'
 description: 'Fecha hasta la que estará vigente el banner en el slideshow del home.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
