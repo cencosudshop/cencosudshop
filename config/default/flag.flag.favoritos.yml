@@ -11,10 +11,10 @@ bundles:
 entity_type: node
 global: false
 weight: 0
-flag_short: '<i class="far fa-2x fa-heart"></i>'
+flag_short: '<i class="far fa-heart"></i>'
 flag_long: 'Agregar esta tienda a favoritas'
 flag_message: ''
-unflag_short: '<i class="fas fa-2x fa-heart"></i>'
+unflag_short: '<i class="fas fa-heart"></i>'
 unflag_long: 'Remover esta tienda de favoritas'
 unflag_message: ''
 unflag_denied_text: ''

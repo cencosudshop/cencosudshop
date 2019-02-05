@@ -1,0 +1,24 @@
+uuid: 36fc0564-0f9e-452e-95f3-b6adfe832cf9
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.panoramas_front
+  module:
+    - views
+  theme:
+    - cencosudshop
+id: views_block__panoramas_front_block_1
+theme: cencosudshop
+region: featured_bottom_second
+weight: 0
+provider: null
+plugin: 'views_block:panoramas_front-block_1'
+settings:
+  id: 'views_block:panoramas_front-block_1'
+  label: Panoramas
+  provider: views
+  label_display: visible
+  views_label: Panoramas
+  items_per_page: none
+visibility: {  }
