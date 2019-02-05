@@ -22,7 +22,7 @@ id: promociones_front
 label: 'Promociones Front'
 module: views
 description: 'Promociones mostradas en la página de inicio'
-tag: Promociones
+tag: ''
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -536,6 +536,26 @@ display:
       display_extenders: {  }
       block_description: 'Promociones front page'
       display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_centro_comercial'
+        - 'config:field.storage.node.field_imagen_promocion'
+        - 'config:field.storage.node.field_vigencia_promocion'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Página
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: promociones-front
     cache_metadata:
       max-age: -1
       contexts:
