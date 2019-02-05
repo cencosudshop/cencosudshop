@@ -19,5 +19,7 @@
 <article{{ attributes.addClass('profile') }}>
   {% if content %}
     {{- content -}}
+    <p>PRUEBA DE TEMPLATE PROFILE</p>
+    <h2>{{ content.field_nombre_user }}</h2>
   {% endif %}
 </article>
