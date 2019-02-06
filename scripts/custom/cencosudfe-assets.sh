@@ -1,5 +1,14 @@
-ls -la
+#!/bin/bash
 
-cd docroot/themes/custom/cencosudshop
+#locate the script in the themes folder
+cd docroot/themes/custom
 
-gulp sass
+themes=($(find . -type d))
+for theme in "${themes[@]}"; do
+    echo $theme
+    if [ ! -d $theme/node_modules ];then
+        cd $theme
+        npm install
+        cd ..
+    fi
+done
