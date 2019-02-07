@@ -78,9 +78,10 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
             }
         }
     }
-    
+    /* Quitar efectos select idioma */
     #exampleFormControlSelect1 {
         border: none;
+        box-shadow: none;
     }
 
     @include breakpoint($md,$lg) {
