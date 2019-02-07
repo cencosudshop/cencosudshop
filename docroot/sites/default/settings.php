@@ -800,7 +800,7 @@ if ($is_ah_env) {
       # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_stage'; //Unique
       $config['acquia_contenthub.admin_settings']['client_name'] = 'cencosud_stage_4f9b31ff-53c0-4e14-bf48-34a862cf67bf';
       $config['acquia_contenthub.admin_settings']['origin'] = '16896391-50d0-4d5d-7025-c0eb27c08e14';
-      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = '6ea318bb-071c-46c3-50ab-250a301cda8b';
+      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = '-071c-46c3-50ab-250a301cda8b';
       $config['acquia_contenthub.admin_settings']['webhook_url'] = 'http://default.realmedianetwork.com/acquia-contenthub/webhook';
       break;
 
@@ -808,6 +808,8 @@ if ($is_ah_env) {
       # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_dev'; //Unique
       $config['acquia_contenthub.admin_settings']['client_name'] = 'cencosud_dev';
       $config['acquia_contenthub.admin_settings']['origin'] = 'f18a09fc-44c7-42af-55aa-521c9b801653';
+      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = '';
+      $config['acquia_contenthub.admin_settings']['webhook_url'] = 'http://devdefault.realmedianetwork.com/acquia-contenthub/webhook';
       break;
   }
 }
