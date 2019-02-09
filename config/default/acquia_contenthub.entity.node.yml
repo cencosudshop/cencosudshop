@@ -3,7 +3,10 @@ langcode: es
 status: true
 dependencies:
   config:
+    - node.type.panorama
+    - node.type.promocion
     - node.type.tienda
+    - node.type.tienda_mall
   module:
     - node
 id: node
@@ -24,12 +27,12 @@ bundles:
     rendering:
       default: default
   panorama:
-    enable_index: false
+    enable_index: true
     enable_viewmodes: false
     rendering:
       default: default
   promocion:
-    enable_index: false
+    enable_index: true
     enable_viewmodes: false
     rendering:
       default: default
@@ -39,7 +42,7 @@ bundles:
     rendering:
       default: default
   tienda_mall:
-    enable_index: false
+    enable_index: true
     enable_viewmodes: false
     rendering:
       default: default
