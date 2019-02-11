@@ -2,9 +2,13 @@ uuid: f02bb555-bde3-4ebf-ba2c-c7a942d6255e
 langcode: es
 status: true
 dependencies:
+  config:
+    - workflows.workflow.editorial
   module:
+    - content_moderation
     - node
     - user
+    - views_autocomplete_filters
 _core:
   default_config_hash: tS8PbpJX90aRFC3-UTgXzdqkq7_2frk2pz4TMijEebM
 id: content
@@ -396,7 +400,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: true
+          destination: false
           plugin_id: entity_operations
       filters:
         title:
@@ -608,11 +612,11 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:workflow_list'
   page_1:
     display_options:
       path: admin/content/node
@@ -640,8 +644,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: 0
-      tags: {  }
+      tags:
+        - 'config:workflow_list'

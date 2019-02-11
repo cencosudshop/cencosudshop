@@ -18,8 +18,11 @@
 #}
 <article{{ attributes.addClass('profile') }}>
   {% if content %}
-    {{- content -}}
-    <p>PRUEBA DE TEMPLATE PROFILE</p>
-    <h2>{{ content.field_nombre_user }}</h2>
+    {#{{- content -}}#}
+    <p>DATOS DE USUARIO</p>
+    <div class="row">
+      <div class="col-3">{{ drupal_view('datos_usuario', 'block_1') }}</div>
+      <div class="col-9">{{ drupal_view('datos_usuario', 'page_1') }}</div>
+    </div>
   {% endif %}
 </article>
