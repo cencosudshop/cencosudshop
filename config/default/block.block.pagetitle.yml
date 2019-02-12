@@ -20,6 +20,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/tiendas/*\r\n/panoramas/*\r\n/promociones/*"
+    pages: "/tiendas/*\r\n/panoramas/*\r\n/promociones/*\r\n/user/*"
     negate: true
     context_mapping: {  }

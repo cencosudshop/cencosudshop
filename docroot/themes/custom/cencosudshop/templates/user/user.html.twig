@@ -19,10 +19,24 @@
 <article{{ attributes.addClass('profile') }}>
   {% if content %}
     {#{{- content -}}#}
-    <p>DATOS DE USUARIO</p>
+    <h3>
+      {% if (content.field_nombre_user) %}
+        ¡Hola {{ content.field_nombre_user.0 }}!
+      {% else %}
+        ¡Bienvenido, por favor editar su cuenta!
+      {% endif %}
+    </h3>
     <div class="row">
-      <div class="col-3">{{ drupal_view('datos_usuario', 'block_1') }}</div>
-      <div class="col-9">{{ drupal_view('datos_usuario', 'page_1') }}</div>
+      <div class="col-2">
+        {{ content.field_imagen_user }}
+        <p><i class="far fa-edit"></i>&nbsp;<a href="/user/{{ user.id }}/edit">Editar cuenta</a></p>
+        {% if 'editor_contenidos' in user.getroles  %}
+          <p><i class="fas fa-plus"></i>&nbsp;<a href="/node/add">Añadir contenido</a></p>
+          <p><i class="fas fa-cog"></i>&nbsp;<a href="/admin/content">Administrar contenido</a></p>
+        {% endif %}
+        <p><i class="fas fa-sign-out-alt"></i>&nbsp;<a href="/user/logout">Cerrar sesión</a></p>
+      </div>
+      <div class="col-10">{{ drupal_view('tiendas_favoritas', 'page_1') }}</div>
     </div>
   {% endif %}
 </article>
