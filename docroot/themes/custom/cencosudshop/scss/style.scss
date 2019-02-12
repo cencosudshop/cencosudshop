@@ -82,6 +82,7 @@ $header-resize: (768px: .75em, 842px: .875em, 916px: 1em);
     #exampleFormControlSelect1 {
         border: none;
         box-shadow: none;
+        color: #3597e1;
     }
 
     @include breakpoint($md,$lg) {
