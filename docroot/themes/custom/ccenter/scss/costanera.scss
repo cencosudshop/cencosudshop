@@ -81,7 +81,7 @@ ul.nolist{
     }
     .navbar-brand {
         @include breakpoint(0px,767px) {
-            max-width: 12rem;
+            max-width: 10rem;
         }
     }
     .navbar-toggler-icon {
@@ -116,8 +116,12 @@ ul.nolist{
     }
 }
 
-.dropdown-item{
-    color: $costanera-sky-light25;
+.bg-aliceblue {
+    background-color: aliceblue;
+    color: #4d4d4d;
+    a {
+        color: #4d4d4d;
+    }
 }
 
 .bg-inverse {
@@ -206,4 +210,5 @@ nav {
     
         }
     }
+    
 }
