@@ -23,7 +23,7 @@ id: promociones_recomendadas
 label: 'Promociones recomendadas'
 module: views
 description: 'Promociones recomendadas en la ficha de la promoción'
-tag: Promociones
+tag: ''
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -708,7 +708,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1219,7 +1219,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true

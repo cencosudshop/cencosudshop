@@ -1171,7 +1171,6 @@ Title Desc|Z -> A</pre> Leave the replacement text blank to remove an option alt
             // Single-select -- display as radio buttons.
             $form[$field_id]['#type'] = 'radios';
             $form[$field_id]['#theme'] = 'bef_radios';
-            $form[$field_id]['#summary_attributes'] = []; //acarrasco, se adiciona summary_attributes.
             if (empty($form[$field_id]['#process'])) {
               $form[$field_id]['#process'] = array();
             }
@@ -1180,7 +1179,6 @@ Title Desc|Z -> A</pre> Leave the replacement text blank to remove an option alt
           else {
             $form[$field_id]['#type'] = 'checkboxes';
             $form[$field_id]['#theme'] = 'bef_checkboxes';
-            $form[$field_id]['#summary_attributes'] = []; //acarrasco, se adiciona summary_attributes.
 
             if ($options['more_options']['bef_select_all_none'] || $options['more_options']['bef_select_all_none_nested']) {
               $form[$field_id]['#attached']['library'][] = 'better_exposed_filters/select_all_none';
@@ -1206,11 +1204,6 @@ Title Desc|Z -> A</pre> Leave the replacement text blank to remove an option alt
           }
           break;
 
-          //acarrasco, añadida la opción default.
-          case 'default':
-            $form[$field_id]['#summary_attributes'] = [];
-            break;
-          
         default:
           $show_apply = TRUE;
           break;
