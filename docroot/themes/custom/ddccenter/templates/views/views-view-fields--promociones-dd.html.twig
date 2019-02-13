@@ -1,0 +1,15 @@
+<style>
+.imagen-promocion{
+    margin-bottom:3%;
+}
+img{
+    width: 100%;
+}
+</style>
+<div class="col-md-6" style="margin-bottom: 1rem;margin-top:2rem">
+    <div class="imagen-promocion">
+        {{ fields.field_imagen_promocion.content }}
+    </div>
+    <h5>{{ fields.title.content }}</h5>
+    <p>DESDE {{ fields.field_vigencia_promocion.content }}</p>
+</div>
