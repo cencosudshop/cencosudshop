@@ -12,9 +12,12 @@
             <h4><strong>{{ node.title.value }}</strong></h4>
             <p ><i class="far fa-calendar-alt"></i> Desde {{ node.field_vigencia_panorama.value|date(format='d/m/Y') }} Hasta {{ node.field_vigencia_panorama.end_value|date(format='d/m/Y') }}</p>                
             <p >{{ node.field_descripcion_panorama.value }}</p>
-            
-            <p><i class="far fa-clock"></i> {{ node.field_horario_panorama.value }}</p>
-            <p><i class="fas fa-map-marker-alt"></i> {{ node.field_ubicacion_panorama.value }}</p>
+            {% if node.field_horario_panorama.value %}
+                <p><i class="far fa-clock"></i> {{ node.field_horario_panorama.value }}</p>
+            {% endif %}
+            {% if node.field_ubicacion_panorama.value %}
+                <p><i class="fas fa-map-marker-alt"></i> {{ node.field_ubicacion_panorama.value }}</p>
+            {% endif %}
         </div>
     </div>
     <hr>
@@ -44,11 +47,20 @@
                 </a>
             </div> <!-- End carousel-->
         </div>
-        <div class="col-md-6 order-md-1">
+       {% if node.field_panorama_slideshow.entity.fileuri %}
+            <div class="col-md-6 order-md-1">
+                <h4 class=""><strong>Panoramas Recomendados</strong></h4>
+                <div class="panoramas_reco-container">
+                    {{ drupal_view('panoramas_recomendados', 'block_1') }}
+                </div>
+            </div>
+        {% else %}
+        <div class="col-md-12 order-md-1">
             <h4 class=""><strong>Panoramas Recomendados</strong></h4>
             <div class="panoramas_reco-container">
                 {{ drupal_view('panoramas_recomendados', 'block_1') }}
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
