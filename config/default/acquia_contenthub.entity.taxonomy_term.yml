@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.categorias_tiendas
+    - taxonomy.vocabulary.malls_cencosud
   module:
     - taxonomy
 id: taxonomy_term
@@ -13,6 +14,6 @@ bundles:
     enable_viewmodes: false
     rendering: {  }
   malls_cencosud:
-    enable_index: false
+    enable_index: true
     enable_viewmodes: false
     rendering: {  }

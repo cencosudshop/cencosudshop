@@ -790,6 +790,8 @@ if ($is_ah_env) {
       #$config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_prod'; //Unique
       $config['acquia_contenthub.admin_settings']['client_name'] = 'ccenter_prod';
       $config['acquia_contenthub.admin_settings']['origin'] = '';
+      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = '';
+      $config['acquia_contenthub.admin_settings']['webhook_url'] = '';
       break;
 
     case 'test':
@@ -804,6 +806,8 @@ if ($is_ah_env) {
       # $config['acquia_lift.settings']['credential']['site_id'] = 'cencosud_dev'; //Unique
       $config['acquia_contenthub.admin_settings']['client_name'] = 'ccenter_dev';
       $config['acquia_contenthub.admin_settings']['origin'] = 'cbb57b0b-b97a-4d6f-7a8e-3f9f3e02e25f';
+      $config['acquia_contenthub.admin_settings']['webhook_uuid'] = 'a31433d5-32cc-4434-9cec-b3d68c19e80d';
+      $config['acquia_contenthub.admin_settings']['webhook_url'] = 'http://devccenter.realmedianetwork.com/acquia-contenthub/webhook';
       break;
   }
 }
