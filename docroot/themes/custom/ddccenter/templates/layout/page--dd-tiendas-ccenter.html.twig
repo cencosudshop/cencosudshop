@@ -1,0 +1,32 @@
+<style>
+.text-dark{
+ color:#495057;
+}
+.bg-costanera-sky{
+    background-color:#3597e1;
+}
+</style>
+<div id="page-wrapper" style="">
+    {% include directory ~ '/templates/partials/header.html.twig' %}
+    <div class="row">
+        <div class="col-12 mb-3">
+            <div class="col-4 float-left bg-costanera-sky">
+                <a class="nav-link  text-center text-light" id="myBtn" href="/dd-tiendas-ccenter/alfabetico"><strong>ALFABETO</strong></a>
+            </div>
+            <div class="col-4 float-left bg-costanera-sky">
+                <a class="nav-link text-center text-light" href="/dd-tiendas-ccenter/categorias">CATEGORIAS</a>
+            </div>
+            <div class="col-4 float-left bg-costanera-sky">
+                <a class="nav-link text-center text-light" href="/dd-tiendas-ccenter/niveles">NIVELES</a>
+            </div>
+        </div>
+    </div>
+    <div id="main-wrapper" class="layout-main-wrapper clearfix p-relativeToFooter">
+      {% block content %}
+      <div id="main" class="container-fluid">
+          {{ page.content }}
+      </div>
+      {% endblock %}
+    </div>
+</div>
+

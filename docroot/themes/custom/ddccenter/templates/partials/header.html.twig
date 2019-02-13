@@ -1,60 +1,69 @@
 
 <style>
-    .logo{
-      display:flex;
-      margin:0 auto;
-    }
-    .iconos{
-        margin-left:48%;
-    }
-    </style>
-    {% 
-      set container_classes = [
-        'bg-costanera-white',
+.logo{
+  display:flex;
+  margin:0 auto;
+}
+.iconos{
+    margin-left:48%;
+}
+
+
+</style>
+
+{% 
+  set container_classes = [
+    'bg-costanera-white',
+  ]
+%}
+{# Navbar #}
+{#% if page.navigation or page.navigation_collapsible %#}
+    {%
+      set navbar_classes = [
+        'navbar',
+        theme.settings.navbar_inverse ? 'navbar-inverse' : 'bg-light navbar-light',
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
-    {# Navbar #}
-    {#% if page.navigation or page.navigation_collapsible %#}
-        {%
-          set navbar_classes = [
-            'navbar',
-            theme.settings.navbar_inverse ? 'navbar-inverse' : 'bg-light navbar-light',
-            theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-          ]
-        %}
-    <header {{ attributes.addClass(container_classes) }} id="navbar">
-    <div class="container mb-5 mt-5">
-       <div class="col-3 logo">
-          <a href="http://local.ddccenter.com"><img  src="/themes/custom/cencosudshop/images/brand-ccenter2.png" alt="Costanera Center"></a>
-       </div>
-    </div>
-    <div class="row">
-    <div class="col-12" id="myDIV">
-      <div class="col-2 float-left navbar-dark bg-dark pt-3">
-         <i class="fas fa-shopping-bag fa-lg text-light iconos"></i>
-         <a class="nav-link text-light text-center active" href="/dd-tiendas-ccenter/alfabetico">TIENDAS</a>
-      </div>
-      <div class="col-2 float-left navbar-dark bg-dark pt-3">
-        <i class="fas fa-utensils fa-lg text-light iconos"></i>
-        <a class="nav-link text-light text-center" href="/dd-restaurantes-ccenter/alfabetico">RESTAURANTES</a>
-      </div>
-      <div class="col-2 float-left navbar-dark bg-dark pt-3">
-        <i class="fas fa-film fa-lg text-light iconos"></i>
-        <a class="nav-link text-light text-center" href="#">CINES</a>
-      </div>
-      <div class="col-2 float-left navbar-dark bg-dark pt-3">
-         <i class="fas fa-calendar-alt fa-lg text-light iconos"></i>
-         <a class="nav-link text-light text-center"  href="/panoramas-dd/4">ACTIVIDADES</a>
-      </div>
-      <div class="col-2 float-left navbar-dark bg-dark pt-3">
-         <i class="fas fa-tags fa-lg text-light iconos"></i>
-         <a class="nav-link text-light text-center" href="/promociones-dd/4">PROMOCIONES</a>
-       </div>
-        <div class="col-2 float-left navbar-dark bg-dark pt-3">
-         <i class="fas fa-tags fa-lg text-light iconos"></i>
-         <a class="nav-link text-light text-center" href="#">SKY COSTANERA</a>
-       </div>
-    </div>
-    </div>
-    </header>
-    
+
+<header {{ attributes.addClass(container_classes) }} id="navbar">
+
+<div class="container mb-5 mt-5">
+   <div class="col-3 logo">
+      <a href="http://local.ddccenter.com"><img  src="/themes/custom/cencosudshop/images/brand-ccenter2.png" alt="Costanera Center"></a>
+   </div>
+</div>
+<div class="row">
+<div class="col-12" id="myDIV">
+  <div class="col-2 float-left navbar-dark bg-dark pt-3">
+     <i class="fas fa-shopping-bag fa-lg text-light iconos"></i>
+     <a class="nav-link text-light text-center active" href="/dd-tiendas-ccenter/alfabetico">TIENDAS</a>
+  </div>
+  <div class="col-2 float-left navbar-dark bg-dark pt-3">
+    <i class="fas fa-utensils fa-lg text-light iconos"></i>
+    <a class="nav-link text-light text-center" href="/dd-restaurantes-ccenter/alfabetico">RESTAURANTES</a>
+  </div>
+  <div class="col-2 float-left navbar-dark bg-dark pt-3">
+    <i class="fas fa-film fa-lg text-light iconos"></i>
+    <a class="nav-link text-light text-center" href="#">CINES</a>
+  </div>
+  <div class="col-2 float-left navbar-dark bg-dark pt-3">
+     <i class="fas fa-calendar-alt fa-lg text-light iconos"></i>
+     <a class="nav-link text-light text-center"  href="/panoramas-dd/4">ACTIVIDADES</a>
+  </div>
+  <div class="col-2 float-left navbar-dark bg-dark pt-3">
+     <i class="fas fa-tags fa-lg text-light iconos"></i>
+     <a class="nav-link text-light text-center" href="/promociones-dd/4">PROMOCIONES</a>
+   </div>
+    <div class="col-2 float-left navbar-dark bg-dark pt-3">
+     <i class="fas fa-tags fa-lg text-light iconos"></i>
+     <a class="nav-link text-light text-center" href="#">SKY COSTANERA</a>
+   </div>
+
+</div>
+</div>
+
+</header>
+
+
+

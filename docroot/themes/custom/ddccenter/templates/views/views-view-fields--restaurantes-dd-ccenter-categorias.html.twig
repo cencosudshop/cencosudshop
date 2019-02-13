@@ -1,0 +1,24 @@
+<style>
+.view-restaurantes-dd-ccenter-categorias h3{ 
+    color: #495057;
+    margin-top: 3%;
+}
+.borde{
+    border-bottom:1px solid #cccccc6b;
+}
+
+.nivel{
+    color: #495057;background:#e2e2e2;width:auto;white-space:nowrap;
+}
+</style>
+
+<div class="content">
+    <div class="row col-12 justify-content-center">
+        <div class="col-8 borde pt-4">
+            {{ fields.title_1.content }}
+        </div>
+        <div class="col-3 borde pt-4">
+            <p class="nivel float-right p-2"> Nivel:{{ fields.field_nivel_tmall.content }}</p>
+        </div>
+    </div>
+</div>
