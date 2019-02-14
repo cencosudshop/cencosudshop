@@ -3,17 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser
     - field.field.node.banner.field_enlace_banner
     - field.field.node.banner.field_fecha_vigencia_banner
     - field.field.node.banner.field_imagen_banner
     - field.field.node.banner.field_mall_banner
+    - image.style.crop_thumbnail
     - node.type.banner
   module:
     - content_moderation
     - datetime
-    - entity_browser
     - field_layout
+    - image
     - layout_discovery
     - link
     - path
@@ -47,17 +47,11 @@ content:
     type: datetime_default
     region: content
   field_imagen_banner:
-    type: entity_browser_file
+    type: image_image
     weight: 1
     settings:
-      entity_browser: image_browser
-      field_widget_remove: true
-      selection_mode: selection_append
       preview_image_style: crop_thumbnail
-      field_widget_edit: true
-      open: false
-      view_mode: default
-      field_widget_replace: false
+      progress_indicator: throbber
     region: content
     third_party_settings: {  }
   field_mall_banner:
@@ -85,7 +79,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -96,14 +90,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -114,3 +103,4 @@ hidden:
   langcode: true
   promote: true
   sticky: true
+  translation: true
