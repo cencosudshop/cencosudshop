@@ -7,6 +7,13 @@ $primary-dark: darken($primary-shade, 12%);
 $accent-shade: #0079C0;
 $accent-light: lighten($accent-shade, 37%);
 $accent-dark: darken($accent-shade, 12%);
+
+// Costanera color
+$costanera-sky: #3597e1;
+$costanera-white: #ffffff;
+$costanera-light-sky: #e9f2f9;
+$costanera-deep-blue: #2d7fd7;
+
 // Reassign color vars to semantic color scheme
 $red: #dc3545;
 $yellow: #ffc107;
