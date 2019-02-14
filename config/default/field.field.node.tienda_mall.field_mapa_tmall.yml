@@ -11,17 +11,17 @@ dependencies:
 third_party_settings:
   content_translation:
     translation_sync:
-      alt: alt
-      title: title
       file: '0'
+      alt: '0'
+      title: '0'
 id: node.tienda_mall.field_mapa_tmall
 field_name: field_mapa_tmall
 entity_type: node
 bundle: tienda_mall
 label: Mapa
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
