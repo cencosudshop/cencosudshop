@@ -24,14 +24,14 @@
                     Hasta {{ node.field_vigencia_promocion.end_value|date(format='d/m/Y') }}
                 </p>
             </div>
+            <div class="descripcion-promo mt-3">
+                <p class="text-justify"> {{ node.field_descripcion_promocion.value }} </p>
+            </div>
         </div><!-- End column foto promoción -->
     </div> <!-- Fin row -->
     <br>
     <div class="row">
         <div class="col-12">
-            <div class="descripcion-promo">
-                <p class="text-justify"> {{ node.field_descripcion_promocion.value }} </p>
-            </div>
             <div class="botonsito text-center text-md-left">
                 {% set idtienda = node.field_tienda_asociada.entity.nid.value %}
                 <button type="button" class="btn btn-info"> {{drupal_view('enlace_tienda_promocion', 'block_1', idtienda)}} </button>
@@ -39,10 +39,15 @@
         </div>
     </div>
     <hr>
-    <div class="row">
-        <h4 class="pl-3"><strong>Promociones Recomendadas</strong></h4>
-        <div class="col-md-12">
-            {{ drupal_view('promociones_recomendadas', 'block_1') }}
-        </div>
-    </div>
+    {% set promociones_recomendadas = drupal_view('promociones_recomendadas', 'block_1') %}
+        {% if promociones_recomendadas %}
+            <div class="row">
+                <h4 class="pl-3"><strong>Promociones Recomendadas</strong></h4>
+                    <div class="col-md-12">
+                    {{ promociones_recomendadas }}
+                    </div>
+            </div>
+        {% endif %}
 </div>
+
+
