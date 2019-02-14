@@ -577,7 +577,20 @@ display:
       title: 'Tus tiendas favoritas'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<h3>Tus tiendas favoritas</h3></br>\r\n<h6>No tiene tiendas favoritas, puede ingresar a <strong><a href=\"/tiendas\">Tiendas</a></strong> para añadir las de su interés.</h6>"
+            format: rich_text
+          plugin_id: text
       relationships:
         field_tienda_tmall:
           id: field_tienda_tmall
