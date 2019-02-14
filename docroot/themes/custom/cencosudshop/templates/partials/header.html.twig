@@ -1,3 +1,18 @@
+<style>
+  .registrar{
+    background: #f3f3f3;
+    padding: 9%;
+    font-size: 0.8rem;
+    border-radius: 4%;
+  }
+  .texto-registrar{
+    font-size:0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .login-user .tabs{
+    display: none;
+  }
+</style>
 {% 
   set container_classes = [
     'bg-costanera-white',
@@ -69,7 +84,7 @@
           </form>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link ico-calendar">
+          <a  class="nav-link ico-calendar use-ajax" data-dialog-options="{&quot;width&quot;:800}" data-dialog-type="modal" href="/user/login">
             <img src="/themes/custom/cencosudshop/images/icons/own/user.png" alt="login">
             <span>Acceder</span>
           </a>
