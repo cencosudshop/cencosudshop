@@ -2,6 +2,8 @@ uuid: c2ee751f-1cf6-4aa1-b5d5-53ed341e8530
 langcode: es
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - cencosudshop
 id: tabs
@@ -17,4 +19,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: true
+    context_mapping: {  }

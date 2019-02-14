@@ -22,7 +22,7 @@ id: promociones_front
 label: 'Promociones Front'
 module: views
 description: 'Promociones mostradas en la página de inicio'
-tag: ''
+tag: Promociones
 base_table: node_field_data
 base_field: nid
 core: 8.x
