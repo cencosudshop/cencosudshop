@@ -1,32 +1,25 @@
-<style>
-        .slick-dots{
-          top:95px;
-          text-align:right;
-          height:5%;
-        }
-      </style>
-      <div id="page-wrapper">
-        {% include directory ~ '/templates/partials/header.html.twig' %}
-        {{ page.highlighted }}
-        <div id="s-content" class="container-fluid p-relativeToFooter">
-          {# Seccion Para hacer#}
-          <div class="s-parahacer container-fluid">
-            <div class="row justify-content-md-center">
-                <div class="col">
-                  <h4>ACTIVIDADES</h4>
-                  <br>
-                  {{ drupal_view('panoramas_front_dd', 'block_1', 421) }}
-                </div>
+<div id="page-wrapper">
+    {% include directory ~ '/templates/partials/header.html.twig' %}
+    {{ page.highlighted }}
+    <div id="s-content" class="container-fluid p-relativeToFooter">
+      {# Seccion Para hacer#}
+      <div class="row justify-content-md-center mb-4">
+          <div class="col">
+            <h3>ACTIVIDADES</h3>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              {#{ drupal_view('panoramas_front_dd', 'block_1', 421) }#}
+              {{ drupal_view('promociones_front_dd', 'block_1', 421) }}
             </div>
-            <div class="row justify-content-md-center mt-5">
-                <div class="col">
-                  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                    <h4>PROMOCIONES</h4>
-                      {{ drupal_view('promociones_front_dd', 'page_1', 421) }}
-                  </div>
-                </div>
-            </div>        
           </div>
-        </div>
       </div>
-      
+      <div class="row justify-content-md-center mb-4">
+          <div class="col">
+            <h3>PROMOCIONES</h3>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                {{ drupal_view('promociones_front_dd', 'page_1', 421) }}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

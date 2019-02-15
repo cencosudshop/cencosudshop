@@ -1,7 +1,52 @@
-@import "variables";
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
 
-.bg-deep-blue {
-    background-color: $costanera-deep-blue;
-    color: white;
+// breakpoint mixin
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: min-width) {
+    @if $mq2 == false {
+        @media ($maxmin: $mq01) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $mq01) and (max-width: $mq2) {
+            @content;
+        }
+    }
 }
 
+// import files
+@import "variables";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+// html
+
+body {
+    background: $white;
+    //color: $costanera-sky;
+}
+
+img {
+    width: 100%;
+}
+.bg-deep-blue {
+    //background-color: $costanera-deep-blue;
+    background-color: navy;
+    * {
+        color: white;
+    }
+}
+
+#s-content {
+    color: #333;
+}
+
+/* GENERAL STYLES */
+.slide__caption a {
+    font-size: 1.3rem;
+    font-weight: bold;
+}

@@ -6,55 +6,36 @@ Description: Bootstrap 4 with Sass
 // import files
 @import "import";
 
-/* GENERAL STYLES
--------------------------------------------------*/
+/* ----------- GENERAL STYLES ----------- */
+
+/* globals */
 
 body {
-    background: $white;
+   @include font-size-map($html-font-size);
 }
 
 
-/* COLORS 
---------------------------------------------------*/
-
-a {
-    color: $accent-shade;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p {
+    margin-bottom: .5rem;
+    @include breakpoint(880px) {
+        margin-bottom: 1rem;
+    }
 }
 
-.bg-inverse {
-    background: $primary-shade !important;
+/* place footer bottom */
+html, body {
+    font-family: $own-font-family-base;
 }
 
-.site-footer {
-    background: $accent-shade !important;
-}
-
-.menu--main li a {
-    color: $primary-shade;
-}
-
-.menu--account li a {
-    color: $primary-shade;
-}
-
-.site-name-slogan a {
-    text-decoration: none;
-}
-
-.card-group img {
-    margin: 0;
-    width: 100%;
-    height: auto;
-}
-
-.card-group .field--type-image {
-    margin: 0
-}
-
-.slick {
-    width: 100%;
-}
-
-.slick>div {
-    margin: 0 15px;
+.slick-arrow {
+    &::before{
+        color: $costanera-white !important;
+    }
+    &::hover{
+        &::before{
+            color: $costanera-sky !important;
+        }
+    }
 }
